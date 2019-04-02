@@ -5,13 +5,12 @@ Eine bestimmte Agentur filtern
 
 **1. System Scope**
 
-    Der Benutzer möchte nur noch Artikel einer oder mehrerer bestimmter Agenturen angezeigt bekommen bzw. bestimmt Agenturen nicht angezeigt bekommen.
+    Der Benutzer möchte nur noch Artikel einer oder mehrerer bestimmter Agenturen angezeigt bekommen bzw. bestimmte Agenturen nicht angezeigt bekommen.
 
 **2. Primary Actors**
 
     - Jounalist(Benutzer)
     - System
-    - Administrator
 
 ***II. Precision Level 2:***
 

@@ -1,4 +1,4 @@
-Artikel nach Stichwörtern durchsuchen
+Alle Artikel nach Stichwörtern durchsuchen
 ============
 
 ***I. Precision Level 1:***
@@ -10,8 +10,6 @@ Artikel nach Stichwörtern durchsuchen
 **2. Primary Actors**
 
     - Jounalist(Benutzer)
-    - System
-    - Administrator
 
 ***II. Precision Level 2:***
 
@@ -41,7 +39,7 @@ Artikel nach Stichwörtern durchsuchen
         1. Das System wirft eine Fehlermeldung(Page not Found 404)
 
     2.
-        1. Das System wirft eine Fehlermeldung(Keine Ergebnisse gefunden)
+        1. Das System informiert den Nutzer über Keine Ergebnisse
 
         2. Der Benutzer geht zurück zum 1. Schritt des MSS.
 

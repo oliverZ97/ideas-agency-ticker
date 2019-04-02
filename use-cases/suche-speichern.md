@@ -5,25 +5,24 @@ Eine Suche speichern
 
 **1. System Scope**
 
-Der Benutzer möchte seine Suche speichern.
+Der Benutzer möchte seine Sucheinstellungen speichern.
 
 **2. Primary Actors**
 
     - Jounalist(Benutzer)
     - System
-    - Administrator
 
 ***II. Precision Level 2:***
 
 **1. Main Success Scenario (MSS)**
 
-    1. Der Benutzer hat eine Suche ausgeführt.
+    1. Der Benutzer hat eine Suche ausgeführt und Filter angepasst.
 
     2. Er betätigt die "Speichern"-Schaltfläche.
 
-    3. Die Suche ist jetzt gespeichert.
+    3. Die Suche wird benannt.
 
-    4. Sie befindet sich jetzt unter dem entsprechenden Menüpunkt.
+    4. Sie wird gespeichert.
 
 ***III. Precision Level 3:***
 
