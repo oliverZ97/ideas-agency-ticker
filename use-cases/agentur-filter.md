@@ -38,15 +38,15 @@ Eine bestimmte Agentur filtern
 **1. The Extension Handling Steps**
 
     1. 
-        1. Das System wirft eine Fehlermedlung(Page not Found 404)
+        1. Das System wirft eine Fehlermedlung.(Page not Found 404)
 
     2. 
         1. (Es gibt keine Artikel die asugeblendet werden müssten.)
 
-        2. Das Ziel ist erreicht
+        2. Das Ziel ist erreicht.
 
     3. 
-        1. Das System wirft eine Fehlermeldung(keine der noch erlaubten Agenturen enthält Artikel.)
+        1. Das System wirft eine Fehlermeldung.(keine der noch erlaubten Agenturen enthält Artikel.)
 
-        2. Zurückgehen zum 2. Schritt des MSS
+        2. Zurückgehen zum 2. Schritt des MSS.
 
