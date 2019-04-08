@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  background-color: firebrick;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) { /**Mobile**/
+  .App {
+    background-color: blueviolet;
+  }
+}
+
+@media screen and (min-width: 769px) { /**Tablet**/
+  .App {
+    background-color: gold;
+  }
+}
+
+@media screen and (min-width: 1024px) { /**Desktop**/
+  .App {
+    background-color: green;
+  }
+}
+
+@media screen and (min-width: 1216px) { /**Widescreen**/
+  .App {
+    background-color: orange;
+  }
+}
+
+@media screen and (min-width: 1408px) { /**Fullhd**/
+  .App {
+    background-color: firebrick;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  text {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+

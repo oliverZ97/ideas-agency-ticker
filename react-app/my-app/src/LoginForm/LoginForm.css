@@ -1,0 +1,44 @@
+.LoginForm {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.LoginForm input {
+    width: 20vw;
+    height: 30px;
+    min-width: 15rem;
+    margin: 5px;
+    padding: 1%;
+    flex: 1;
+
+    font-size: 17px;
+}
+  
+.LoginForm button {
+    background-color: darkgreen;
+    width: 15rem;
+    height: 50px;
+    margin-top: 1rem;
+    color: whitesmoke;
+    font-size: 20px;
+    color: yellowgreen;
+    flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .LoginForm {
+        min-width: 260px;
+        min-height: 1000px;
+    }
+
+    .LoginForm input {
+        width: 15rem;
+        height: 30px;
+    }
+
+    .LoginForm button {
+        height: 50px;
+    }
+}
