@@ -3,17 +3,23 @@
     display: flex;
     flex-direction: column;
     align-content: center;
+    justify-content: center; /**alignment along the MAIN-AXIS(column)**/
+    margin-bottom: 200px;
 }
 
 .LoginForm input {
-    width: 20vw;
+    width: 240px;
     height: 30px;
     min-width: 15rem;
     margin: 5px;
-    padding: 1%;
+    padding: 10px;
     flex: 1;
 
     font-size: 17px;
+}
+
+.LoginForm input:focus {
+    border-color:#00cc66;
 }
   
 .LoginForm button {
@@ -21,10 +27,23 @@
     width: 15rem;
     height: 50px;
     margin-top: 1rem;
-    color: whitesmoke;
+    border-radius: 4px;
+    border-color: green;
     font-size: 20px;
-    color: yellowgreen;
+    color: #00cc66;
+    transition: .6s;
+    overflow: hidden;
     flex: 1;
+}
+
+.LoginForm button:hover {
+    background-color: #00cc66;
+    color: green;
+    cursor: pointer;
+}
+
+.LoginForm button:focus {
+    outline: none;
 }
 
 @media screen and (max-width: 768px) {

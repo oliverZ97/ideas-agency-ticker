@@ -1,3 +1,18 @@
 .Navigation {
     background-color: darkslategray;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.Navigation button {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: dimgrey;
+    margin: 2px;
+}
+
+.Navigation #navigation_button_logout {
+    align-self: flex-end;
 }

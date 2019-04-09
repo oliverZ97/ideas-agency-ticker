@@ -1,3 +1,5 @@
 .Footer {
     background-color: darkslategray;
+    min-height: 60px;
+    position: static;
 }
