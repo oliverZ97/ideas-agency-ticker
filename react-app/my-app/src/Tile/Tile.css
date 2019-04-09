@@ -1,0 +1,38 @@
+.Tile {
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background-color: #b30000
+}
+
+.Tile h4 {
+    flex: 2;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.Tile p {
+    overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;
+    align-self: flex-end;
+    flex: 1;
+    padding: 2px;
+}
+
+.Tile button {
+    width: 30px;
+    height: 30px;
+    flex: 0.5;
+    background-color: orange;
+    border-radius: 5px;
+}
+
+.Tile .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

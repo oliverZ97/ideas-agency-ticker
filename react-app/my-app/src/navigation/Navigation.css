@@ -13,6 +13,6 @@
     margin: 2px;
 }
 
-.Navigation #navigation_button_logout {
-    align-self: flex-end;
+#navigation_button_logout {
+    
 }

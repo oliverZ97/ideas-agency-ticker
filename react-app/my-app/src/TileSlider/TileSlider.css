@@ -1,0 +1,27 @@
+.TileSlider {
+    
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.slider-content{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid black;
+    background-color: aqua;
+    max-width: 90%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.prev {
+    background-color: red;
+}
+
+.next {
+    background-color: red;
+}

@@ -3,7 +3,9 @@ import {Router, Route, browserHistory} from 'react-router';
 import './App.css';
 import Navigation from './Navigation/Navigation';
 import Footer from './Footer/Footer';
-import LoginPage from './Pages/LoginPage';
+import LoginPage from './Pages/LoginPage/LoginPage';
+import ListPage from './Pages/ListPage/ListPage';
+import DetailPage from './Pages/DetailPage/DetailPage';
 
 class App extends Component {
   render() {
@@ -12,6 +14,8 @@ class App extends Component {
       <Navigation />
         <Router history={browserHistory}>
                   <Route path={"login"} component={LoginPage}/>
+                  <Route path={"list"} component={ListPage}/>
+                  <Route path={"detail"} component={DetailPage}/>
         </Router>
         <Footer />
       </div>
