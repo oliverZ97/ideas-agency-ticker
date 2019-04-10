@@ -1,5 +1,65 @@
 .ContentView {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 20% auto 20% 5%;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    justify-items: center;
+    grid-template-areas:
+        "title title title title"
+        "date . . fav"
+        "img img img img"
+        "article article article article"
+        "author . . agency"
+        "tags tags tags tags";
+}
+
+.detail_title {
+    grid-area: title;
+    justify-self: left;
+}
+
+.detail_date {
+    grid-area: date;
+}
+
+.detail_agency {
+    grid-area: agency;
+}
+
+.detail_fav {
+    grid-area: fav;
+}
+
+.detail_img {
+    grid-area: img;
+    object-fit: cover;
+    width: 100%;
+    align-self: center;
+    max-height: 200px;
+}
+
+.detail_text {
+    grid-area: article;
+}
+
+.detail_author {
+    grid-area: author;
+}
+
+.detail_tags {
+    grid-area: tags;
+    justify-self: left;
+}
+
+@media screen and (max-width: 768px){
+    .ContentView {
+        grid-template-columns: 20% auto 20% 5%;
+        grid-template-areas:
+        "title title title title"
+        "date . fav ."
+        "img img img img"
+        "article article article article"
+        "author . agency ."
+        "tags tags tags tags";
+    }
 }

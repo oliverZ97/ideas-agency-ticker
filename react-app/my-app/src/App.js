@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Router, Route, browserHistory} from 'react-router';
+import 'normalize.css';
 import './App.css';
 import Navigation from './Navigation/Navigation';
 import Footer from './Footer/Footer';
