@@ -1,0 +1,36 @@
+.FavTile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 200px;
+    margin: 15px;
+    padding: 5px;
+    background-color: #3fb0ac;
+    color: #173e43;
+    border-radius: 5px;
+}
+
+.FavTile button {
+    height: 100%;
+    width: auto;
+    min-width: 50px;
+    background-color: #173e43;
+    color: #fae596;
+    background: #173e43 url(../Images/noun_abort_1258168.png) no-repeat center;
+    background-size: 50px 50px;
+}
+
+.FavTile h5 {
+    margin: 0px;
+}
+
+.Fav_preview {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.FavContent {
+        width: 1%;
+        flex-grow: 1;
+}

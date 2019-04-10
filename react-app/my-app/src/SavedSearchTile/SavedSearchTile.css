@@ -1,0 +1,37 @@
+.SavedSearchTile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 1px solid black;
+    height: 200px;
+    margin: 15px;
+    background-color: #3fb0ac;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.SearchContent {
+    width: 90%;
+    padding: 5px;
+}
+
+.SavedSearchTile button {
+    height: 100%;
+    width: auto;
+    min-width: 50px;
+}
+
+.SavedSearchTile h5 {
+    margin: 0px;
+    color: #173e43;
+}
+
+.UpdateFilter {
+    background: #173e43 url(../Images/noun_checkmark_67952.png) no-repeat center;
+    background-size: 50px 50px;
+}
+
+.DeleteFilter {
+    background: #173e43 url(../Images/noun_abort_1258168.png) no-repeat center;
+    background-size: 50px 50px;
+}

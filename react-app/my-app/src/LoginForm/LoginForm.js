@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import './LoginForm.css';
 
 class LoginForm extends Component {
@@ -14,7 +15,7 @@ class LoginForm extends Component {
             <input type="password" placeholder="Password" minLength="6" name="psw"></input>
           </div>
           <div>
-          <button type="submit">Login</button>
+          <button type="submit"><Link to="/list">Login</Link></button>
           </div>
         </form>
     );

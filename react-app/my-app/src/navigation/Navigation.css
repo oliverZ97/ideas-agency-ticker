@@ -1,5 +1,5 @@
 .Navigation {
-    background-color: darkslategray;
+    background-color: #3fb0ac;
     display: flex;
     flex-direction: row;
     align-content: space-between;
@@ -8,11 +8,64 @@
 .Navigation button {
     width: 50px;
     height: 50px;
-    border-radius: 5px;
-    background-color: dimgrey;
+    border-radius: 50px;
+    background-color: #173e43;
     margin: 2px;
 }
 
+.Navigation a {
+    color: #3fb0ac;
+}
+
+.Navigation input {
+    border-radius: 30px;
+    border: none;
+    background-color: #dddfd4;
+}
+
+#navigation_button_filter {
+    background: url("../Images/noun_filters_220951.png");
+    background-size: 50px 50px;
+}
+
+#navigation_button_searches {
+    background: url("../Images/noun_diskette_1939628.png");
+    background-size: 50px 50px;
+}
+
+#navigation_button_favs {
+    background: url("../Images/noun_Star_750828.png");
+    background-size: 50px 50px;
+}
+
 #navigation_button_logout {
+    background: url("../Images/noun_logout_1350695.png");
+    background-size: 50px 50px;
+}
+
+@media screen and (max-width: 768px){
+    .Navigation button {
+        width: 40px;
+        height: 40px;
+    }
+
+    #navigation_button_filter {
+        background: url("../Images/noun_filters_220951.png");
+        background-size: 40px 40px;
+    }
     
+    #navigation_button_searches {
+        background: url("../Images/noun_diskette_1939628.png");
+        background-size: 40px 40px;
+    }
+    
+    #navigation_button_favs {
+        background: url("../Images/noun_Star_750828.png");
+        background-size: 40px 40px;
+    }
+    
+    #navigation_button_logout {
+        background: url("../Images/noun_logout_1350695.png");
+        background-size: 40px 40px;
+    }
 }

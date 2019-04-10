@@ -1,5 +1,5 @@
 .TileSlider {
-    
+
 }
 
 .slider {
@@ -11,17 +11,21 @@
 .slider-content{
     display: flex;
     flex-direction: row;
-    border: 3px solid black;
-    background-color: aqua;
     max-width: 90%;
     overflow-x: auto;
     white-space: nowrap;
 }
 
 .prev {
-    background-color: red;
+    background-color: #3fb0ac;
 }
 
 .next {
-    background-color: red;
+    background-color: #3fb0ac;
+}
+
+@media screen and (max-width: 768px){
+    .slider-content {
+        max-width: 80%;
+    }
 }

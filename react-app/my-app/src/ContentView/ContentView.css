@@ -1,4 +1,5 @@
 .ContentView {
+    margin: 5px;
     display: grid;
     grid-template-columns: 20% auto 20% 5%;
     grid-template-rows: auto;
@@ -6,7 +7,7 @@
     justify-items: center;
     grid-template-areas:
         "title title title title"
-        "date . . fav"
+        "date . fav fav"
         "img img img img"
         "article article article article"
         "author . . agency"
@@ -16,18 +17,26 @@
 .detail_title {
     grid-area: title;
     justify-self: left;
+    color: #dddfd4;
 }
 
 .detail_date {
     grid-area: date;
+    color: #dddfd4;
 }
 
 .detail_agency {
     grid-area: agency;
+    color: #dddfd4;
 }
 
 .detail_fav {
     grid-area: fav;
+    background: #fae596 url(../Images/noun_Star_750828.png);
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
 }
 
 .detail_img {
@@ -40,15 +49,20 @@
 
 .detail_text {
     grid-area: article;
+    color: #dddfd4;
 }
 
 .detail_author {
     grid-area: author;
+    color: #dddfd4;
+    margin-left: 15px;
 }
 
 .detail_tags {
     grid-area: tags;
     justify-self: left;
+    color: #dddfd4;
+    
 }
 
 @media screen and (max-width: 768px){

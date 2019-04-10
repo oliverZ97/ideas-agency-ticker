@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ListPage.css'
 import TileSlider from '../../TileSlider/TileSlider';
 
 class ListPage extends Component {

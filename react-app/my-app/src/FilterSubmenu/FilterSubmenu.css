@@ -1,0 +1,12 @@
+.FilterSubmenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1216px){
+    .FilterSubmenu {
+        justify-content: space-between;
+    }
+}

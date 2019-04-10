@@ -7,6 +7,10 @@ import Footer from './Footer/Footer';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import ListPage from './Pages/ListPage/ListPage';
 import DetailPage from './Pages/DetailPage/DetailPage';
+import FavPage from './Pages/FavPage/FavPage';
+import SaveSearchPage from './Pages/SaveSearchPage/SaveSearchPage';
+import FilterPage from './Pages/FilterPage/FilterPage';
+
 
 class App extends Component {
   render() {
@@ -17,6 +21,10 @@ class App extends Component {
                   <Route path={"login"} component={LoginPage}/>
                   <Route path={"list"} component={ListPage}/>
                   <Route path={"detail"} component={DetailPage}/>
+                  {/*<Route path={"error"} component={ErrorPage}/>*/}
+                  <Route path={"favorites"} component={FavPage}/>
+                  <Route path={"ssearches"} component={SaveSearchPage}/>
+                  <Route path={"filter"} component={FilterPage}/>
         </Router>
         <Footer />
       </div>

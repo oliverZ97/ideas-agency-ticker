@@ -6,9 +6,7 @@ class ContentView extends Component {
     return (
       <div className="ContentView">
         <h5 className="detail_title">djfkdhsf kjhdkjfh d kjahfkjhef khafkjhakhsf kakhfkahf kajhsfkhjaf</h5>
-        <button className="detail_fav" type="button">
-                Star 
-        </button>
+        <button className="detail_fav" type="button"></button>
         <p className="detail_date">09. April 2019</p>
         <p className="detail_agency">dpa</p>
         <img className="detail_img" alt="Beispielbild" src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80.jpg"></img>

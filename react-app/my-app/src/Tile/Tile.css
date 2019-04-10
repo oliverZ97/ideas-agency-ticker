@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     padding: 8px;
-    background-color: #b30000
+    background-color: #3fb0ac;
 }
 
 .Tile h4 {
@@ -27,7 +27,8 @@
     width: 30px;
     height: 30px;
     flex: 0.5;
-    background-color: orange;
+    background: #fae596 url(../Images/noun_Star_750828.png) no-repeat center;
+    background-size: 30px 30px;
     border-radius: 5px;
 }
 
