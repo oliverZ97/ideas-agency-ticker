@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import "./ContentView.css";
 
 class ContentView extends Component {
   render() {
     return (
       <div className="ContentView">
-        <h5 className="detail_title">djfkdhsf kjhdkjfh d kjahfkjhef khafkjhakhsf kakhfkahf kajhsfkhjaf</h5>
+        <Link className="detail_back" to="/list"><button className="detail_back"></button></Link>
+        <h4 className="detail_title">djfkdhsf kjhdkjfh d kjahfkjhef khafkjhakhsf kakhfkahf kajhsfkhjaf</h4>
         <button className="detail_fav" type="button"></button>
         <p className="detail_date">09. April 2019</p>
         <p className="detail_agency">dpa</p>

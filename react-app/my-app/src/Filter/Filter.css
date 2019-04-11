@@ -1,10 +1,11 @@
 .Filter {
     margin-bottom: 50px;
     width: 80%;
-    background-color: #fae596;
+    border: 2px  #fae596 outset;
+    padding: 3px;
 }
 
-.Filter h5 {
+.Filter h4 {
     margin-bottom: 5px;
     margin-top: 100px;
     color: #fae596;

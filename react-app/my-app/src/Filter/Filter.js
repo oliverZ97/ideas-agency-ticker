@@ -11,11 +11,11 @@ class Filter extends Component {
           <button className="Filter_button_update" type="submit"><Link to="/list"></Link></button>
           <button className="Filter_button_save" type="submit"></button>
         </div>
-        <h5>Prioritäten</h5>
+        <h4>Prioritäten</h4>
         <FilterSubmenu />
-        <h5>Kategorien</h5>
+        <h4>Kategorien</h4>
         <FilterSubmenu />
-        <h5>Agenturen</h5>
+        <h4>Agenturen</h4>
         <FilterSubmenu />
       </div>
     );

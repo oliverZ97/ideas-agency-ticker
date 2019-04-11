@@ -6,13 +6,13 @@ class ListPage extends Component {
   render() {
     return (
       <div className="ListPage">
-        <h5>Priorität 1</h5>
+        <h3>Priorität 1</h3>
         <TileSlider />
-        <h5>Politik</h5>
+        <h3>Politik</h3>
         <TileSlider />
-        <h5>Wirtschaft</h5>
+        <h3>Wirtschaft</h3>
         <TileSlider />
-        <h5>Kultur</h5>
+        <h3>Kultur</h3>
         <TileSlider />
       </div>
     );

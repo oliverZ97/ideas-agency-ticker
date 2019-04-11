@@ -6,8 +6,8 @@ class TileSlider extends Component {
   render() {
     return (
         <div className="slider">
-            <div className="prev">
-                <p>Prev</p>
+            <div>
+                <button className="prev" type="submit"></button>
             </div>
             <div className="slider-content">
                 <div className="tile">
@@ -84,8 +84,8 @@ class TileSlider extends Component {
                 </div>
 
             </div>
-            <div className="next">
-                <p>Next</p>
+            <div>
+                <button className="next" type="submit"></button>
             </div>
         </div>
     );
