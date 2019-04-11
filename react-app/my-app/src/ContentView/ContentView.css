@@ -1,18 +1,18 @@
 .ContentView {
     margin: 5px;
     display: grid;
-    grid-template-columns: 20% auto 20% 5%;
+    grid-template-columns: 25% 20% auto 20% 5% 25%;
     grid-template-rows: auto;
     grid-gap: 5px;
     justify-items: center;
     grid-template-areas:
-        "back . . ."
-        "title title title title"
-        "date . fav fav"
-        "img img img img"
-        "article article article article"
-        "author . . agency"
-        "tags tags tags tags";
+        ". back . . . ."
+        ". title title title title ."
+        ". date . fav fav ."
+        ". img img img img ."
+        ". article article article article ."
+        ". author . . agency ."
+        ". tags tags tags tags. ";
 }
 
 .detail_back {
@@ -63,12 +63,16 @@
 .detail_text {
     grid-area: article;
     color: #dddfd4;
+    line-height: 1.5;
+    padding: 5px;
+    border-left: 2px solid #fae596;
 }
 
 .detail_author {
     grid-area: author;
     color: #dddfd4;
     margin-left: 15px;
+    justify-self: left;
 }
 
 .detail_tags {
@@ -80,13 +84,21 @@
 
 @media screen and (max-width: 768px){
     .ContentView {
-        grid-template-columns: 20% auto 20% 5%;
+        grid-template-columns: 30% auto 20% 5%;
         grid-template-areas:
+        "back . . . "
         "title title title title"
         "date . fav ."
         "img img img img"
         "article article article article"
         "author . agency ."
         "tags tags tags tags";
+        grid-gap: 0px;
+        padding: 3%;
+    }
+
+    .detail_text {
+        text-align: justify;
+        width: 100%;
     }
 }

@@ -78,15 +78,15 @@ h5 {
 }
 
 h6 { 
-  font-size: 0.5rem;
+  font-size: 1rem;
 }
 
 text {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 }
 
@@ -112,11 +112,11 @@ p {
   }
 
   h5 {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   h6 {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
 }
 
