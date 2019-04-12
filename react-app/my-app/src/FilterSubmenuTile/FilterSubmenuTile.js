@@ -6,6 +6,7 @@ class FilterSubmenuTile extends Component {
     return (
       <div className="FilterSubmenuTile">
         <p>FilterSubmenuTile</p>
+        <button className="tile-unchecked"></button>
       </div>
     );
   }

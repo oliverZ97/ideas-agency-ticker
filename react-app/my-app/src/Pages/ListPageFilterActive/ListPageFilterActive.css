@@ -1,4 +1,4 @@
-.ListPage {
+.ListPageFilterActive {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -6,9 +6,13 @@
     padding: 5px;
 }
 
-.ListPage h3 {
+.ListPageFilterActive h3 {
     margin-top: 100px;
     margin-bottom: 5px;
+    margin-left: 5%;
+}
+
+.active-filter-settings {
     margin-left: 5%;
 }
 
@@ -69,12 +73,12 @@ input:checked + .toggle-slider:before {
 }
 
 @media screen and (max-width: 768px) {
-    .ListPage {
+    .ListPageFilterActive {
         width: 100%;
         padding: 0px; 
     }
 
-    .ListPage h3 {
+    .ListPageFilterActive h3 {
         margin-top: 100px;
         margin-bottom: 5px;
         margin-left: 13%;
@@ -82,15 +86,16 @@ input:checked + .toggle-slider:before {
 }
 
 @media screen and (min-width: 1024px) {
-    .ListPage {
+    .ListPageFilterActive {
         width: 100%;
         padding: 0px; 
     }
 }
 
 @media screen and (min-width: 1216px) {
-    .ListPage {
+    .ListPageFilterActive {
         width: 60%;
         padding: 5px; 
     }
 }
+

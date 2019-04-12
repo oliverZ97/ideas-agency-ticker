@@ -120,3 +120,11 @@
     }
 
 }
+
+@media screen and (min-width: 1216px) {
+    .ContentView {
+        width: 60%;
+        padding: 5px; 
+        margin: auto;
+    }
+}

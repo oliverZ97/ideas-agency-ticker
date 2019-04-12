@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import './ListPage.css'
+import './ListPageFilterActive.css'
 import TileSlider from '../../TileSlider/TileSlider';
 
-class ListPage extends Component {
+class ListPageFilterActive extends Component {
   render() {
     return (
-      <div className="ListPage">
+      <div className="ListPageFilterActive">
+        <p className="active-filter-settings">Filter aktiv: Priorität 1, Priorität 2, Wirtschaft</p>
         <label className="auto-reload-toggle">
             <input type="checkbox" name="toggle"></input>
             <span className="toggle-slider"></span>
@@ -24,4 +25,4 @@ class ListPage extends Component {
   }
 }
 
-export default ListPage;
+export default ListPageFilterActive;

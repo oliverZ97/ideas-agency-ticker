@@ -1,4 +1,4 @@
-.FilterSubmenuTile {
+.FilterSubmenuTileActive {
     border: 1px solid #dddfd4;
     width: 200px;
     height: 100px;
@@ -9,28 +9,28 @@
     justify-content: center;
 }
 
-.FilterSubmenuTile p {
+.FilterSubmenuTileActive p {
     color: #dddfd4;
     text-align: center;
     font-size: 22px;
 }
 
-.FilterSubmenuTile .tile-unchecked {
+.FilterSubmenuTileActive .tile-checked {
     width: 30px;
     height: 30px;
-    background: #dddfd4;
+    background: #fae596 url(../Images/noun_checkmark_67952.png) no-repeat center;
     background-size: 30px 30px;
     align-self: flex-end;
 }
 
 @media screen and (max-width: 768px) {
-    .FilterSubmenuTile {
+    .FilterSubmenuTileActive {
         width: 100%;
     }
 }
 
 @media screen and (min-width:1216px) {
-    .FilterSubmenuTile {
+    .FilterSubmenuTileActive {
         width: 250px;
         height: 150px;
     }

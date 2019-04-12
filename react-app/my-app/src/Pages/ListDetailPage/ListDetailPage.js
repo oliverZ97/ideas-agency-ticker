@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import './ListPage.css'
+import './ListDetailPage.css'
 import TileSlider from '../../TileSlider/TileSlider';
+import ContentViewExpand from '../../ContentViewExpand/ContentViewExpand';
 
-class ListPage extends Component {
+class ListDetailPage extends Component {
   render() {
     return (
-      <div className="ListPage">
+      <div className="ListDetailPage">
         <label className="auto-reload-toggle">
             <input type="checkbox" name="toggle"></input>
             <span className="toggle-slider"></span>
@@ -13,6 +14,7 @@ class ListPage extends Component {
         <label className="toggle-label"of="toggle">Auto-Aktualisieren</label>
         <h3>Priorität 1</h3>
         <TileSlider />
+        <ContentViewExpand />
         <h3>Politik</h3>
         <TileSlider />
         <h3>Wirtschaft</h3>
@@ -24,4 +26,4 @@ class ListPage extends Component {
   }
 }
 
-export default ListPage;
+export default ListDetailPage;
