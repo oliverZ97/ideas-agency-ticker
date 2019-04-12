@@ -13,31 +13,31 @@
 }
 
 .prev {
-    background-color: #3fb0ac;
-    background: #3fb0ac url(../Images/noun_Arrow_8603.png) no-repeat center;
+    background: #fae596 url(../Images/noun_Arrow_8603.png) no-repeat center;
     background-size: 50px 50px;
     height: 100%;
     min-width: 50px;
+    border: 1px solid #173e43;
 }
 
 .next {
-    background-color: #3fb0ac;
-    background: #3fb0ac url(../Images/noun_Arrow_8604.png) no-repeat center;
+    background: #fae596 url(../Images/noun_Arrow_8604.png) no-repeat center;
     background-size: 50px 50px;
     height: 100%;
     min-width: 50px;
+    border: 1px solid #173e43;
 }
 
 @media screen and (max-width: 768px){
     .slider-content {
-        width: 100%;
+        width: auto;
     }
 
     .prev {
-        opacity: 0.6;;
+        width: 10%;
     }
 
     .next {
-        opacity: 0.6;
+        width: 10%;
     }
 }

@@ -5,8 +5,7 @@
     border: 1px solid black;
     height: 200px;
     margin: 15px;
-    background-color: #3fb0ac;
-    border-radius: 5px;
+    background-color: #173e43;
     padding: 5px;
 }
 
@@ -23,15 +22,14 @@
 
 .SavedSearchTile h5 {
     margin: 0px;
-    color: #173e43;
-}
-
-.UpdateFilter {
-    background: #173e43 url(../Images/noun_checkmark_67952.png) no-repeat center;
-    background-size: 50px 50px;
+    color: #dddfd4;
 }
 
 .DeleteFilter {
-    background: #173e43 url(../Images/noun_abort_1258168.png) no-repeat center;
+    background: #fae596 url(../Images/noun_abort_1258168.png) no-repeat center;
     background-size: 50px 50px;
+}
+
+.SavedSearchTile p {
+    color: #dddfd4;
 }

@@ -6,7 +6,7 @@ class ContentView extends Component {
   render() {
     return (
       <div className="ContentView">
-        <Link className="detail_back" to="/list"><button className="detail_back"></button></Link>
+        <Link className="detail_back" to="/list"></Link>
         <h4 className="detail_title">Umbau vor Lärmschutztunnel auf A7 geht weiter - weitere Vollsperrung</h4>
         <button className="detail_fav" type="button"></button>
         <p className="detail_date">11. April 2019</p>

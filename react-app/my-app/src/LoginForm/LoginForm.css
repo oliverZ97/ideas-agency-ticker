@@ -5,6 +5,7 @@
     align-content: center;
     justify-content: center; /**alignment along the MAIN-AXIS(column)**/
     margin-bottom: 200px;
+    background-color: #173e43;
 }
 
 .LoginForm input {
@@ -19,6 +20,10 @@
 }
 
 .LoginForm input:focus {
+    border-color:#00cc66;
+}
+
+.LoginForm input:hover {
     border-color:#00cc66;
 }
   

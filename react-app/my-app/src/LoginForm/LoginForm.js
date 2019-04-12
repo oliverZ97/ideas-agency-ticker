@@ -15,7 +15,7 @@ class LoginForm extends Component {
             <input type="password" placeholder="Password" minLength="6" name="psw"></input>
           </div>
           <div>
-          <button type="submit"><Link to="/list">Login</Link></button>
+          <Link to="/list"><button type="submit">Login</button></Link>
           </div>
         </form>
     );

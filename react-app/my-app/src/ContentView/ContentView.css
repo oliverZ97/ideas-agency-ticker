@@ -1,18 +1,17 @@
 .ContentView {
-    margin: 5px;
+    background-color: #173e43;
     display: grid;
     grid-template-columns: 25% 20% auto 20% 5% 25%;
     grid-template-rows: auto;
     grid-gap: 5px;
     justify-items: center;
     grid-template-areas:
-        ". back . . . ."
+        ". back . . fav ."
         ". title title title title ."
-        ". date . fav fav ."
+        ". date . tags tags ."
         ". img img img img ."
         ". article article article article ."
-        ". author . . agency ."
-        ". tags tags tags tags. ";
+        ". author . . agency .";
 }
 
 .detail_back {
@@ -23,6 +22,7 @@
     border-radius: 50px;
     background: #fae596 url(../Images/noun_Arrow_8603.png) no-repeat center;
     background-size: 40px 40px;
+    margin-top: 10px;
 }
 
 .detail_title {
@@ -50,6 +50,7 @@
     height: 50px;
     border-radius: 50px;
     justify-self: end;
+    margin-top: 10px;
 }
 
 .detail_img {
@@ -86,19 +87,36 @@
     .ContentView {
         grid-template-columns: 30% auto 20% 5%;
         grid-template-areas:
-        "back . . . "
+        "back . . fav "
         "title title title title"
-        "date . fav ."
+        "date . tags tags"
         "img img img img"
         "article article article article"
-        "author . agency ."
-        "tags tags tags tags";
+        "author author agency agency";
         grid-gap: 0px;
         padding: 3%;
+        margin-top: 0px;
     }
 
     .detail_text {
         text-align: justify;
         width: 100%;
     }
+}
+
+@media screen and (min-width: 1024px) {
+    .ContentView {
+        grid-template-columns: 30% auto 20% 5%;
+        grid-template-areas:
+        "back . . fav "
+        "title title title title"
+        "date . tags tags"
+        "img img img img"
+        "article article article article"
+        "author author agency agency";
+        grid-gap: 0px;
+        padding: 3%;
+        margin-top: 0px;
+    }
+
 }

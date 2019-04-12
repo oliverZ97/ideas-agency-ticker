@@ -5,9 +5,6 @@ class SavedSearchTile extends Component {
   render() {
     return (
       <div className="SavedSearchTile">
-        <div>
-            <button className="UpdateFilter" type="submit"></button>
-        </div>
         <div className="SearchContent">
             <h5>Name</h5>
             <p>Filter:</p>

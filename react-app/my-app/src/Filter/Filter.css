@@ -1,14 +1,17 @@
 .Filter {
     margin-bottom: 50px;
-    width: 80%;
-    border: 2px  #fae596 outset;
+    width: 100%;
+    border: 2px  #173e43 outset;
     padding: 3px;
+    background-color: #dddfd4;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Filter h4 {
     margin-bottom: 5px;
     margin-top: 100px;
-    color: #fae596;
 }
 
 .Filter button {
@@ -34,4 +37,10 @@
 .Filter_button_save {
     background: #fae596 url(../Images/noun_diskette_1939628.png);
     background-size: 50px 50px;
+}
+
+@media screen and (max-width: 768px){
+    .Filter {
+        width: 90%;
+    }
 }

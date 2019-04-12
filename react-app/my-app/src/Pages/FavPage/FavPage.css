@@ -1,6 +1,7 @@
 .FavPage {
     width: 60%;
     margin: auto;
+    background-color: #dddfd4;
 }
 
 .fav_back {
@@ -11,4 +12,16 @@
     background-size: 40px 40px;
     margin-top: 15px;
     margin-left: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .FavPage{
+        width: 100%;
+    } 
+}
+
+@media screen and (min-width: 1024px){
+    .FavPage {
+        width: 100%;
+    }
 }

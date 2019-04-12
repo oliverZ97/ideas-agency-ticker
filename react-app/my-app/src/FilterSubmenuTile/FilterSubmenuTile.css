@@ -1,13 +1,13 @@
 .FilterSubmenuTile {
-    border: 1px solid #173e43;
+    border: 1px solid #dddfd4;
     width: 200px;
     height: 100px;
     overflow: hidden;
-    background-color: #3fb0ac;
+    background-color: #173e43;
 }
 
 .FilterSubmenuTile p {
-    color: #173e43;
+    color: #dddfd4;
     text-align: center;
     font-size: 22px;
 }

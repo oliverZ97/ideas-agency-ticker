@@ -10,6 +10,7 @@ import DetailPage from './Pages/DetailPage/DetailPage';
 import FavPage from './Pages/FavPage/FavPage';
 import SaveSearchPage from './Pages/SaveSearchPage/SaveSearchPage';
 import FilterPage from './Pages/FilterPage/FilterPage';
+import ActiveFilterPage from './Pages/ActiveFilterPage/ActiveFilterPage';
 
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
                   <Route path={"favorites"} component={FavPage}/>
                   <Route path={"ssearches"} component={SaveSearchPage}/>
                   <Route path={"filter"} component={FilterPage}/>
+                  <Route path={"active-filter"} component={ActiveFilterPage}/>
         </Router>
         <Footer />
       </div>
