@@ -7,7 +7,8 @@ class LoginForm extends Component {
     super(props);
     this.state = {
       name: '',
-      password: ''
+      password: '',
+      showError: props.showError
     };
 
     this.handleChangeUsername = this.handleChangeUsername.bind(this);
@@ -15,22 +16,29 @@ class LoginForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  static getDerivedStateFromProps(props, state) {
+    state.showError = props.showError
+    return state
+  } 
+
   handleChangeUsername(e) {
-    console.log(e);
     this.setState({ name: e.target.value })
   }
 
   handleChangePassword(e) {
-    console.log(e);
     this.setState({ password: e.target.value })
 
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.onSubmit(this.state.name, this.state.password);
   }
 
   render() {
+
+    var errorMessage = this.state.showError ? <p className="ErrorMsg">Error</p> : null;
+
     return (
       <form className="LoginForm" onSubmit={this.handleSubmit}>
         <div className="username">
@@ -44,6 +52,7 @@ class LoginForm extends Component {
         <div>
           <button type="submit">Login</button>
         </div>
+        {errorMessage}
       </form>
     );
   }

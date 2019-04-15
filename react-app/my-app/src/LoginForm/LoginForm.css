@@ -50,6 +50,10 @@
     outline: none;
 }
 
+.ErrorMsg {
+    color: #dddfd4;
+}
+
 @media screen and (max-width: 768px) {
     .LoginForm {
         min-width: 260px;
