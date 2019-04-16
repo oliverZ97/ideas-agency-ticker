@@ -29,7 +29,7 @@
     width: 30px;
     height: 30px;
     flex: 0.5;
-    background: #fae596 url(../Images/noun_Star_750828.png) no-repeat center;
+    background: #fae596 url(../../Images/noun_Star_750828.png) no-repeat center;
     background-size: 30px 30px;
     border-radius: 5px;
 }

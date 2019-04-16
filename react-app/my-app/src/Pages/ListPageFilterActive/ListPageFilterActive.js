@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ListPageFilterActive.css'
-import TileSlider from '../../TileSlider/TileSlider';
+import TileSlider from '../../Components/TileSlider/TileSlider';
 
 class ListPageFilterActive extends Component {
   render() {

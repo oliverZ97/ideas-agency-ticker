@@ -18,7 +18,7 @@
 .FilterSubmenuTileActive .tile-checked {
     width: 30px;
     height: 30px;
-    background: #fae596 url(../Images/noun_checkmark_67952.png) no-repeat center;
+    background: #fae596 url(../../Images/noun_checkmark_67952.png) no-repeat center;
     background-size: 30px 30px;
     align-self: flex-end;
 }

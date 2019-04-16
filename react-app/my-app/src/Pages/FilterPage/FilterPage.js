@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import './FilterPage.css';
-import SlideInView from '../../SlideInView/SlideInView';
-import Filter from '../../Filter/Filter';
+import SlideInView from '../../Components/SlideInView/SlideInView';
+import Filter from '../../Components/Filter/Filter';
 
 class FilterPage extends Component {
   render() {

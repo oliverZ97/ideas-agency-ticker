@@ -20,26 +20,24 @@ export class HttpClient {
             payload.headers[key] = value;
         }
 
-        fetch(url, payload)
-        .then(handleResponse)
-        .then(data => console.log('data is', data))
-        .catch (error => console.log('Wrong input', error.statusText));
+        return fetch(url, payload)
+            .then(handleResponse)
+    }
+
+    put() { }
+
+    delete() { }
+}
 
 function handleResponse(response) {
     if (response.ok) {
-        return response.json()
+        return Promise.resolve(response.json())
     } else {
         return Promise.reject({
             status: response.status,
             statusText: response.statusText
         })
     }
-}
-    }
-
-put() { }
-
-delete () { }
 }
 
 // default export

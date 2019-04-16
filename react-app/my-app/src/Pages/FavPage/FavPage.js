@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import './FavPage.css';
-import SlideInView from '../../SlideInView/SlideInView';
-import Favorites from '../../Favorites/Favorites';
+import SlideInView from '../../Components/SlideInView/SlideInView';
+import Favorites from '../../Components/Favorites/Favorites';
 
 class FavPage extends Component {
   render() {

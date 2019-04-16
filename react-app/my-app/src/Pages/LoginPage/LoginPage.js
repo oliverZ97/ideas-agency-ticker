@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PageTitle from '../../PageTitle/PageTitle';
-import LoginForm from '../../LoginForm/LoginForm';
+import PageTitle from '../../Components/PageTitle/PageTitle';
+import LoginForm from '../../Components/LoginForm/LoginForm';
 import apiClient from '../../services/apiClient';
 import './LoginPage.css';
 
@@ -15,14 +15,15 @@ class LoginPage extends Component {
   }
 
   onLogin(username, password) {
-    if(username !== password) {
-      this.setState({loginFailed: true});
-    } else {
-      this.setState({loginFailed: false});
-    }
-
-
-    apiClient.login(username, password);
+    apiClient.login(username, password)
+    .then(() => {
+      console.log('Weiterleitung')
+    } )
+    .catch(() => {
+      this.setState({
+        loginFailed: true
+      })
+    })
   }
 
   render() {

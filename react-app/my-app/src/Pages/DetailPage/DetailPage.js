@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContentView from '../../ContentView/ContentView';
+import ContentView from '../../Components/ContentView/ContentView';
 
 class DetailPage extends Component {
   render() {

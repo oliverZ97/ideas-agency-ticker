@@ -37,7 +37,7 @@ class LoginForm extends Component {
 
   render() {
 
-    var errorMessage = this.state.showError ? <p className="ErrorMsg">Error</p> : null;
+    var errorMessage = this.state.showError ? <p className="ErrorMsg">Oops! Please check your Login Data.</p> : null;
 
     return (
       <form className="LoginForm" onSubmit={this.handleSubmit}>

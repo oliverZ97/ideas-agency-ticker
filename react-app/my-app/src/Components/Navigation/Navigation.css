@@ -36,22 +36,22 @@
 }
 
 #navigation_button_filter {
-    background: #fae595 url("../Images/noun_filters_220951.png");
+    background: #fae595 url("../../Images/noun_filters_220951.png");
     background-size: 50px 50px;
 }
 
 #navigation_button_searches {
-    background: #fae595 url("../Images/noun_diskette_1939628.png");
+    background: #fae595 url("../../Images/noun_diskette_1939628.png");
     background-size: 50px 50px;
 }
 
 #navigation_button_favs {
-    background: #fae595 url("../Images/noun_Star_750828.png");
+    background: #fae595 url("../../Images/noun_Star_750828.png");
     background-size: 50px 50px;
 }
 
 #navigation_button_logout {
-    background: #fae595 url("../Images/noun_logout_1350695.png");
+    background: #fae595 url("../../Images/noun_logout_1350695.png");
     background-size: 50px 50px;
 }
 
@@ -66,22 +66,22 @@
     }
 
     #navigation_button_filter {
-        background: #fae595 url("../Images/noun_filters_220951.png");
+        background: #fae595 url("../../Images/noun_filters_220951.png");
         background-size: 30px 30px;
     }
     
     #navigation_button_searches {
-        background: #fae595 url("../Images/noun_diskette_1939628.png");
+        background: #fae595 url("../../Images/noun_diskette_1939628.png");
         background-size: 30px 30px;
     }
     
     #navigation_button_favs {
-        background: #fae595 url("../Images/noun_Star_750828.png");
+        background: #fae595 url("../../Images/noun_Star_750828.png");
         background-size: 30px 30px;
     }
     
     #navigation_button_logout {
-        background: #fae595 url("../Images/noun_logout_1350695.png");
+        background: #fae595 url("../../Images/noun_logout_1350695.png");
         background-size: 30px 30px;
     }
 }
@@ -99,22 +99,22 @@
     }
 
     #navigation_button_filter {
-        background: #fae595 url("../Images/noun_filters_220951.png");
+        background: #fae595 url("../../Images/noun_filters_220951.png");
         background-size: 40px 40px;
     }
     
     #navigation_button_searches {
-        background: #fae595 url("../Images/noun_diskette_1939628.png");
+        background: #fae595 url("../../Images/noun_diskette_1939628.png");
         background-size: 40px 40px;
     }
     
     #navigation_button_favs {
-        background: #fae595 url("../Images/noun_Star_750828.png");
+        background: #fae595 url("../../Images/noun_Star_750828.png");
         background-size: 40px 40px;
     }
     
     #navigation_button_logout {
-        background: #fae595 url("../Images/noun_logout_1350695.png");
+        background: #fae595 url("../../Images/noun_logout_1350695.png");
         background-size: 40px 40px;
     }
 }

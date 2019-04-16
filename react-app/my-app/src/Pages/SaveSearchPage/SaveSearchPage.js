@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import './SaveSearchPage.css';
-import SlideInView from '../../SlideInView/SlideInView';
-import SavedSearches from '../../SavedSearches/SavedSearches';
+import SlideInView from '../../Components/SlideInView/SlideInView';
+import SavedSearches from '../../Components/SavedSearches/SavedSearches';
 
 class SaveSearchPage extends Component {
   render() {

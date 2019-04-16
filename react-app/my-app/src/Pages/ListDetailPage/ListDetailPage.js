@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './ListDetailPage.css'
-import TileSlider from '../../TileSlider/TileSlider';
-import ContentViewExpand from '../../ContentViewExpand/ContentViewExpand';
+import TileSlider from '../../Components/TileSlider/TileSlider';
+import ContentViewExpand from '../../Components/ContentViewExpand/ContentViewExpand';
 
 class ListDetailPage extends Component {
   render() {
