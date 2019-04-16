@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PageTitle from '../../PageTitle/PageTitle';
 import LoginForm from '../../LoginForm/LoginForm';
+import apiClient from '../../services/apiClient';
 import './LoginPage.css';
 
 class LoginPage extends Component {
@@ -19,6 +20,9 @@ class LoginPage extends Component {
     } else {
       this.setState({loginFailed: false});
     }
+
+
+    apiClient.login(username, password);
   }
 
   render() {
