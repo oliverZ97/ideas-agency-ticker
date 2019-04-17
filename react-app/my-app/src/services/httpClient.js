@@ -1,10 +1,10 @@
 import 'whatwg-fetch';
 
 export class HttpClient {
-    get() { }
+    get() {}
 
     //The HTTP-Post-Method uses whatwg-fetch to create HTTP-Requests
-    // the fetch-call needs fetch(url, headers, body)
+    // the fetch-call needs fetch(url, payload)
     post(url, content, headers) {
 
         let payload = {
