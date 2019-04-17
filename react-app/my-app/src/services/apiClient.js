@@ -1,11 +1,12 @@
 // default import
 import httpClient from './httpClient';
+import authentificationService from './authentificationService';
 
 class ApiClient {
 
-    constructor(client) {
+    constructor(client, authentificationService) {
         this.client = client;
-        this.token = this.getToken();
+        this.authentificationService = authentificationService
     }
 
     //calls the Post-Method of the http-Client to send the content to server
@@ -21,7 +22,7 @@ class ApiClient {
 
         return this.client.post('https://iam.ipool.asideas.de/iam/token/newsfinder', {}, headers)
             .then(data => {
-                this.setToken(data);
+                this.authentificationService.setToken(data);
                 return data;
             })
     }
@@ -34,24 +35,14 @@ class ApiClient {
         }
 
         let headers = {
-            XAuthToken: this.getToken()
+            XAuthToken: this.authentificationService.getToken()
         }
 
-        return this.client.post('https://newsfinder-api.ipool.asideas.de/newsfinder/agency/documents', bodyContent, headers)
+        return this.client.post('https://newsfinder-api.ipool.asideas.de/newsfinder/agencies/documents', bodyContent, headers)
             .then(data => {
                 return data;//TODO
             })
     }
-
-    setToken(data) {
-        this.token = data;
-        localStorage.setItem('accessToken', data['accessToken']);//puts the Response Token in a local Storage object
-        return data;
-    }
-
-    getToken() {
-        return localStorage.getItem('accessToken');
-    }
 }
 
-export default new ApiClient(httpClient);
+export default new ApiClient(httpClient, authentificationService);

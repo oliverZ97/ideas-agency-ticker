@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import authentificationService from '../../services/authentificationService';
 import './Navigation.css';
 
 class Navigation extends Component {
+  constructor() {
+    super();
+    this.handleLogout = this.handleLogout.bind(this);
+    this.authentificationService = authentificationService
+  }
+
+  handleLogout() {
+    this.authentificationService.removeToken();
+  }
+
   render() {
     return (
       <div className="Navigation">
@@ -16,7 +27,7 @@ class Navigation extends Component {
             <input id="navigation_searchbar" type="text" placeholder="Search"></input>
           </div>
           <div className="nav_logout">
-            <a href="login"><button id="navigation_button_logout" type="submit"></button></a>
+            <button id="navigation_button_logout" onClick={this.handleLogout}></button>
           </div>
         </div>
       </div>

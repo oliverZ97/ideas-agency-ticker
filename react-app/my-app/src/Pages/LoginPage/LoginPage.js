@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router';
 import { browserHistory } from 'react-router';
 import PageTitle from '../../Components/PageTitle/PageTitle';
 import LoginForm from '../../Components/LoginForm/LoginForm';
@@ -30,10 +29,6 @@ class LoginPage extends Component {
   }
 
   render() {
-    /** if (this.state.redirect) {
-      return <Redirect to='/list' />
-    }*/
-
     return (
       <div className="LoginPage">
         <PageTitle />
