@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router';
+import { browserHistory } from 'react-router';
 import PageTitle from '../../Components/PageTitle/PageTitle';
 import LoginForm from '../../Components/LoginForm/LoginForm';
 import apiClient from '../../services/apiClient';
@@ -9,6 +11,7 @@ class LoginPage extends Component {
     super(props);
     this.state = {
       loginFailed: false,
+      redirect: false
     };
 
     this.onLogin = this.onLogin.bind(this);
@@ -17,7 +20,7 @@ class LoginPage extends Component {
   onLogin(username, password) {
     apiClient.login(username, password)
     .then(() => {
-      console.log('Weiterleitung')
+      browserHistory.push('/list')
     } )
     .catch(() => {
       this.setState({
@@ -27,6 +30,10 @@ class LoginPage extends Component {
   }
 
   render() {
+    /** if (this.state.redirect) {
+      return <Redirect to='/list' />
+    }*/
+
     return (
       <div className="LoginPage">
         <PageTitle />
