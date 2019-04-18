@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { browserHistory } from 'react-router';
 import authentificationService from '../../services/authentificationService';
 import './Navigation.css';
 
@@ -12,6 +13,7 @@ class Navigation extends Component {
 
   handleLogout() {
     this.authentificationService.removeToken();
+    browserHistory.push('/login');
   }
 
   render() {
