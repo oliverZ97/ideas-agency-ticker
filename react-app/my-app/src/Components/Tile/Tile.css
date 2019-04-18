@@ -8,15 +8,14 @@
     background-color: #173e43; 
 }
 
-.Tile h4 {
+.Tile p {
     flex: 2;
     margin-bottom: 0px;
     margin-top: 0px;
     color:#dddfd4;
 }
 
-.Tile p {
-    overflow: hidden;
+.Tile h6 {
     white-space: pre;
     text-overflow: ellipsis;
     align-self: flex-end;
@@ -25,10 +24,15 @@
     color: #dddfd4;
 }
 
+.Tile .content {
+    overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;
+}
+
 .Tile button {
-    width: 30px;
-    height: 30px;
-    flex: 0.5;
+    width: 40px;
+    height: 40px;
     background: #fae596 url(../../Images/noun_Star_750828.png) no-repeat center;
     background-size: 30px 30px;
     border-radius: 5px;
@@ -37,5 +41,5 @@
 .Tile .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
 }

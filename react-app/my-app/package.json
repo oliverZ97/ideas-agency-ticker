@@ -7,7 +7,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^3.2.1",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "string-strip-html": "^4.0.12"
   },
   "scripts": {
     "start": "react-scripts start",

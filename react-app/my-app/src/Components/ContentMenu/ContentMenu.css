@@ -1,0 +1,20 @@
+.ContentMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+    background-color: #dddfd4;
+    border: 1px solid #dddfd4;
+}
+
+.ContentMenu .toggle {
+    display: flex;
+    flex-direction: row;
+}
+
+.ContentMenu input {
+    border-radius: 30px;
+    border: none;
+    margin-left: 5px;
+}

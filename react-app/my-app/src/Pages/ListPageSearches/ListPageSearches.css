@@ -1,0 +1,29 @@
+.ListPageSearches {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.ListPageSearches button {
+    background-color: #fae596;
+    border-radius: 5px;
+}
+
+.ListPageSearches .menu {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #dddfd4;
+    border: 1px solid #dddfd4;
+}
+
+.ListPageSearches .searchresult {
+    min-height: 600px;
+    display: flex;
+    flex-wrap: wrap; 
+    background-color: #dddfd4;
+}

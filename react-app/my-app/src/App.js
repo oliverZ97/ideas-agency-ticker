@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div className="App">
       <Navigation />
-        <Router history={browserHistory}>
+        <Router className="content" history={browserHistory}>
                   <Route path={"login"} component={LoginPage}/>
                   <Route path={"list"} component={ListPage}/>
                   <Route path={"detail"} component={DetailPage}/>

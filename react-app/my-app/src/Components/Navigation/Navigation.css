@@ -22,12 +22,6 @@
     color: #3fb0ac;
 }
 
-.Navigation input {
-    border-radius: 30px;
-    border: none;
-    background-color: #dddfd4;
-}
-
 .nav_search {
     display: flex;
     flex-direction: row;

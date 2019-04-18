@@ -25,9 +25,6 @@ class Navigation extends Component {
             <a href="ssearches"><button id="navigation_button_searches" type="submit"></button></a>
             <a href="favorites"><button id="navigation_button_favs" type="submit"></button></a>
           </div>
-          <div className="nav_search">
-            <input id="navigation_searchbar" type="text" placeholder="Search"></input>
-          </div>
           <div className="nav_logout">
             <button id="navigation_button_logout" onClick={this.handleLogout}></button>
           </div>

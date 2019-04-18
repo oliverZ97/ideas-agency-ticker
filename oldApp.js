@@ -20,12 +20,12 @@ class App extends Component {
             Learn React
           </a>
         </header>
-        <div class="login">
+        <div className="login">
           <label for="uName">Benutzer:</label>
           <input type="text" placeholder="Benutzer" minLength="4" name="uName"></input>
           <label for="psw">Passwort:</label>
           <input type="text" placeholder="Password" minLength="6" name="psw"></input>
-          <button class="b-login" type="submit">Login</button>
+          <button className="b-login" type="submit">Login</button>
         </div>
       </div>
     );
