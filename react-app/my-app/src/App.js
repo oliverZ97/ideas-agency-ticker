@@ -13,6 +13,7 @@ import FilterPage from './Pages/FilterPage/FilterPage';
 import ActiveFilterPage from './Pages/ActiveFilterPage/ActiveFilterPage';
 import ListPageFilterActive from './Pages/ListPageFilterActive/ListPageFilterActive';
 import ListDetailPage from './Pages/ListDetailPage/ListDetailPage';
+import ListPageSearches from './Pages/ListPageSearches/ListPageSearches';
 
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
                   <Route path={"active-filter"} component={ActiveFilterPage}/>
                   <Route path={"list-active"} component={ListPageFilterActive}/>
                   <Route path={"list-detail"} component={ListDetailPage}/>
+                  <Route path={"list-search"} component={ListPageSearches}/>
         </Router>
         <Footer />
       </div>
