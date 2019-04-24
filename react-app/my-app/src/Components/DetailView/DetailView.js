@@ -9,6 +9,7 @@ class DetailView extends React.Component {
 
     this.renderAsHtml = this.renderAsHtml.bind(this);
     this.stripHtmlText= this.stripHtmlText.bind(this);
+    this.onClickCloseDetailView = this.onClickCloseDetailView.bind(this);
   }
 
   renderAsHtml(text) {
@@ -18,10 +19,15 @@ class DetailView extends React.Component {
   stripHtmlText(text) {
     return stripHtml(text)
   }
+
+  onClickCloseDetailView() {
+    this.props.closeDetail();
+  }
+
   render() {
     return (
       <div className="DetailView">
-        <Link className="detail_back" to="/list"></Link>
+        <button className="detail_back" onClick={this.onClickCloseDetailView}></button>
         <h4 className="detail_title" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>
         <button className="detail_fav" type="button"></button>
         <p className="detail_date">{this.props.document.dateCreated}</p>

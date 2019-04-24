@@ -13,12 +13,14 @@ class ListPageSearches extends Component {
             documents: [],
             query: '',
             displayAsList: true,
-            activeDoc: null
+            activeDoc: null,
+            detailActive: false
         }
         this.handleSearch = _.debounce(this.handleSearch.bind(this), 500);
         this.handleDisplayToggle = this.handleDisplayToggle.bind(this);
         this.handleQuery = this.handleQuery.bind(this);
         this.setDocument = this.setDocument.bind(this);
+        this.onClickCloseDetailView = this.onClickCloseDetailView.bind(this);
     }
 
     handleDisplayToggle() {
@@ -54,6 +56,14 @@ class ListPageSearches extends Component {
         console.log(this.state.activeDoc);
     }
 
+    onClickCloseDetailView() {
+        if(this.state.activeDoc !== null){
+            this.setState({
+                activeDoc: null
+            })
+        } 
+    }
+
     render() {
         return (
             <div className="ListPageSearches">
@@ -63,7 +73,7 @@ class ListPageSearches extends Component {
 
                 <div className="searchresult">
                     {this.state.displayAsList &&
-                        <TileList documents={this.state.documents} setDoc={this.setDocument} />
+                        <TileList documents={this.state.documents} setDoc={this.setDocument}/>
                     }
 
                     {!this.state.displayAsList &&
@@ -82,7 +92,7 @@ class ListPageSearches extends Component {
                     }
 
                     {this.state.activeDoc !== null &&
-                        <DetailView document={this.state.activeDoc}/>
+                        <DetailView className="detailView" document={this.state.activeDoc} closeDetail={this.onClickCloseDetailView}/>
                     }
                 </div>
             </div>

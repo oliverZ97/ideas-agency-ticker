@@ -22,10 +22,7 @@ class ContentMenu extends Component {
 
     handleKeyPress(event){
 
-        let eventIsEnter = false; // do it
-        if(event.key == 'Enter'){
-            eventIsEnter = true;
-        }
+        let eventIsEnter = event.key == 'Enter';
 
         if(eventIsEnter){
             this.handleSearch();
