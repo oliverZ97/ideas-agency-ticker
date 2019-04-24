@@ -3,6 +3,8 @@ import './ListPageSearches.css'
 import TileList from '../../Components/TileList/TileList';
 import apiClient from '../../services/apiClient';
 import ContentMenu from '../../Components/ContentMenu/ContentMenu';
+import DetailView from '../../Components/DetailView/DetailView';
+import _ from 'lodash';
 
 class ListPageSearches extends Component {
     constructor() {
@@ -11,10 +13,12 @@ class ListPageSearches extends Component {
             documents: [],
             query: '',
             displayAsList: true,
+            activeDoc: null
         }
-        this.handleSearch = this.handleSearch.bind(this);
+        this.handleSearch = _.debounce(this.handleSearch.bind(this), 500);
         this.handleDisplayToggle = this.handleDisplayToggle.bind(this);
         this.handleQuery = this.handleQuery.bind(this);
+        this.setDocument = this.setDocument.bind(this);
     }
 
     handleDisplayToggle() {
@@ -43,6 +47,13 @@ class ListPageSearches extends Component {
             })
     }
 
+    setDocument(document) {
+        this.setState({
+            activeDoc: document
+        })
+        console.log(this.state.activeDoc);
+    }
+
     render() {
         return (
             <div className="ListPageSearches">
@@ -52,13 +63,26 @@ class ListPageSearches extends Component {
 
                 <div className="searchresult">
                     {this.state.displayAsList &&
-                        <TileList documents={this.state.documents} />
+                        <TileList documents={this.state.documents} setDoc={this.setDocument} />
                     }
 
                     {!this.state.displayAsList &&
                         <div className="tiles">
                             <p>CRAZY list view netflix style</p>
                         </div>
+                    }
+                </div>
+
+                <div>
+
+                    {this.state.activeDoc === null &&
+                        <div>
+                            <p>nothing to show</p>   
+                        </div> 
+                    }
+
+                    {this.state.activeDoc !== null &&
+                        <DetailView document={this.state.activeDoc}/>
                     }
                 </div>
             </div>

@@ -1,34 +1,53 @@
 import React, { Component } from 'react';
 import stripHtml from 'string-strip-html';
 import './Tile.css';
+import { browserHistory } from 'react-router'; 
 
 
-//erhält über props title , etc und rednert
-function Tile(props) {
+//erhält über props title , etc und rendert
+class Tile extends React.Component {
+constructor(props) {
+  super(props);
+  this.state = {
+    document: this.props.document,
+  }
 
-  function renderAsHtml(text) {
+  this.renderAsHtml = this.renderAsHtml.bind(this);
+  this.stripHtmlText = this.stripHtmlText.bind(this);
+  this.setDocument = this.setDocument.bind(this);
+}
+
+  renderAsHtml(text) {
     return { __html: text };
   }
 
-  function stripHtmlText(text) {
+  stripHtmlText(text) {
     return stripHtml(text)
   }
 
-  return (
-    <div className="Tile">
-      <div className="row">
-        <p dangerouslySetInnerHTML={renderAsHtml(props.title)}></p>
-
-        <button type="button"></button>
+  setDocument() {
+    let document = this.state.document;
+    return this.props.setDoc(document);
+  }
+    
+  render() {
+    return (
+      <div className="Tile" onClick={this.setDocument}>
+        <div className="row">
+          <p dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
+  
+          <button type="button"></button>
+        </div>
+        <div className="row">
+          <h6>{this.props.document.publisher}</h6>
+          <h6>{this.props.document.category}</h6>
+          <h6>{this.props.document.dateCreated}</h6>
+        </div>
+        <p className="content">{this.stripHtmlText(this.props.document.content || '')}</p>
       </div>
-      <div className="row">
-        <h6>{props.agency}</h6>
-        <h6>{props.category}</h6>
-        <h6>{props.date}</h6>
-      </div>
-      <p className="content">{stripHtmlText(props.content || '')}</p>
-    </div>
-  );
+    );
+  }
+  
 }
 
 export default Tile;

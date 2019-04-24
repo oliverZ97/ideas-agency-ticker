@@ -7,6 +7,7 @@ class ContentMenu extends Component {
 
         this.handleDisplayToggle = this.handleDisplayToggle.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
+        this.handleKeyPress = this.handleKeyPress.bind(this);
     }
 
     handleDisplayToggle(){
@@ -17,6 +18,16 @@ class ContentMenu extends Component {
         let qString = document.getElementById("navigation_searchbar").value;
         this.props.queryHandler(qString);
         this.props.searchHandler();
+    }
+
+    handleKeyPress(event){
+
+        let eventIsEnter = false; // do it
+
+        if(eventIsEnter){
+            this.handleSearch();
+        }
+        console.log(event);
     }
 
     render() {
@@ -30,7 +41,7 @@ class ContentMenu extends Component {
                     <label className="toggle-label" of="toggle">Auto-Aktualisieren</label>
                 </div>
                 <button onClick={this.handleDisplayToggle}>Kachelansicht</button>
-                <input id="navigation_searchbar" type="text" placeholder="Search" onChange={this.handleSearch}></input>
+                <input id="navigation_searchbar" type="text" placeholder="Search" onKeyDown={this.handleKeyPress} onChange={this.handleSearch}></input>
             </div>
         );
     }
