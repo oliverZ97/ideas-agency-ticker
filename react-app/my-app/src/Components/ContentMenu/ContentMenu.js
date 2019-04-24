@@ -23,11 +23,13 @@ class ContentMenu extends Component {
     handleKeyPress(event){
 
         let eventIsEnter = false; // do it
+        if(event.key == 'Enter'){
+            eventIsEnter = true;
+        }
 
         if(eventIsEnter){
             this.handleSearch();
         }
-        console.log(event);
     }
 
     render() {
@@ -41,7 +43,7 @@ class ContentMenu extends Component {
                     <label className="toggle-label" of="toggle">Auto-Aktualisieren</label>
                 </div>
                 <button onClick={this.handleDisplayToggle}>Kachelansicht</button>
-                <input id="navigation_searchbar" type="text" placeholder="Search" onKeyDown={this.handleKeyPress} onChange={this.handleSearch}></input>
+                <input id="navigation_searchbar" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
             </div>
         );
     }
