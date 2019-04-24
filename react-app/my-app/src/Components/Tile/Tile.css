@@ -1,5 +1,5 @@
 .Tile {
-    border: 1px solid black;
+    border: 2px solid #dddfd4;
     width: 400px;
     height: 200px;
     display: flex;

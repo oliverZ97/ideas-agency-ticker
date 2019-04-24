@@ -23,6 +23,10 @@ class ListPageSearches extends Component {
         this.onClickCloseDetailView = this.onClickCloseDetailView.bind(this);
     }
 
+    componentWillMount() {
+        this.handleSearch();
+    }
+
     handleDisplayToggle() {
         this.setState({
             displayAsList: !this.state.displayAsList
