@@ -9,17 +9,24 @@ class ListPageSearches extends Component {
         super();
         this.state = {
             documents: [],
-            query: 'merkel',
+            query: '',
             displayAsList: true,
         }
         this.handleSearch = this.handleSearch.bind(this);
         this.handleDisplayToggle = this.handleDisplayToggle.bind(this);
+        this.handleQuery = this.handleQuery.bind(this);
     }
 
     handleDisplayToggle() {
         this.setState({
             displayAsList: !this.state.displayAsList
-        });
+        })
+    }
+
+    handleQuery(q) {
+        this.setState({
+            query: q
+        })
     }
 
     handleSearch() {
@@ -40,8 +47,7 @@ class ListPageSearches extends Component {
         return (
             <div className="ListPageSearches">
                 <div className="menu">
-                    <ContentMenu />
-                    <button onClick={this.handleSearch}>Merkel-Suche</button>
+                    <ContentMenu toggleHandler={this.handleDisplayToggle} queryHandler={this.handleQuery} searchHandler={this.handleSearch}/>
                 </div>
 
                 <div className="searchresult">

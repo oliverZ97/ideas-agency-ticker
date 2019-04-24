@@ -40,12 +40,8 @@ class ApiClient {
             'X-Auth-Token': this.authentificationService.getToken()
         }
 
-        console.log('search');
-
         return this.client.post('https://newsfinder-api.ipool.asideas.de/newsfinder/agencies/documents', bodyContent, headers)
             .then(data => {
-                //filterService.splitResults(data);
-                console.log('success');
                 return data;
             })
     }
