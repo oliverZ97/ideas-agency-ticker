@@ -43,3 +43,10 @@
     flex-direction: row;
     justify-content: flex-end;
 }
+
+@media screen and (max-width: 768px) {
+    .Tile {
+        height: 150px;
+        width: 300px;
+    }
+}

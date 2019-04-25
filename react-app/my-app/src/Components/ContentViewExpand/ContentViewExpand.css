@@ -7,41 +7,41 @@
     width: 100%;
 }
 
-.title-fav {
+.ContentViewExpand .title-fav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 3px;
 }
 
-.date-agency {
+.ContentViewExpand .date-agency {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.author-tags {
+.ContentViewExpand .author-tags {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.detail_title {
+.ContentViewExpand .detail_title {
     justify-self: left;
     color: #dddfd4;
     font-size: 25px;
 }
 
-.detail_date {
+.ContentViewExpand .detail_date {
     color: #dddfd4;
     justify-self: start;
 }
 
-.detail_agency {
+.ContentViewExpand .detail_agency {
     color: #dddfd4;
 }
 
-.detail_fav {
+.ContentViewExpand .detail_fav {
     background: #fae596 url(../../Images/noun_Star_750828.png);
     background-size: 50px 50px;
     width: 50px;
@@ -51,25 +51,25 @@
     margin-top: 10px;
 }
 
-.detail_img {
+.ContentViewExpand .detail_img {
     object-fit: cover;
     width: 100%;
     align-self: center;
     max-height: 200px;
 }
 
-.detail_text {
+.ContentViewExpand .detail_text {
     color: #dddfd4;
     line-height: 1.5;
     padding: 5px;
     border-left: 2px solid #fae596;
 }
 
-.detail_author {
+.ContentViewExpand .detail_author {
     color: #dddfd4;
 }
 
-.detail_tags {
+.ContentViewExpand .detail_tags {
     justify-self: left;
     color: #dddfd4;
 }
@@ -80,7 +80,7 @@
         margin-top: 0px;
     }
 
-    .detail_text {
+    .ContentViewExpand .detail_text {
         text-align: justify;
         width: 100%;
     }

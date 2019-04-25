@@ -19,7 +19,7 @@ class LoginPage extends Component {
   onLogin(username, password) {
     apiClient.login(username, password)
     .then(() => {
-      browserHistory.push('/list')
+      browserHistory.push('/list-search')
     } )
     .catch(() => {
       this.setState({

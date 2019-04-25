@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import ContentView from '../../Components/ContentView/ContentView';
+import DetailView from '../../Components/DetailView/DetailView';
 
 class DetailPage extends Component {
   render() {
     return (
       <div className="DetailPage">
-        <ContentView />
+        <DetailView />
       </div>
     );
   }

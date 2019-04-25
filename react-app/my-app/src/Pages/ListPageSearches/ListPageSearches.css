@@ -27,3 +27,10 @@
     flex-wrap: wrap; 
     background-color: #dddfd4;
 }
+
+@media screen and (max-width: 768px){
+    .ListPageSearches {
+        width: 100%;
+    }
+
+}
