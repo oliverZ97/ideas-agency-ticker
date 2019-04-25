@@ -8,10 +8,12 @@ class ContentMenu extends Component {
         this.handleDisplayToggle = this.handleDisplayToggle.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
         this.handleKeyPress = this.handleKeyPress.bind(this);
+        this.changeToggleButton = this.changeToggleButton.bind(this);
     }
 
     handleDisplayToggle(){
         this.props.toggleHandler();
+        this.changeToggleButton();
     }
 
     handleSearch(){
@@ -29,18 +31,19 @@ class ContentMenu extends Component {
         }
     }
 
+    changeToggleButton() {
+        if(this.props.displayMode){
+            document.getElementById('toggleDisplay').className = 'displayList';
+        } else {
+            document.getElementById('toggleDisplay').className = 'displayTile';
+        }
+    }
+
     render() {
         return (
             <div className="ContentMenu">
-                <div className="toggle">
-                    <label className="auto-reload-toggle">
-                        <input type="checkbox" name="toggle"></input>
-                        <span className="toggle-slider"></span>
-                    </label>
-                    <label className="toggle-label" of="toggle">Auto-Aktualisieren</label>
-                </div>
-                <button onClick={this.handleDisplayToggle}>Kachelansicht</button>
                 <input id="navigation_searchbar" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
+                <button id="toggleDisplay" className="displayTile" onClick={this.handleDisplayToggle}></button>
             </div>
         );
     }

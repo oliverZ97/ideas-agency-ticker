@@ -23,7 +23,7 @@ class DetailView extends React.Component {
   onClickCloseDetailView() {
     this.props.closeDetail();
   }
-
+ 
   render() {
     return (
       <div className="DetailView">

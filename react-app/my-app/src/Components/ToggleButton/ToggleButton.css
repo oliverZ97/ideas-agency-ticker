@@ -1,0 +1,10 @@
+.ToggleButton .toggle {
+    display: flex;
+    flex-direction: row;
+}
+
+.ToggleButton input {
+    border-radius: 30px;
+    border: none;
+    margin-left: 5px;
+}

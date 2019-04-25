@@ -72,7 +72,7 @@ class ListPageSearches extends Component {
         return (
             <div className="ListPageSearches">
                 <div className="menu">
-                    <ContentMenu toggleHandler={this.handleDisplayToggle} queryHandler={this.handleQuery} searchHandler={this.handleSearch}/>
+                    <ContentMenu toggleHandler={this.handleDisplayToggle} queryHandler={this.handleQuery} searchHandler={this.handleSearch} displayMode={this.state.displayAsList}/>
                 </div>
 
                 <div className="searchresult">
