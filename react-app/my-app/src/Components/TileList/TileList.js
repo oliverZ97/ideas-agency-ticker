@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './TileList.css'
 import Tile from '../Tile/Tile';
-import DetailView from '../DetailView/DetailView';
-
 
  //TileList ist zuständig für das rendern der tiles und bekommt über die props das suchergebnis
 

@@ -25,6 +25,8 @@ class DetailView extends React.Component {
   }
  
   render() {
+    let random = Math.random()*100000000000;
+
     return (
       <div className="DetailView">
         <button className="detail_back" onClick={this.onClickCloseDetailView}></button>
@@ -32,7 +34,7 @@ class DetailView extends React.Component {
         <button className="detail_fav" type="button"></button>
         <p className="detail_date">{this.props.document.dateCreated}</p>
         <p className="detail_agency">{this.props.document.publisher}/{this.props.document.category}</p>
-        <img className="detail_img" alt="Beispielbild" src="https://images.unsplash.com/photo-1506951796365-405279289a75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"></img>
+        <img className="detail_img" alt="Beispielbild" src={"https://picsum.photos/600/250?rand=" + random}></img>
         <p className="detail_text">{this.stripHtmlText(this.props.document.content || '')}</p>
         <h6 className="detail_author">{this.props.document.author}</h6>
       </div>
