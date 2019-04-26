@@ -1,8 +1,4 @@
 .Filter {
-    position: absolute;
-    top: 46px;
-    left: 20%;
-    right: 20%;
     margin-bottom: 50px;
     width: auto;
     border: 2px  #173e43 outset;
@@ -20,6 +16,13 @@
 
 @media screen and (max-width: 768px){
     .Filter {
-        width: 90%;
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .Filter {
+        width: 60%;
     }
 }

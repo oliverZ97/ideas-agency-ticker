@@ -41,10 +41,6 @@
     overflow: hidden;
 }
 
-.tileImg img {
-    
-}
-
 .container input {
     position: absolute;
     opacity: 0;
@@ -97,6 +93,11 @@
         top: 10px;
         left: 10px;
     }
+
+    .FilterSubmenuTile img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 769px){
@@ -106,7 +107,7 @@
     }
 }
 
-@media screen and (min-width: 1216px) {
+@media screen and (min-width: 1024px) {
     .FilterSubmenuTile {
         width: 300px;
         height: 150px;
