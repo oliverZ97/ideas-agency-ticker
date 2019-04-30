@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Router, Route, browserHistory} from 'react-router';
+import {Router, Route, browserHistory, Redirect} from 'react-router';
 import 'normalize.css';
 import './App.css';
 import Navigation from './Components/Navigation/Navigation';
@@ -23,6 +23,7 @@ class App extends Component {
       <div className="App">
       <Navigation />
         <Router className="content" history={browserHistory}>
+                  <Route exact path="/" component={LoginPage}/>
                   <Route path={"login"} component={LoginPage}/>
                   <Route path={"list"} component={ListPage}/>
                   <Route path={"detail"} component={DetailPage}/>
