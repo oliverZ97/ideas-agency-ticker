@@ -8,89 +8,91 @@ class Filter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      urgencies: [
-        [ 'Priorität 1', false ],
-        [ 'Priorität 2', false ],
-        [ 'Priorität 3', false ],
-        [ 'Priorität 4', false ],
-        [ 'Priorität 5', false ],
-        [ 'Priorität 6', false ],
-        [ 'Priorität 7', false ],
-        [ 'Priorität 8', false ]
-      ],
-      categories: [
-        [ 'Internationales', false ],
-        [ 'Kultur', false ],
-        [ 'Kategorie unbekannt', false ],
-        [ 'Politik', false ],
-        [ 'Redaktioneller Service', false ],
-        [ 'Sport', false ],
-        [ 'Vermischtes', false ],
-        [ 'Wirtschaft', false ],
-      ],
+      urgencies: [],
+      categories: [],
       filterContent: []
     };
 
-    this.handleFilterContent = this.handleFilterContent.bind(this);
-    this.handleActiveStatusUrgency = this.handleActiveStatusUrgency.bind(this);
-    this.handleActiveStatusCategory = this.handleActiveStatusCategory.bind(this);
-  }
-  handleFilterContent(content) {
-    let newContent = this.state.filterContent;
-    newContent.push(content);
-    this.setState({
-      filterContent: newContent
-    });
-    console.log(this.state.filterContent)
+    this.handleToggleCategories = this.handleToggleCategories.bind(this);
+    this.handleToggleUrgency = this.handleToggleUrgency.bind(this);
   }
 
-  handleActiveStatusUrgency(name, status) {
-    let newUrgencies = this.state.urgencies;
-    console.log('name: ' + name);
-    console.log('status: '+ status)
+  handleToggleCategories(name, selected) {
+    let newCategories = [];
 
-    for (i in newUrgencies) {
-      if(i[0] === name) {
-        console.log('Urgency at Index' + i + "was" + newUrgencies[i][1]);
-        newUrgencies[i][1] === status;
-        console.log('Urgency at Index' + i + "is now" + newUrgencies[i][1]);
-      }
+    if(selected) {
+      newCategories = [...this.state.categories];
+      newCategories.push(name);
+    } else {
+      newCategories = [...this.state.categories];
+      let idx = newCategories.indexOf(name);
+      newCategories.splice(idx, 1);
     }
-
-    this.setState({
-      urgencies: newUrgencies
-    })
-  }
-
-  handleActiveStatusCategory(name, status) {
-    let newCategories = this.state.categories;
-
-    for (i in newCategories) {
-      if(i[0] === name) {
-        newCategories[i][1] === status;
-      }
-    }
-
-    this.setState({
+    
+    this.setState ({
       categories: newCategories
     })
   }
 
+  handleToggleUrgency(name, selected) {
+
+    if (selected) {
+      console.log('add ', name, ' from urgency in state')
+    } else {
+      console.log('remove ', name, ' to urgency in state')
+    }
+  }
+
   render() {
-    return (
-      <div className="Filter">
-        <FilterMenu searchHandler={this.props.searchHandler}/>
+    let categoryEntries = 
+    [
+      {text: 'Internationales', value: 'Internationales'},
+      {text: 'Kultur', value: 'Kultur'},
+      {text: 'Kategorie unbekannt', value:'Kategorie unbekannt'},
+      {text: 'Kultur', value: 'Kultur'},
+      {text: 'Politik', value: 'Politik'},
+      {text: 'Redaktioneller Service', value: 'Redaktioneller Service'},
+      {text: 'Sport', value:'Sport'},
+      {text: 'Vermischtes', value: 'Vermischtes'},
+      {text: 'Wirtschaft', value: 'Wirtschaft'}
+    ];
+
+    categoryEntries.forEach(category => {
+      if(this.state.categories.indexOf(category.value) !== -1) {
+        category.selected = true;
+      } else {
+        category.selected = false;
+      }
+    })
+
+  /*// urgencies
+  let categoryEntries = {
+    'Internationales': "Internationales",
+    'Kategorie unbekannt': 'Kategorie unbekannt',
+    'Kultur': 'Kultur',
+    'Politik': 'Politik',
+    'Redaktioneller Service': 'Redaktioneller Service',
+    'Sport':'Sport',
+    'Vermischtes': 'Vermischtes',
+    'Wirtschaft': 'Wirtschaft'
+};*/
+
+    /*
+            <FilterMenu searchHandler={this.props.searchHandler}/>
         <h4>Prioritäten</h4>
         <FilterSubmenu className="FilterSubmenu"
           content={this.state.urgencies}
           filterContent={this.handleFilterContent}
-          handleActiveStatus={this.handleActiveStatusUrgency}
-        />
+          handleActiveStatus={this.setUrgencyActive}
+          context={'urgencies'}
+        /> */
+    return (
+      <div className="Filter">
+
         <h4>Kategorien</h4>
         <FilterSubmenu className="FilterSubmenu"
-          content={this.state.categories}
-          filterContent={this.handleFilterContent}
-          handleActiveStatus={this.handleActiveStatusCategory}
+          entries={categoryEntries}
+          onFilterChange={this.handleToggleCategories}
         />
       </div>
     );

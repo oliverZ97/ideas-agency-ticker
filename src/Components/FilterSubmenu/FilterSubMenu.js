@@ -2,25 +2,19 @@ import React, { Component } from 'react';
 import './FilterSubmenu.css';
 import FilterSubmenuTile from '../FilterSubmenuTile/FilterSubmenuTile';
 
-function FilterSubmenu(props) {
-
-  function handleFilterContent(content) {
-    return props.filterContent(content);
-  }
-
-  function handleActiveStatus(name, status) {
-    return props.handleActiveStatus(name, status);
-  }
-
-  let filtertiles = props.content.map((content) => <FilterSubmenuTile
-    key={content.name}
-    content={content}
-    filterContent={handleFilterContent}
-    handleActiveStatus={handleActiveStatus}
-  />);
-  return (
+const FilterSubmenu = (props) =>  {
+  let entries = props.entries || [];
+  let tiles = entries.map((entry) => {
+  return <FilterSubmenuTile
+    content={entry.text}
+    isChecked={entry.selected}
+    value={entry.value}
+    handleToggle={props.onFilterChange} />;
+  })
+  
+    return (
     <div className="FilterSubmenu">
-      {filtertiles}
+      {tiles}
     </div>
   );
 }
