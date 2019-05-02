@@ -5,34 +5,35 @@ import FilterSubmenu from '../FilterSubmenu/FilterSubMenu';
 import FilterMenu from '../FilterMenu/FilterMenu';
 
 class Filter extends Component {
-  constructor(){
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       urgencies: [
-        {'name': 'Priorität 1', 'active': false}, 
-        {'name': 'Priorität 2', 'active': false},
-        {'name': 'Priorität 3', 'active': false},
-        {'name': 'Priorität 4', 'active': false},
-        {'name': 'Priorität 5', 'active': false},
-        {'name': 'Priorität 6', 'active': false},
-        {'name': 'Priorität 7', 'active': false},
-        {'name': 'Priorität 8', 'active': false}
+        [ 'Priorität 1', false ],
+        [ 'Priorität 2', false ],
+        [ 'Priorität 3', false ],
+        [ 'Priorität 4', false ],
+        [ 'Priorität 5', false ],
+        [ 'Priorität 6', false ],
+        [ 'Priorität 7', false ],
+        [ 'Priorität 8', false ]
       ],
       categories: [
-        {'name': 'Internationales', 'active': false},
-        {'name': 'Kultur', 'active': false},
-        {'name': 'Kategorie unbekannt', 'active': false},
-        {'name': 'Politik', 'active': false},
-        {'name': 'Redaktioneller Service', 'active': false},
-        {'name': 'Sport', 'active': false},
-        {'name': 'Vermischtes', 'active': false},
-        {'name': 'Wirtschaft', 'active': false},
+        [ 'Internationales', false ],
+        [ 'Kultur', false ],
+        [ 'Kategorie unbekannt', false ],
+        [ 'Politik', false ],
+        [ 'Redaktioneller Service', false ],
+        [ 'Sport', false ],
+        [ 'Vermischtes', false ],
+        [ 'Wirtschaft', false ],
       ],
       filterContent: []
     };
 
     this.handleFilterContent = this.handleFilterContent.bind(this);
-    this.handleActiveStatus = this.handleActiveStatus.bind(this);
+    this.handleActiveStatusUrgency = this.handleActiveStatusUrgency.bind(this);
+    this.handleActiveStatusCategory = this.handleActiveStatusCategory.bind(this);
   }
   handleFilterContent(content) {
     let newContent = this.state.filterContent;
@@ -43,27 +44,54 @@ class Filter extends Component {
     console.log(this.state.filterContent)
   }
 
-  handleActiveStatus(name, status) {
+  handleActiveStatusUrgency(name, status) {
     let newUrgencies = this.state.urgencies;
+    console.log('name: ' + name);
+    console.log('status: '+ status)
 
-    for (let i in this.state.urgencies) {
-      if(this.state.urgencies[i].name == name){
-        newUrgencies[i].active = status;
+    for (i in newUrgencies) {
+      if(i[0] === name) {
+        console.log('Urgency at Index' + i + "was" + newUrgencies[i][1]);
+        newUrgencies[i][1] === status;
+        console.log('Urgency at Index' + i + "is now" + newUrgencies[i][1]);
       }
-      this.setState({
-        urgencies: newUrgencies
-      })
     }
+
+    this.setState({
+      urgencies: newUrgencies
+    })
+  }
+
+  handleActiveStatusCategory(name, status) {
+    let newCategories = this.state.categories;
+
+    for (i in newCategories) {
+      if(i[0] === name) {
+        newCategories[i][1] === status;
+      }
+    }
+
+    this.setState({
+      categories: newCategories
+    })
   }
 
   render() {
     return (
       <div className="Filter">
-        <FilterMenu />
+        <FilterMenu searchHandler={this.props.searchHandler}/>
         <h4>Prioritäten</h4>
-        <FilterSubmenu className="FilterSubmenu" content={this.state.urgencies} filterContent={this.handleFilterContent} activeStatus={this.handleActiveStatus}/>
+        <FilterSubmenu className="FilterSubmenu"
+          content={this.state.urgencies}
+          filterContent={this.handleFilterContent}
+          handleActiveStatus={this.handleActiveStatusUrgency}
+        />
         <h4>Kategorien</h4>
-        <FilterSubmenu className="FilterSubmenu" content={this.state.categories} filterContent={this.handleFilterContent} activeStatus={this.handleActiveStatus}/>
+        <FilterSubmenu className="FilterSubmenu"
+          content={this.state.categories}
+          filterContent={this.handleFilterContent}
+          handleActiveStatus={this.handleActiveStatusCategory}
+        />
       </div>
     );
   }

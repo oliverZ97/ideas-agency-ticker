@@ -9,14 +9,14 @@ function FilterSubmenu(props) {
   }
 
   function handleActiveStatus(name, status) {
-    return props.activeStatus(name, status);
+    return props.handleActiveStatus(name, status);
   }
 
   let filtertiles = props.content.map((content) => <FilterSubmenuTile
     key={content.name}
     content={content}
     filterContent={handleFilterContent}
-    activeStatus={handleActiveStatus}
+    handleActiveStatus={handleActiveStatus}
   />);
   return (
     <div className="FilterSubmenu">
