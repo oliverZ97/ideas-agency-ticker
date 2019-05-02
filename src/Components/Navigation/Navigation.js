@@ -11,7 +11,7 @@ class Navigation extends Component {
     this.handleFilterClick = this.handleFilterClick.bind(this);
     this.handleSearchClick = this.handleSearchClick.bind(this);
     this.handleFavClick= this.handleFavClick.bind(this);
-    this.authentificationService = authentificationService
+    this.authentificationService = authentificationService;
   }
 
   handleLogout() {
@@ -20,6 +20,7 @@ class Navigation extends Component {
   }
 
   handleFilterClick() {
+    console.log('handleFilterMethod');
     browserHistory.push('/filter');
   }
 
@@ -36,9 +37,9 @@ class Navigation extends Component {
       <div className="Navigation">
         <div className="nav_content">
           <div className="nav_buttons">
-            <a href="filter"><button id="navigation_button_filter" onClick={this.handleFilterClick}></button></a>
-            <a href="ssearches"><button id="navigation_button_searches" onClick={this.handleSearchClick}></button></a>
-            <a href="favorites"><button id="navigation_button_favs" onClick={this.handleFavClicks}></button></a>
+            <button id="navigation_button_filter" onClick={this.handleFilterClick}></button>
+            <button id="navigation_button_searches" onClick={this.handleSearchClick}></button>
+            <button id="navigation_button_favs" onClick={this.handleFavClicks}></button>
           </div>
           <div className="nav_logout">
             <button id="navigation_button_logout" onClick={this.handleLogout}></button>

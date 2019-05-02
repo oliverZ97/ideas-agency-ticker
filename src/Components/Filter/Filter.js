@@ -19,14 +19,14 @@ class Filter extends Component {
         {'name': 'Priorität 8', 'active': false}
       ],
       categories: [
-        {'name': 'Internationales', active: false},
-        {'name': 'Kultur', active: false},
-        {name: 'Kategorie unbekannt', active: false},
-        {name: 'Politik', active: false},
-        {name: 'Redaktioneller Service', active: false},
-        {name: 'Sport', active: false},
-        {name: 'Vermischtes', active: false},
-        {name: 'Wirtschaft', active: false},
+        {'name': 'Internationales', 'active': false},
+        {'name': 'Kultur', 'active': false},
+        {'name': 'Kategorie unbekannt', 'active': false},
+        {'name': 'Politik', 'active': false},
+        {'name': 'Redaktioneller Service', 'active': false},
+        {'name': 'Sport', 'active': false},
+        {'name': 'Vermischtes', 'active': false},
+        {'name': 'Wirtschaft', 'active': false},
       ],
       filterContent: []
     };
