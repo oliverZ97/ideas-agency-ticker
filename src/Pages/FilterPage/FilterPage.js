@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import apiClient from '../../services/apiClient';
 import './FilterPage.css';
 import Filter from '../../Components/Filter/Filter';
+import _ from 'lodash';
 
 class FilterPage extends Component {
   constructor() {
