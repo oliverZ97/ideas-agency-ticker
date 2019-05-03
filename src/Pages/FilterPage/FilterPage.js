@@ -10,17 +10,22 @@ class FilterPage extends Component {
     this.state = {
       documents: [],
       query: '',
+      urgencyLimit: '',
+      categories: null
     }
     this.handleSearch = _.debounce(this.handleSearch.bind(this), 500);
     this.handleQuery = this.handleQuery.bind(this);
+    this.handleUrgencyLimit = this.handleUrgencyLimit.bind(this);
+    this.handleCategories = this.handleCategories.bind(this);
   }
 
   handleSearch() {
-    apiClient.search(this.state.query)
+    apiClient.search(this.state.query, this.state.urgencyLimit, this.state.categories)
       .then((result) => {
         this.setState({
           documents: result.documents
         })
+        console.log('Suche in FilterPage');
       })
       .catch(() => {
         this.setState({
@@ -35,10 +40,22 @@ class FilterPage extends Component {
     })
   }
 
+  handleUrgencyLimit(limit) {
+    this.setState({
+      urgencyLimit: limit
+    })
+  }
+
+  handleCategories(catArray) {
+    this.setState({
+      categories: catArray
+    })
+  }
+
   render() {
     return (
       <div className="FilterPage">
-        <Filter searchHandler={this.handleSearch} queryHandler={this.handleQuery}/>
+        <Filter searchHandler={this.handleSearch} categoryHandler={this.handleCategories} urgencyHandler={this.handleUrgencyLimit}/>
       </div>
     );
   }

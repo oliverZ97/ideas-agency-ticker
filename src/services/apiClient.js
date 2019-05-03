@@ -29,12 +29,15 @@ class ApiClient {
             })
     }
 
-    search(query) {
+    search(searchstring, urgencyLimit = '', categories = null) {
 
         let bodyContent = {
             limit: 20,
-            q: query
+            q: searchstring,
+            urgencyLimit: urgencyLimit,
+            categories: categories
         }
+        console.log('body: ' + bodyContent.categories);
 
         let headers = {
             'X-Auth-Token': this.authentificationService.getToken()

@@ -15,24 +15,26 @@ class Filter extends Component {
 
     this.handleToggleCategories = this.handleToggleCategories.bind(this);
     this.handleToggleUrgencies = this.handleToggleUrgencies.bind(this);
+    this.handleCategories = this.handleCategories.bind(this);
   }
 
   handleToggleCategories(name, selected) {
     let newCategories = [];
 
     if (selected) {
-      newCategories = [...this.state.categories]; //erzeugt eine Kopie des Arrays und keine Referenz
-      newCategories.push(name);
+      newCategories = [...this.state.categories]; //creates a copy of the array not a reference
+      newCategories.push(name);   //name-element is pushed into array
     } else {
       newCategories = [...this.state.categories];
-      let idx = newCategories.indexOf(name);
-      newCategories.splice(idx, 1);
+      let idx = newCategories.indexOf(name);  //return index of an object in the array which equals name, returns -1 if object not exist in array
+      newCategories.splice(idx, 1); //returns one element at Index idx
     }
 
     this.setState({
       categories: newCategories
     })
     console.log(this.state.categories);
+    this.handleCategories();
   }
 
   handleToggleUrgencies(name, selected) {
@@ -51,6 +53,10 @@ class Filter extends Component {
       urgencies: newUrgencies
     })
     console.log(this.state.urgencies);
+  }
+
+  handleCategories() {
+    return this.props.categoryHandler(this.state.categories);
   }
 
   render() {
@@ -87,7 +93,7 @@ class Filter extends Component {
     ]
 
     urgencyEntries.forEach(urgency => {
-      if (this.state.urgencies.indexOf(urgency.value) !== -1){
+      if (this.state.urgencies.indexOf(urgency.value) !== -1){ //true when urgency.value is element in array
         urgency.selected = true;
       } else {
         urgency.selected = false;

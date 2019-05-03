@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ContentMenu.css';
+import {browserHistory} from 'react-router';
 
 class ContentMenu extends Component {
     constructor(props){
@@ -9,6 +10,7 @@ class ContentMenu extends Component {
         this.handleSearch = this.handleSearch.bind(this);
         this.handleKeyPress = this.handleKeyPress.bind(this);
         this.changeToggleButton = this.changeToggleButton.bind(this);
+        this.handleFilterClick = this.handleFilterClick.bind(this);
     }
 
     handleDisplayToggle(){
@@ -39,11 +41,18 @@ class ContentMenu extends Component {
         }
     }
 
+    handleFilterClick() {
+        browserHistory.push('/filter');
+    }
+
     render() {
         return (
             <div className="ContentMenu">
                 <input id="navigation_searchbar" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
+                <div className="buttons">
+                <button id="navigation_button_filter" onClick={this.handleFilterClick}></button>
                 <button id="toggleDisplay" className="displayTile" onClick={this.handleDisplayToggle}></button>
+                </div> 
             </div>
         );
     }
