@@ -5,7 +5,7 @@ import apiClient from '../../services/apiClient';
 import ContentMenu from '../../Components/ContentMenu/ContentMenu';
 import DetailView from '../../Components/DetailView/DetailView';
 import _ from 'lodash';
-import FilterPage from '../FilterPage/FilterPage';
+import Filter from '../../Components/Filter/Filter';
 
 class ListPageSearches extends Component {
     constructor() {
@@ -13,15 +13,21 @@ class ListPageSearches extends Component {
         this.state = {
             documents: [],
             query: '',
+            categories: null,
+            urgencyLimit: '',
             displayAsList: true,
             activeDoc: null,
             detailActive: false,
+            displayFilter: false
         }
         this.handleSearch = _.debounce(this.handleSearch.bind(this), 500);
         this.handleDisplayToggle = this.handleDisplayToggle.bind(this);
         this.handleQuery = this.handleQuery.bind(this);
         this.setDocument = this.setDocument.bind(this);
         this.onClickCloseDetailView = this.onClickCloseDetailView.bind(this);
+        this.handleCategories = this.handleCategories.bind(this);
+        this.handleUrgencyLimit = this.handleUrgencyLimit.bind(this);
+        this.handleDisplayFilter = this.handleDisplayFilter.bind(this);
     }
 
     componentWillMount() {
@@ -41,12 +47,11 @@ class ListPageSearches extends Component {
     }
 
     handleSearch() {
-        apiClient.search(this.state.query)
+        apiClient.search(this.state.query, this.state.urgencyLimit, this.state.categories)
             .then((result) => {
                 this.setState({
                     documents: result.documents
                 })
-                console.log('Suche in ListPageSearches');
             })
             .catch(() => {
                 this.setState({
@@ -70,21 +75,60 @@ class ListPageSearches extends Component {
         }
     }
 
+    handleUrgencyLimit(limit) {
+        this.setState({
+            urgencyLimit: limit
+        })
+    }
+
+    handleCategories(catArray) {
+        this.setState({
+            categories: catArray
+        })
+
+    }
+
+    handleDisplayFilter() {
+        this.setState({
+            displayFilter: !this.state.displayFilter
+        })
+    }
+
     render() {
         return (
             <div className="ListPageSearches">
-                <div className="menu">
-                    <ContentMenu toggleHandler={this.handleDisplayToggle} queryHandler={this.handleQuery} searchHandler={this.handleSearch} displayMode={this.state.displayAsList} />
-                </div>
-
-                <div className="searchresult">
-                    {this.state.displayAsList &&
-                        <TileList documents={this.state.documents} setDoc={this.setDocument} />
+                <div className="filter">
+                    {this.state.displayFilter &&
+                        <Filter
+                            categoryHandler={this.handleCategories}
+                            urgencyHandler={this.handleUrgencyLimit}
+                            displayFilter={this.handleDisplayFilter}
+                        />
                     }
 
-                    {!this.state.displayAsList &&
-                        <div className="tiles">
-                            <p>CRAZY list view netflix style</p>
+                    {this.state.displayFilter === false &&
+                        <div>
+                            <div className="menu">
+                                <ContentMenu
+                                    toggleHandler={this.handleDisplayToggle}
+                                    queryHandler={this.handleQuery}
+                                    searchHandler={this.handleSearch}
+                                    displayMode={this.state.displayAsList}
+                                    displayFilter={this.handleDisplayFilter}
+                                />
+                            </div>
+
+                            <div className="searchresult">
+                                {this.state.displayAsList &&
+                                    <TileList documents={this.state.documents} setDoc={this.setDocument} />
+                                }
+
+                                {!this.state.displayAsList &&
+                                    <div className="tiles">
+                                        <p>CRAZY list view netflix style</p>
+                                    </div>
+                                }
+                            </div>
                         </div>
                     }
                 </div>

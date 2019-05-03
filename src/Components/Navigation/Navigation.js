@@ -8,7 +8,6 @@ class Navigation extends Component {
   constructor() {
     super();
     this.handleLogout = this.handleLogout.bind(this);
-    this.handleFilterClick = this.handleFilterClick.bind(this);
     this.handleSearchClick = this.handleSearchClick.bind(this);
     this.handleFavClick= this.handleFavClick.bind(this);
     this.authentificationService = authentificationService;
@@ -17,11 +16,6 @@ class Navigation extends Component {
   handleLogout() {
     this.authentificationService.removeToken();
     browserHistory.push('/login');
-  }
-
-  handleFilterClick() {
-    console.log('handleFilterMethod');
-    browserHistory.push('/filter');
   }
 
   handleSearchClick() {
@@ -37,7 +31,6 @@ class Navigation extends Component {
       <div className="Navigation">
         <div className="nav_content">
           <div className="nav_buttons">
-            <button id="navigation_button_filter" onClick={this.handleFilterClick}></button>
             <button id="navigation_button_searches" onClick={this.handleSearchClick}></button>
             <button id="navigation_button_favs" onClick={this.handleFavClicks}></button>
           </div>

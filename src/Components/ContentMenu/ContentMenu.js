@@ -42,7 +42,7 @@ class ContentMenu extends Component {
     }
 
     handleFilterClick() {
-        browserHistory.push('/filter');
+       return this.props.displayFilter();
     }
 
     render() {

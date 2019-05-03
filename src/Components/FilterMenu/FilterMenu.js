@@ -12,12 +12,11 @@ class FilterMenu extends Component {
     }
 
     updateFilter() {
-        browserHistory.push('/list-search');
-       return this.props.searchHandler();
+        return this.props.displayFilter();
     }
 
     goBack() {
-        browserHistory.push('/list-search');
+        return this.props.displayFilter();
     }
 
     render() {

@@ -15,7 +15,6 @@ class Filter extends Component {
 
     this.handleToggleCategories = this.handleToggleCategories.bind(this);
     this.handleToggleUrgencies = this.handleToggleUrgencies.bind(this);
-    this.handleCategories = this.handleCategories.bind(this);
   }
 
   handleToggleCategories(name, selected) {
@@ -33,8 +32,7 @@ class Filter extends Component {
     this.setState({
       categories: newCategories
     })
-    console.log(this.state.categories);
-    this.handleCategories();
+    return this.props.categoryHandler(newCategories);
   }
 
   handleToggleUrgencies(name, selected) {
@@ -52,12 +50,12 @@ class Filter extends Component {
     this.setState({
       urgencies: newUrgencies
     })
-    console.log(this.state.urgencies);
+    return this.props.urgencyHandler(newUrgencies);
   }
+  //Methode um veränderte States an die ListSearchPage zu übergeben?
+  /*sendStateUpdate() {
 
-  handleCategories() {
-    return this.props.categoryHandler(this.state.categories);
-  }
+  }*/
 
   render() {
     let categoryEntries =
@@ -103,7 +101,7 @@ class Filter extends Component {
     return (
       <div className="Filter">
 
-        <FilterMenu searchHandler={this.props.searchHandler} />
+        <FilterMenu displayFilter={this.props.displayFilter}/>
         <h4>Prioritäten</h4>
         <FilterSubmenu className="FilterSubmenu" 
           entries={urgencyEntries}
