@@ -29,15 +29,24 @@ class ApiClient {
             })
     }
 
-    search(searchstring, urgencyLimit = '', categories = null) {
+    search(searchstring, urgencyLimit = '', categories = []) {
+
+        // search for all categories if non selected
+        if (!categories.length) {
+            categories = null;
+        }
+
+        if (urgencyLimit = ''){
+            urgencyLimit = 8;
+        }
 
         let bodyContent = {
-            limit: 20,
+            limit: 30,
             q: searchstring,
             urgencyLimit: urgencyLimit,
             categories: categories
         }
-        console.log('body: ' + bodyContent.categories);
+        console.log('body: ' + bodyContent.categories, bodyContent.urgencyLimit);
 
         let headers = {
             'X-Auth-Token': this.authentificationService.getToken()

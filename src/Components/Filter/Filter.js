@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import './Filter.css';
 import FilterSubmenu from '../FilterSubmenu/FilterSubMenu';
 import FilterMenu from '../FilterMenu/FilterMenu';
@@ -7,11 +6,7 @@ import FilterMenu from '../FilterMenu/FilterMenu';
 class Filter extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      urgencies: [],
-      categories: [],
-      filterContent: []
-    };
+    console.log(this.props)
 
     this.handleToggleCategories = this.handleToggleCategories.bind(this);
     this.handleToggleUrgencies = this.handleToggleUrgencies.bind(this);
@@ -21,41 +16,31 @@ class Filter extends Component {
     let newCategories = [];
 
     if (selected) {
-      newCategories = [...this.state.categories]; //creates a copy of the array not a reference
+      newCategories = [...this.props.categories]; //creates a copy of the array not a reference
       newCategories.push(name);   //name-element is pushed into array
     } else {
-      newCategories = [...this.state.categories];
+      newCategories = [...this.props.categories];
       let idx = newCategories.indexOf(name);  //return index of an object in the array which equals name, returns -1 if object not exist in array
       newCategories.splice(idx, 1); //returns one element at Index idx
     }
 
-    this.setState({
-      categories: newCategories
-    })
     return this.props.categoryHandler(newCategories);
   }
 
-  handleToggleUrgencies(name, selected) {
-    let newUrgencies = [];
-
+  //gibt Limit an SearchPage zurück
+  handleToggleUrgencies(urgency, selected) {
+    let newUrgency = 0;
     if(selected) {
-      newUrgencies = [...this.state.urgencies]; 
-      newUrgencies.push(name);
+      if(this.props.urgencyLimit < urgency){
+        newUrgency = urgency;
+      }
     } else {
-      newUrgencies = [...this.state.urgencies];
-      let idx = newUrgencies.indexOf(name);
-      newUrgencies.splice(idx, 1);
+        newUrgency = 0;
     }
 
-    this.setState({
-      urgencies: newUrgencies
-    })
-    return this.props.urgencyHandler(newUrgencies);
+    console.log('limit', newUrgency);
+    this.props.urgencyHandler(newUrgency);
   }
-  //Methode um veränderte States an die ListSearchPage zu übergeben?
-  /*sendStateUpdate() {
-
-  }*/
 
   render() {
     let categoryEntries =
@@ -71,7 +56,7 @@ class Filter extends Component {
       ];
 
     categoryEntries.forEach(category => {
-      if (this.state.categories.indexOf(category.value) !== -1) {
+      if (this.props.categories.indexOf(category.value) !== -1) {
         category.selected = true;
       } else {
         category.selected = false;
@@ -80,18 +65,19 @@ class Filter extends Component {
 
     let urgencyEntries =
     [
-      {text: 'Priorität 1', value: 'Priorität 1'},
-      {text: 'Priorität 2', value: 'Priorität 2'},
-      {text: 'Priorität 3', value: 'Priorität 3'},
-      {text: 'Priorität 4', value: 'Priorität 4'},
-      {text: 'Priorität 5', value: 'Priorität 5'},
-      {text: 'Priorität 6', value: 'Priorität 6'},
-      {text: 'Priorität 7', value: 'Priorität 7'},
-      {text: 'Priorität 8', value: 'Priorität 8'}
+      {text: 'Priorität 1', value: 1},
+      {text: 'Priorität 2', value: 2},
+      {text: 'Priorität 3', value: 3},
+      {text: 'Priorität 4', value: 4},
+      {text: 'Priorität 5', value: 5},
+      {text: 'Priorität 6', value: 6},
+      {text: 'Priorität 7', value: 7},
+      {text: 'Priorität 8', value: 8}
     ]
-
+    //rendert checkbox in tile
     urgencyEntries.forEach(urgency => {
-      if (this.state.urgencies.indexOf(urgency.value) !== -1){ //true when urgency.value is element in array
+      if(this.props.urgencyLimit >= urgency.value) {
+      //if (this.state.urgencies.indexOf(urgency.value) !== -1){ //true when urgency.value is element in array
         urgency.selected = true;
       } else {
         urgency.selected = false;

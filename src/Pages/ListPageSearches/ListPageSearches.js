@@ -13,8 +13,8 @@ class ListPageSearches extends Component {
         this.state = {
             documents: [],
             query: '',
-            categories: null,
-            urgencyLimit: '',
+            categories: [],
+            urgencyLimit: 8,
             displayAsList: true,
             activeDoc: null,
             detailActive: false,
@@ -55,6 +55,7 @@ class ListPageSearches extends Component {
     }
 
     handleSearch() {
+        console.log(this.state);
         apiClient.search(this.state.query, this.state.urgencyLimit, this.state.categories)
             .then((result) => {
                 this.setState({
@@ -100,7 +101,6 @@ class ListPageSearches extends Component {
         this.setState({
             displayFilter: !this.state.displayFilter
         })
-        console.log('filtertoggle', this.state);
         if(triggerSearch) {
             this.handleSearch();
         }
@@ -117,6 +117,8 @@ class ListPageSearches extends Component {
             <div className="ListPageSearches">
                 {this.state.displayFilter &&
                     <Filter
+                        categories={this.state.categories}
+                        urgencyLimit={this.state.urgencyLimit}
                         categoryHandler={this.handleCategories}
                         urgencyHandler={this.handleUrgencyLimit}
                         displayFilter={this.handleDisplayFilter}
