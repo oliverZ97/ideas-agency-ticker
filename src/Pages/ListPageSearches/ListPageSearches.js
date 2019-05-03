@@ -28,10 +28,18 @@ class ListPageSearches extends Component {
         this.handleCategories = this.handleCategories.bind(this);
         this.handleUrgencyLimit = this.handleUrgencyLimit.bind(this);
         this.handleDisplayFilter = this.handleDisplayFilter.bind(this);
+        this.startSearch = this.startSearch.bind(this);
     }
 
     componentWillMount() {
         this.handleSearch();
+    }
+
+    componentDidMount() {
+        document.addEventListener("keydown", this.startSearch, false);
+    }
+    componentWillUnmount() {
+        document.removeEventListener("keydown", this.startSearch, false);
     }
 
     handleDisplayToggle() {
@@ -88,60 +96,61 @@ class ListPageSearches extends Component {
 
     }
 
-    handleDisplayFilter() {
+    handleDisplayFilter(triggerSearch) {
         this.setState({
             displayFilter: !this.state.displayFilter
         })
+        console.log('filtertoggle', this.state);
+        if(triggerSearch) {
+            this.handleSearch();
+        }
+    }
+
+    startSearch(event) {
+        if (event.keyCode === 13) {
+            this.handleSearch();
+        }
     }
 
     render() {
         return (
             <div className="ListPageSearches">
-                <div className="filter">
-                    {this.state.displayFilter &&
-                        <Filter
-                            categoryHandler={this.handleCategories}
-                            urgencyHandler={this.handleUrgencyLimit}
-                            displayFilter={this.handleDisplayFilter}
-                        />
-                    }
+                {this.state.displayFilter &&
+                    <Filter
+                        categoryHandler={this.handleCategories}
+                        urgencyHandler={this.handleUrgencyLimit}
+                        displayFilter={this.handleDisplayFilter}
+                    />
+                }
 
-                    {this.state.displayFilter === false &&
-                        <div>
-                            <div className="menu">
-                                <ContentMenu
-                                    toggleHandler={this.handleDisplayToggle}
-                                    queryHandler={this.handleQuery}
-                                    searchHandler={this.handleSearch}
-                                    displayMode={this.state.displayAsList}
-                                    displayFilter={this.handleDisplayFilter}
-                                />
-                            </div>
-
-                            <div className="searchresult">
-                                {this.state.displayAsList &&
-                                    <TileList documents={this.state.documents} setDoc={this.setDocument} />
-                                }
-
-                                {!this.state.displayAsList &&
-                                    <div className="tiles">
-                                        <p>CRAZY list view netflix style</p>
-                                    </div>
-                                }
-                            </div>
+                {!this.state.displayFilter &&
+                    <div>
+                        <div className="menu">
+                            <ContentMenu
+                                toggleHandler={this.handleDisplayToggle}
+                                queryHandler={this.handleQuery}
+                                searchHandler={this.handleSearch}
+                                displayMode={this.state.displayAsList}
+                                displayFilter={this.handleDisplayFilter}
+                            />
                         </div>
-                    }
-                </div>
 
+                        <div className="searchresult">
+                            {this.state.displayAsList &&
+                                <TileList documents={this.state.documents} setDoc={this.setDocument} />
+                            }
+
+                            {!this.state.displayAsList &&
+                                <div className="tiles">
+                                    <p>CRAZY list view netflix style</p>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
                 <div>
 
-                    {this.state.activeDoc === null &&
-                        <div>
-                            <p>nothing to show</p>
-                        </div>
-                    }
-
-                    {this.state.activeDoc !== null &&
+                    {this.state.activeDoc &&
                         <DetailView className="detailView" document={this.state.activeDoc} closeDetail={this.onClickCloseDetailView} />
                     }
                 </div>

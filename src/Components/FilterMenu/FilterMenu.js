@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import './FilterMenu.css';
-import {browserHistory} from 'react-router'
 
 class FilterMenu extends Component {
     constructor(props){
@@ -12,11 +10,11 @@ class FilterMenu extends Component {
     }
 
     updateFilter() {
-        return this.props.displayFilter();
+        return this.props.displayFilter(true);
     }
 
     goBack() {
-        return this.props.displayFilter();
+        return this.props.displayFilter(false);
     }
 
     render() {
