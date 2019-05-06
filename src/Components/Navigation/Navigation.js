@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { browserHistory } from 'react-router';
 import authentificationService from '../../services/authentificationService';
+import '../../css/modules/button.css';
+import '../../css/base/container.css';
 import './Navigation.css';
 
 class Navigation extends Component {
@@ -29,13 +31,13 @@ class Navigation extends Component {
   render() {
     return (
       <div className="Navigation">
-        <div className="nav_content">
-          <div className="nav_buttons">
-            <button id="navigation_button_searches" onClick={this.handleSearchClick}></button>
-            <button id="navigation_button_favs" onClick={this.handleFavClicks}></button>
+        <div className="Navigation__content Container-row Container-row--space-between"> 
+          <div>
+            <button className="button--small Navigation-button--searches" onClick={this.handleSearchClick}></button>
+            <button className="button--small Navigation-button--favorite" onClick={this.handleFavClicks}></button>
           </div>
-          <div className="nav_logout">
-            <button id="navigation_button_logout" onClick={this.handleLogout}></button>
+          <div>
+            <button className="button--small Navigation-button--logout" onClick={this.handleLogout}></button>
           </div>
         </div>
       </div>

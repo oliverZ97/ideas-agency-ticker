@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './ContentMenu.css';
-import {browserHistory} from 'react-router';
+import '../../css/modules/button.css';
+import '../../css/modules/searchbar.css';
+import '../../css/base/container.css';
 
 class ContentMenu extends Component {
     constructor(props){
@@ -19,7 +21,7 @@ class ContentMenu extends Component {
     }
 
     handleSearch(){
-        let qString = document.getElementById("navigation_searchbar").value;
+        let qString = document.getElementById("searchbar").value;
         this.props.queryHandler(qString);
         this.props.searchHandler();
     }
@@ -35,9 +37,9 @@ class ContentMenu extends Component {
 
     changeToggleButton() {
         if(this.props.displayMode){
-            document.getElementById('toggleDisplay').className = 'displayList';
+            document.getElementById('toggleDisplay').className = 'button--primary ContentMenu-button--displayList';
         } else {
-            document.getElementById('toggleDisplay').className = 'displayTile';
+            document.getElementById('toggleDisplay').className = 'button--primary ContentMenu-button--displayTile';
         }
     }
 
@@ -48,10 +50,10 @@ class ContentMenu extends Component {
     render() {
         return (
             <div className="ContentMenu">
-                <input id="navigation_searchbar" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
-                <div className="buttons">
-                <button id="navigation_button_filter" onClick={this.handleFilterClick}></button>
-                <button id="toggleDisplay" className="displayTile" onClick={this.handleDisplayToggle}></button>
+                <input id="searchbar" className="Searchbar__input" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
+                <div className="Container-row Container-row--space-between">
+                <button className="button--primary ContentMenu-button--filter" onClick={this.handleFilterClick}></button>
+                <button id="toggleDisplay" className="button--primary ContentMenu-button--displayTile" onClick={this.handleDisplayToggle}></button>
                 </div> 
             </div>
         );

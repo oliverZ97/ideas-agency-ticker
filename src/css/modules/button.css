@@ -1,0 +1,31 @@
+.button--large {
+    width: 15rem;
+    min-height: 50px;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.button--large:hover {
+    background-color: #00cc66;
+    color: green;
+    cursor: pointer;
+}
+
+.button--large:focus {
+    outline: none;
+}
+
+.button--primary {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 2px;
+    background-color: #fae596;
+}
+
+.button--small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin: 2px;
+}

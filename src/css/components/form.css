@@ -1,0 +1,72 @@
+.Form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center; /**alignment along the MAIN-AXIS(column)**/
+    margin-bottom: 200px;
+    background-color: #173e43;
+}
+
+.Form__input {
+    flex: 1;
+    width: 240px;
+    min-height: 30px;
+    min-width: 15rem;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #dddfd4;
+    color: #173e43;
+    font-size: 17px;
+}
+
+.Form__input:focus {
+    border-color:#00cc66;
+    color: #173e43;
+}
+
+.Form__input:hover {
+    border-color:#00cc66;
+}
+  
+.Form__button {
+    flex: 1;
+    background-color: #3fb0ac;
+    color: #173e43;
+    border-color: green;
+    font-size: 20px;
+    transition: .6s;
+    overflow: hidden;
+}
+
+.Form__button:hover {
+    background-color: #00cc66;
+    color: green;
+    cursor: pointer;
+}
+
+.Form__button:focus {
+    outline: none;
+}
+
+.Form__message {
+    color: #dddfd4;
+}
+
+@media screen and (max-width: 768px) {
+    .Form {
+        justify-content: left;
+        min-width: 260px;
+        min-height: 1000px;
+    }
+
+    .Form__input {
+        width: 15rem;
+        height: 30px;
+    }
+
+    .Form__button {
+        height: 50px;
+    }
+}

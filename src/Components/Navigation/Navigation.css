@@ -3,92 +3,43 @@
     border-bottom: 2px solid #173e43;
 }
 
-.nav_content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 60%;
-    margin: auto;
-}
-
-.Navigation button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    margin: 2px;
-}
-
-.Navigation a {
-    color: #3fb0ac;
-}
-
-.nav_search {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-}
-
-#navigation_button_filter {
-    background: #fae595 url("../../Images/noun_filters_220951.png");
-    background-size: 50px 50px;
-}
-
-#navigation_button_searches {
+.Navigation-button--searches {
     background: #fae595 url("../../Images/noun_diskette_1939628.png");
-    background-size: 50px 50px;
+    background-size: 40px 40px;
 }
 
-#navigation_button_favs {
+.Navigation-button--favorite {
     background: #fae595 url("../../Images/noun_Star_750828.png");
-    background-size: 50px 50px;
+    background-size: 40px 40px;
 }
 
-#navigation_button_logout {
+.Navigation-button--logout {
     background: #fae595 url("../../Images/noun_logout_1350695.png");
-    background-size: 50px 50px;
+    background-size: 40px 40px;
 }
 
-@media screen and (max-width: 768px){
-    .nav_content {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 769px){
-    .nav_content {
+@media screen and (min-width: 1024px){
+    .Navigation__content {
         width: 80%;
     }
 }
 
 @media screen and (min-width: 1024px){
-    .nav_content {
-        width: 100%;
+    .Navigation__content {
+        width: 60%;
     }
 
-    .Navigation button {
-        width: 40px;
-        height: 40px;
-        border-radius: 50px;
-        margin: 2px;
-    }
-
-    #navigation_button_filter {
-        background: #fae595 url("../../Images/noun_filters_220951.png");
-        background-size: 40px 40px;
-    }
-    
-    #navigation_button_searches {
+    .Navigation-button--searches {
         background: #fae595 url("../../Images/noun_diskette_1939628.png");
         background-size: 40px 40px;
     }
     
-    #navigation_button_favs {
+    .Navigation-button--favorite {
         background: #fae595 url("../../Images/noun_Star_750828.png");
         background-size: 40px 40px;
     }
     
-    #navigation_button_logout {
+    .Navigation-button--logout {
         background: #fae595 url("../../Images/noun_logout_1350695.png");
         background-size: 40px 40px;
     }

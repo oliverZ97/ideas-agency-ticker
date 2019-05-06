@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import '../../css/components/form.css';
+import '../../css/base/container.css';
 import './LoginForm.css';
 
 class LoginForm extends Component {
@@ -37,20 +39,20 @@ class LoginForm extends Component {
 
   render() {
 
-    var errorMessage = this.state.showError ? <p className="ErrorMsg">Oops! Please check your Login Data.</p> : null;
+    var errorMessage = this.state.showError ? <p className="LoginForm__message">Oops! Please check your Login Data.</p> : null;
 
     return (
       <form className="LoginForm" onSubmit={this.handleSubmit}>
-        <div className="username">
-          <label htmlFor="uName"></label>
-          <input type="text" placeholder="Username" minLength="4" name="uName" onChange={this.handleChangeUsername}></input>
+        <div className="Container-column Container--items-centered">
+          <label className="Form__label" htmlFor="username"></label>
+          <input className="Form__input" type="text" placeholder="Username" minLength="4" name="username" onChange={this.handleChangeUsername}></input>
         </div>
-        <div className="password">
-          <label htmlFor="psw"></label>
-          <input type="password" placeholder="Password" minLength="6" name="psw" onChange={this.handleChangePassword}></input>
+        <div className="Container-column Container--items-centered">
+          <label className="Form__label" htmlFor="password"></label>
+          <input className="Form__input" type="password" placeholder="Password" minLength="6" name="password" onChange={this.handleChangePassword}></input>
         </div>
-        <div>
-          <button type="submit">Login</button>
+        <div className="Container-column Container--items-centered">
+          <button className="Form__button Form__button--cta button--large" type="submit">Login</button>
         </div>
         {errorMessage}
       </form>
