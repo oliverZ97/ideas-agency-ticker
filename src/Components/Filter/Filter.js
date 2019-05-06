@@ -6,7 +6,6 @@ import FilterMenu from '../FilterMenu/FilterMenu';
 class Filter extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props)
 
     this.handleToggleCategories = this.handleToggleCategories.bind(this);
     this.handleToggleUrgencies = this.handleToggleUrgencies.bind(this);
@@ -37,8 +36,6 @@ class Filter extends Component {
     } else {
         newUrgency = 0;
     }
-
-    console.log('limit', newUrgency);
     this.props.urgencyHandler(newUrgency);
   }
 

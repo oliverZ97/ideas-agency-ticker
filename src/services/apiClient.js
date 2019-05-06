@@ -46,7 +46,6 @@ class ApiClient {
             urgencyLimit: urgencyLimit,
             categories: categories
         }
-        console.log('body: ' + bodyContent.categories, bodyContent.urgencyLimit);
 
         let headers = {
             'X-Auth-Token': this.authentificationService.getToken()

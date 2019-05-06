@@ -55,7 +55,6 @@ class ListPageSearches extends Component {
     }
 
     handleSearch() {
-        console.log(this.state);
         apiClient.search(this.state.query, this.state.urgencyLimit, this.state.categories)
             .then((result) => {
                 this.setState({
@@ -73,7 +72,6 @@ class ListPageSearches extends Component {
         this.setState({
             activeDoc: document
         })
-        console.log(this.state.activeDoc);
     }
 
     onClickCloseDetailView() {
