@@ -6,6 +6,10 @@
     border: 1px solid #dddfd4;
 }
 
+.ContentMenu__buttons {
+    margin: 0;
+}
+
 .ContentMenu-button--displayTile {
     background: #fae596 url(../../Images/noun_tiles_777826.png) no-repeat center;
     background-size: 40px 40px;

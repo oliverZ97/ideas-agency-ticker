@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './ContentMenu.css';
 import '../../css/modules/button.css';
-import '../../css/modules/searchbar.css';
 import '../../css/base/container.css';
 
 class ContentMenu extends Component {
@@ -50,8 +49,8 @@ class ContentMenu extends Component {
     render() {
         return (
             <div className="ContentMenu">
-                <input id="searchbar" className="Searchbar__input" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
-                <div className="Container-row Container-row--space-between">
+                <input id="searchbar" className="Form__input--round" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
+                <div className="ContentMenu_Buttons Container-row Container-row--space-between">
                 <button className="button--primary ContentMenu-button--filter" onClick={this.handleFilterClick}></button>
                 <button id="toggleDisplay" className="button--primary ContentMenu-button--displayTile" onClick={this.handleDisplayToggle}></button>
                 </div> 
