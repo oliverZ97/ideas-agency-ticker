@@ -8,10 +8,6 @@
     background-color: #173e43; 
 }
 
-.Tile__container {
-    max-height: 100px;
-}
-
 .Tile__container--meta {
     border-bottom: 1px solid #dddfd4;
 }
