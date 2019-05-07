@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../css/base/container.css';
 import './FilterMenu.css';
 
 class FilterMenu extends Component {
@@ -19,12 +20,12 @@ class FilterMenu extends Component {
 
     render() {
         return (
-            <div className="FilterMenu">
-                <div className="filter_options">
-                    <button className="filter_update" onClick={this.updateFilter}></button>
-                    <button className="filter_save" type="submit"></button>
+            <div className="FilterMenu Container-row Container-row--space-between">
+                <div className="Container-row">
+                    <button className="FilterMenu-button--update button--primary" onClick={this.updateFilter}></button>
+                    <button className="FilterMenu-button--save button--primary" type="submit"></button>
                 </div>
-                <button className="filter_back" onClick={this.goBack}></button>
+                <button className="FilterMenu-button--back button--primary" onClick={this.goBack}></button>
             </div>
         );
     }
