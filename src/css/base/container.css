@@ -2,7 +2,6 @@
     .Container-row {
         display: flex;
         flex-direction: row;
-        margin: auto;
     }
 
     .Container-row--space-between {
@@ -14,7 +13,6 @@
     .Container-row {
         display: flex;
         flex-direction: row;
-        margin: auto;
     }
 
     .Container-row--space-between {

@@ -78,6 +78,10 @@
         height: 30px;
     }
 
+    .Form__input--round {
+        min-width: 10rem;
+    }
+
     .Form__button {
         height: 50px;
     }
