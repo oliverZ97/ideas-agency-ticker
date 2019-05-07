@@ -20,7 +20,7 @@
         ". author . . . .";
 }
 
-.DetailView .detail_back {
+.DetailView-button--back {
     grid-area: back;
     justify-self: end;
     width: 50px;
@@ -30,24 +30,24 @@
     border-radius: 50px;
 }
 
-.DetailView .detail_title {
+.DetailView__title {
     grid-area: title;
     justify-self: left;
     color: #dddfd4;
 }
 
-.DetailView .detail_date {
+.DetailView__date {
     grid-area: date;
     color: #dddfd4;
     justify-self: start;
 }
 
-.DetailView .detail_agency {
+.DetailView__agency {
     grid-area: agency;
     color: #dddfd4;
 }
 
-.DetailView .detail_fav {
+.DetailView-button--favorite {
     grid-area: fav;
     background: #fae596 url(../../Images/noun_Star_750828.png);
     background-size: 50px 50px;
@@ -57,7 +57,7 @@
     justify-self: start;
 }
 
-.DetailView .detail_img {
+.DetailView__img {
     grid-area: img;
     object-fit: cover;
     width: 100%;
@@ -65,7 +65,7 @@
     max-height: 200px;
 }
 
-.DetailView .detail_text {
+.DetailView__text {
     grid-area: article;
     color: #dddfd4;
     line-height: 1.5;
@@ -73,18 +73,11 @@
     border-left: 2px solid #fae596;
 }
 
-.DetailView .detail_author {
+.DetailView__author {
     grid-area: author;
     color: #dddfd4;
     margin-left: 15px;
     justify-self: left;
-}
-
-.DetailView .detail_tags {
-    grid-area: tags;
-    justify-self: left;
-    color: #dddfd4;
-    
 }
 
 @media screen and (max-width: 768px){
@@ -105,13 +98,13 @@
         top: 55px;
     }
 
-    .DetailView .detail_text {
+    .DetailView__text {
         text-align: justify;
         width: 100%;
         padding: 5px;
     }
 
-    .DetailView .detail_img {
+    .DetailView__img {
         width: 100%;
         height: auto;
     }
@@ -134,7 +127,7 @@
         right: 10%;
     }
 
-    .DetailView .detail_text {
+    .DetailView__text {
         text-align: justify;
         width: 100%;
     }

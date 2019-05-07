@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import stripHtml from 'string-strip-html';
-import "./DetailView.css";
+import './DetailView.css';
+import '../../css/modules/button.css';
 
 class DetailView extends React.Component {
   constructor(props){
@@ -29,14 +29,14 @@ class DetailView extends React.Component {
 
     return (
       <div className="DetailView">
-        <button className="detail_back" onClick={this.onClickCloseDetailView}></button>
-        <h4 className="detail_title" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>
-        <button className="detail_fav" type="button"></button>
-        <p className="detail_date">{this.props.document.dateCreated}</p>
-        <p className="detail_agency">{this.props.document.publisher}/{this.props.document.category}</p>
-        <img className="detail_img" alt="Beispielbild" src={"https://picsum.photos/600/250?rand=" + random}></img>
-        <p className="detail_text">{this.stripHtmlText(this.props.document.content || '')}</p>
-        <h6 className="detail_author">{this.props.document.author}</h6>
+        <button className="button--primary DetailView-button--back" onClick={this.onClickCloseDetailView}></button>
+        <h4 className="DetailView__title" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>
+        <button className="button--primary DetailView-button--favorite" type="button"></button>
+        <p className="DetailView__date">{this.props.document.dateCreated}</p>
+        <p className="DetailView__agency">{this.props.document.publisher}/{this.props.document.category}</p>
+        <img className="DetailView__img" alt="Beispielbild" src={"https://picsum.photos/600/250?rand=" + random}></img>
+        <p className="DetailView__text">{this.stripHtmlText(this.props.document.content || '')}</p>
+        <h6 className="DetailView__author">{this.props.document.author}</h6>
       </div>
     );
   }
