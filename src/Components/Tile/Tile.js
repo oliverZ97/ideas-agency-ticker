@@ -5,6 +5,7 @@ import { browserHistory } from 'react-router';
 import '../../css/modules/button.css';
 import '../../css/base/text.css';
 import '../../css/base/container.css';
+import ShortDate from '../ShortDate/ShortDate';
 
 
 //erhält über props title , etc und rendert
@@ -33,17 +34,13 @@ class Tile extends React.Component {
     return this.props.setDoc(document);
   }
 
-  getShortDate() {
-
-  }
-
   render() {
     return (
       <div className="Tile" onClick={this.setDocument}>
         <div className="Container-row Container-row--flex-end Tile__container--meta">
           <h6 className="text__h--light Tile__h6">{this.props.document.publisher}</h6>
           <h6 className="text__h--light Tile__h6">{this.props.document.category}</h6>
-          <h6 className="text__h--light Tile__h6">{this.props.document.dateCreated}</h6>
+          <ShortDate date={this.props.document.dateCreated}/>
         </div>
         <div className="Container-row Container-row--flex-end Tile__container">
           <p className="text--light Tile__text" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
@@ -52,7 +49,6 @@ class Tile extends React.Component {
       </div>
     );
   }
-  /**<p className="text--light Tile__text Tile__text--hiddenoverflow">{this.stripHtmlText(this.props.document.content || '')}</p> */
 }
 
 export default Tile;
