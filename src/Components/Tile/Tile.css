@@ -8,40 +8,33 @@
     background-color: #173e43; 
 }
 
-.Tile p {
-    flex: 2;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    color:#dddfd4;
+.Tile__container {
+    max-height: 100px;
 }
 
-.Tile h6 {
+.Tile__container--meta {
+    border-bottom: 1px solid #dddfd4;
+}
+
+.Tile__text {
+    flex: 2;
+    margin-top: 3px;
+}
+
+.Tile__h6 {
+    flex: 1;
     white-space: pre;
     text-overflow: ellipsis;
     align-self: flex-end;
-    flex: 1;
     padding: 2px;
-    color: #dddfd4;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
 }
 
-.Tile .content {
+.Tile__text--hiddenoverflow {
     overflow: hidden;
     white-space: pre;
     text-overflow: ellipsis;
-}
-
-.Tile button {
-    width: 40px;
-    height: 40px;
-    background: #fae596 url(../../Images/noun_Star_750828.png) no-repeat center;
-    background-size: 30px 30px;
-    border-radius: 5px;
-}
-
-.Tile .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
 }
 
 @media screen and (max-width: 768px) {

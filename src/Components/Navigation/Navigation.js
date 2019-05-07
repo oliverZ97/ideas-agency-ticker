@@ -34,7 +34,7 @@ class Navigation extends Component {
         <div className="Navigation__content Container-row Container-row--space-between"> 
           <div>
             <button className="button--small Navigation-button--searches" onClick={this.handleSearchClick}></button>
-            <button className="button--small Navigation-button--favorite" onClick={this.handleFavClicks}></button>
+            <button className="button--small button--favorite" onClick={this.handleFavClicks}></button>
           </div>
           <div>
             <button className="button--small Navigation-button--logout" onClick={this.handleLogout}></button>

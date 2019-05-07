@@ -29,3 +29,8 @@
     border-radius: 50px;
     margin: 2px;
 }
+
+.button--favorite {
+    background: #fae595 url("../../Images/noun_Star_750828.png");
+    background-size: 40px 40px;
+}

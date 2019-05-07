@@ -8,11 +8,6 @@
     background-size: 40px 40px;
 }
 
-.Navigation-button--favorite {
-    background: #fae595 url("../../Images/noun_Star_750828.png");
-    background-size: 40px 40px;
-}
-
 .Navigation-button--logout {
     background: #fae595 url("../../Images/noun_logout_1350695.png");
     background-size: 40px 40px;
@@ -26,11 +21,6 @@
 
     .Navigation-button--searches {
         background: #fae595 url("../../Images/noun_diskette_1939628.png");
-        background-size: 40px 40px;
-    }
-    
-    .Navigation-button--favorite {
-        background: #fae595 url("../../Images/noun_Star_750828.png");
         background-size: 40px 40px;
     }
     

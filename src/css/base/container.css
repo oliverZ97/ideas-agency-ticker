@@ -7,6 +7,10 @@
     .Container-row--space-between {
         justify-content: space-between;
     }
+
+    .Container-row--flex-end {
+        justify-content: flex-end;
+    }
 }
 
 @media screen and (min-width: 769px){
@@ -17,6 +21,10 @@
 
     .Container-row--space-between {
         justify-content: space-between;
+    }
+
+    .Container-row--flex-end {
+        justify-content: flex-end;
     }
 }
 
