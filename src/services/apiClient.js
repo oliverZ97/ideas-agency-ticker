@@ -29,21 +29,21 @@ class ApiClient {
             })
     }
 
-    search(searchstring, urgencyLimit = '', categories = []) {
+    search(searchstring, urgency = '', categories = []) {
 
         // search for all categories if non selected
         if (!categories.length) {
             categories = null;
         }
 
-        if (urgencyLimit = ''){
-            urgencyLimit = 8;
+        if (urgency === ''){
+            urgency = 8;
         }
 
         let bodyContent = {
             limit: 30,
             q: searchstring,
-            urgencyLimit: urgencyLimit,
+            urgencyLimit: urgency,
             categories: categories
         }
 
