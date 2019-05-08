@@ -2,94 +2,26 @@ import React, { Component } from 'react';
 import './TileSlider.css';
 import Tile from '../Tile/Tile';
 
-class TileSlider extends Component {
-  render() {
-    return (
-        <div className="slider">
-            <div>
-                <button className="prev" type="submit"></button>
-            </div>
-            <div className="slider-content">
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
-                <div className="tile">
-                    <Tile />
-                </div>
+function TileSlider(props) {
 
+    function setDocument(document) {
+        return props.setDoc(document);
+    }
+
+    let tiles = props.documents.map((document) => <Tile key={document.id} document={document} setDoc={setDocument} />);
+    return (
+        <div className="TileSlider">
+            <div>
+                <button className="TileSlider-button--prev" type="submit"></button>
+            </div>
+            <div className="TileSlider__content">
+                {tiles}
             </div>
             <div>
-                <button className="next" type="submit"></button>
+                <button className="TileSlider-button--next" type="submit"></button>
             </div>
         </div>
     );
-  }
 }
 
 export default TileSlider;

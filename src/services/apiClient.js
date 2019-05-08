@@ -41,7 +41,7 @@ class ApiClient {
         }
 
         let bodyContent = {
-            limit: 30,
+            limit: 72,
             q: searchstring,
             urgencyLimit: urgency,
             categories: categories

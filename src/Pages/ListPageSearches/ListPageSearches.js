@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import './ListPageSearches.css'
+import './ListPageSearches.css';
+import '../../css/base/container.css';
 import TileList from '../../Components/TileList/TileList';
 import apiClient from '../../services/apiClient';
 import ContentMenu from '../../Components/ContentMenu/ContentMenu';
 import DetailView from '../../Components/DetailView/DetailView';
 import _ from 'lodash';
 import Filter from '../../Components/Filter/Filter';
+import TileGroup from '../../Components/TileGroup/TileGroup';
 
 class ListPageSearches extends Component {
     constructor() {
@@ -29,7 +31,7 @@ class ListPageSearches extends Component {
         this.handleUrgencyLimit = this.handleUrgencyLimit.bind(this);
         this.handleDisplayFilter = this.handleDisplayFilter.bind(this);
         this.startSearch = this.startSearch.bind(this);
-    }
+        }
 
     componentWillMount() {
         this.handleSearch();
@@ -99,7 +101,7 @@ class ListPageSearches extends Component {
         this.setState({
             displayFilter: !this.state.displayFilter
         })
-        if(triggerSearch) {
+        if (triggerSearch) {
             this.handleSearch();
         }
     }
@@ -141,9 +143,7 @@ class ListPageSearches extends Component {
                             }
 
                             {!this.state.displayAsList &&
-                                <div className="tiles">
-                                    <p>CRAZY list view netflix style</p>
-                                </div>
+                                <TileGroup documents={this.state.documents} setDoc={this.setDocument}/>
                             }
                         </div>
                     </div>

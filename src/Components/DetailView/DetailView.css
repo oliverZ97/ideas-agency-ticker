@@ -82,7 +82,7 @@
 
 @media screen and (max-width: 768px){
     .DetailView {
-        width: 97%;
+        width: 100%;
         left: 0;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-areas:
@@ -112,6 +112,7 @@
 
 @media screen and (min-width: 769px){
     .DetailView {
+        width: 80%;
         grid-template-columns: 30% auto 20% 5%;
         grid-template-areas:
         "fav . . back "
@@ -147,9 +148,6 @@
         padding: 5px;
         margin-top: 0px;
         top: 46px;
-        left: 20%;
-        right: 20%;
-        width: 60%;
     }
 
 }
@@ -158,5 +156,12 @@
     .DetailView {
         padding: 5px; 
         margin: auto;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1408px) {
+    .DetailView {
+        width: 80%;
     }
 }

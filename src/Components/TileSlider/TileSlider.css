@@ -1,43 +1,48 @@
-.slider {
+.TileSlider {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    overflow-x: scroll;
+    margin: 10px;
 }
 
-.slider-content{
+.TileSlider__content{
     display: flex;
     flex-direction: row;
-    max-width: 90%;
-    overflow-x: auto;
-    white-space: nowrap;
 }
 
-.prev {
+.TileSlider-button--prev {
+    position: relative;
+    opacity: 0.4;
     background: #fae596 url(../../Images/noun_Arrow_8603.png) no-repeat center;
     background-size: 50px 50px;
-    height: 100%;
+    border-radius: 5px;
+    height: 100px;
     min-width: 50px;
     border: 1px solid #173e43;
 }
 
-.next {
+.TileSlider-button--next {
+    position: relative;
+    opacity: 0.4;
     background: #fae596 url(../../Images/noun_Arrow_8604.png) no-repeat center;
     background-size: 50px 50px;
-    height: 100%;
+    height: 100px;
     min-width: 50px;
     border: 1px solid #173e43;
 }
 
 @media screen and (max-width: 768px){
-    .slider-content {
+    .TileSlider__content {
         width: auto;
     }
 
-    .prev {
-        width: 10%;
+    .TileSlider-button--prev {
+        position: absolute;
+        left: 0;
     }
 
-    .next {
-        width: 10%;
+    .TileSlider-button--next {
+        position: absolute;
     }
 }
