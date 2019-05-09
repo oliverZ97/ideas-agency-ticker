@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './TileSlider.css';
 import Tile from '../Tile/Tile';
 
@@ -8,19 +8,18 @@ function TileSlider(props) {
         return props.setDoc(document);
     }
 
-    let tiles = props.documents.map((document) => <Tile key={document.id} document={document} setDoc={setDocument} />);
+    let tiles = props.documents.map((document) => <Tile key={props.title + "_" + document.id} document={document} setDoc={setDocument} />);
     return (
-        <div className="TileSlider">
-            <div>
-                <button className="TileSlider-button--prev" type="submit"></button>
-            </div>
-            <div className="TileSlider__content">
-                {tiles}
-            </div>
-            <div>
-                <button className="TileSlider-button--next" type="submit"></button>
+        <div>
+            <h2>{props.title}</h2>
+            <div className="TileSlider">
+                <div className="TileSlider__content">
+                    {tiles}
+                </div>
+
             </div>
         </div>
+
     );
 }
 
