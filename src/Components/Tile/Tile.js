@@ -43,7 +43,7 @@ class Tile extends React.Component {
           <ShortDate date={this.props.document.dateCreated}/>
         </div>
         <div className="Container-row Container-row--flex-end Tile__container--content">
-          <p className="text--light Tile__text Tile__text--hiddenoverflow" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
+          <p className="text--light Tile__text" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
           <button className="button--small button--favorite" type="button"></button>
         </div>
       </div>
