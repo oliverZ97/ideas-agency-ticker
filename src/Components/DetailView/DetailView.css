@@ -4,6 +4,7 @@
     left: 20%;
     right: 20%;
     width: auto;
+    z-index: 99999;
     background-color: #173e43;
     border: 1px solid #dddfd4;
     display: grid;
@@ -82,20 +83,19 @@
 
 @media screen and (max-width: 768px){
     .DetailView {
-        width: 100%;
+        width: 98%;
         left: 0;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-areas:
         "fav . . back "
         "title title title title"
-        "date . agency ."
+        "date date agency agency"
         "img img img img"
         "article article article article"
         ". . . .";
         grid-gap: 0px;
         padding: 5px;
-        margin-top: 0px;
-        top: 55px;
+        margin: auto;
     }
 
     .DetailView__text {
@@ -112,18 +112,16 @@
 
 @media screen and (min-width: 769px){
     .DetailView {
-        width: 80%;
         grid-template-columns: 30% auto 20% 5%;
         grid-template-areas:
         "fav . . back "
         "title title title title"
-        "date . agency ."
+        "date date agency ."
         "img img img img"
         "article article article article"
         "author author . .";
         grid-gap: 0px;
         padding: 5px;
-        top: 55px;
         left: 10%;
         right: 10%;
     }
@@ -148,6 +146,7 @@
         padding: 5px;
         margin-top: 0px;
         top: 46px;
+        width: 80%;
     }
 
 }
@@ -156,12 +155,12 @@
     .DetailView {
         padding: 5px; 
         margin: auto;
-        width: 70%;
+        width: 80%;
     }
 }
 
 @media screen and (min-width: 1408px) {
     .DetailView {
-        width: 80%;
+        width: 70%;
     }
 }

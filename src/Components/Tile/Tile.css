@@ -1,11 +1,11 @@
 .Tile {
     border: 2px solid #dddfd4;
-    width: 400px;
+    width: 400px !important;
     height: 200px;
     display: flex;
     flex-direction: column;
     padding: 8px;
-    background-color: #173e43; 
+    background-color: #173e43;
 }
 
 .Tile__container--meta {
@@ -29,8 +29,6 @@
 
 .Tile__text--hiddenoverflow {
     overflow: hidden;
-    white-space: pre;
-    text-overflow: ellipsis;
 }
 
 @media screen and (max-width: 768px) {

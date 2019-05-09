@@ -42,8 +42,8 @@ class Tile extends React.Component {
           <h6 className="text__h--light Tile__h6">{this.props.document.category}</h6>
           <ShortDate date={this.props.document.dateCreated}/>
         </div>
-        <div className="Container-row Container-row--flex-end">
-          <p className="text--light Tile__text" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
+        <div className="Container-row Container-row--flex-end Tile__container--content">
+          <p className="text--light Tile__text Tile__text--hiddenoverflow" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
           <button className="button--small button--favorite" type="button"></button>
         </div>
       </div>
