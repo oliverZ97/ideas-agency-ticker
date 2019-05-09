@@ -1,0 +1,21 @@
+.btn {
+    background-color: #3fb0ac;
+    border-radius: 5px;
+}
+
+.btn__primary {
+    width: 250px;
+    height: 50px;
+    margin-top: 1rem;
+}
+
+.btn__primary:hover {
+    background-color: #00cc66;
+    color: green;
+    cursor: pointer;
+}
+
+.btn__primary:focus {
+    outline: none;
+}
+

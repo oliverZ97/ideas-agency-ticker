@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ListPageSearches.css';
-import '../../css/base/container.css';
+import '../../css/layout/container.css';
 import TileList from '../../Components/TileList/TileList';
 import apiClient from '../../services/apiClient';
 import ContentMenu from '../../Components/ContentMenu/ContentMenu';

@@ -1,3 +1,4 @@
+/*Gestaltung der <p> Elemente*/
 .text--light {
     color:#dddfd4;
 }
@@ -6,10 +7,10 @@
     color: #173e43;
 }
 
-.text__h--light {
-    color: #dddfd4;
+.text__primary {
+
 }
 
-.text__h--dark {
-    color: #173e43;
+.text__secondary {
+
 }

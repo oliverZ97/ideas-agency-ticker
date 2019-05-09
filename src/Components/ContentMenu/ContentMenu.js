@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './ContentMenu.css';
-import '../../css/modules/button.css';
-import '../../css/base/container.css';
+import '../../css/elements/button.css';
+import '../../css/layout/container.css';
 
 class ContentMenu extends Component {
     constructor(props){

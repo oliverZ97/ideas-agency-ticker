@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import stripHtml from 'string-strip-html';
 import './DetailView.css';
-import '../../css/modules/button.css';
+import '../../css/elements/button.css';
 
 class DetailView extends React.Component {
   constructor(props){

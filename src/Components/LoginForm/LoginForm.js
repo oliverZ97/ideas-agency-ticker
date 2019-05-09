@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import '../../css/components/form.css';
-import '../../css/base/container.css';
+import '../../css/layout/container.css';
 import './LoginForm.css';
 
 class LoginForm extends Component {
@@ -52,7 +51,7 @@ class LoginForm extends Component {
           <input className="Form__input" type="password" placeholder="Password" minLength="6" name="password" onChange={this.handleChangePassword}></input>
         </div>
         <div className="Container-column Container--items-centered">
-          <button className="Form__button Form__button--cta button--large" type="submit">Login</button>
+          <button className="btn btn__primary" type="submit">Login</button>
         </div>
         {errorMessage}
       </form>

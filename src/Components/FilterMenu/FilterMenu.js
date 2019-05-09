@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../css/base/container.css';
+import '../../css/layout/container.css';
 import './FilterMenu.css';
 
 class FilterMenu extends Component {
