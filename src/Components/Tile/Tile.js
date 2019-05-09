@@ -7,7 +7,6 @@ import '../../css/base/text.css';
 import '../../css/base/container.css';
 import ShortDate from '../ShortDate/ShortDate';
 
-
 //erhält über props title , etc und rendert
 class Tile extends React.Component {
   constructor(props) {
@@ -17,16 +16,11 @@ class Tile extends React.Component {
     }
 
     this.renderAsHtml = this.renderAsHtml.bind(this);
-    this.stripHtmlText = this.stripHtmlText.bind(this);
     this.setDocument = this.setDocument.bind(this);
   }
 
   renderAsHtml(text) {
-    return { __html: text };
-  }
-
-  stripHtmlText(text) {
-    return stripHtml(text)
+    return { __html: stripHtml(text) };
   }
 
   setDocument() {
