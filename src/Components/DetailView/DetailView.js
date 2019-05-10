@@ -29,9 +29,9 @@ class DetailView extends React.Component {
 
     return (
       <div className="DetailView">
-        <button className="button--primary DetailView-button--back" onClick={this.onClickCloseDetailView}></button>
+        <button className="pill pill__primary pill--back DetailView-button--back" onClick={this.onClickCloseDetailView}></button>
         <h4 className="DetailView__title" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>
-        <button className="button--primary DetailView-button--favorite" type="button"></button>
+        <button className="pill pill__primary pill--favorite DetailView-button--favorite" type="button"></button>
         <p className="DetailView__date">{this.props.document.dateCreated}</p>
         <p className="DetailView__agency">{this.props.document.publisher}/{this.props.document.category}</p>
         <img className="DetailView__img" alt="Beispielbild" src={"https://picsum.photos/600/250?rand=" + random}></img>

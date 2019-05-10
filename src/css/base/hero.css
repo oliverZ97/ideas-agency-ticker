@@ -1,11 +1,9 @@
 .hero {
-
+    font-family: 'Courier New', Courier, monospace;
+    color: #fae596;
+    background-color: #173e43;
 }
 
-.hero__text {
+.hero__text {}
 
-}
-
-.hero__img {
-    
-}
+.hero__img {}

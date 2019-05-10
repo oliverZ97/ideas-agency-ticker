@@ -1,6 +1,6 @@
 import React from 'react';
 import './TileSlider.css';
-import Tile from '../Tile/Tile';
+import Tile from '../../Tile/Tile';
 
 function TileSlider(props) {
 

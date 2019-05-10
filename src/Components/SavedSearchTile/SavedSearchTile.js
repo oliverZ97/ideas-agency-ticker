@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import './SavedSearchTile.css';
+import '../../css/elements/pill.css';
 
 class SavedSearchTile extends Component {
   render() {
@@ -14,7 +15,7 @@ class SavedSearchTile extends Component {
         </div>
         </Link>
         <div> 
-            <button className="DeleteFilter" type="submit"></button>
+            <button className="pill pill__primary pill--delete" type="submit"></button>
         </div>
       </div>
     );

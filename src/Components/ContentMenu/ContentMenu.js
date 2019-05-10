@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ContentMenu.css';
-import '../../css/elements/button.css';
+import '../../css/elements/pill.css';
 import '../../css/layout/container.css';
 
 class ContentMenu extends Component {
@@ -36,9 +36,9 @@ class ContentMenu extends Component {
 
     changeToggleButton() {
         if(this.props.displayMode){
-            document.getElementById('toggleDisplay').className = 'button--primary ContentMenu-button--displayList';
+            document.getElementById('toggleDisplay').className = 'pill pill__primary pill--displayList';
         } else {
-            document.getElementById('toggleDisplay').className = 'button--primary ContentMenu-button--displayTile';
+            document.getElementById('toggleDisplay').className = 'pill pill__primary pill--displayTile';
         }
     }
 
@@ -51,8 +51,8 @@ class ContentMenu extends Component {
             <div className="ContentMenu">
                 <input id="searchbar" className="Form__input--round" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
                 <div className="ContentMenu_Buttons Container-row Container-row--space-between">
-                <button className="button--primary ContentMenu-button--filter" onClick={this.handleFilterClick}></button>
-                <button id="toggleDisplay" className="button--primary ContentMenu-button--displayTile" onClick={this.handleDisplayToggle}></button>
+                <button className="pill pill__primary pill--filter" onClick={this.handleFilterClick}></button>
+                <button id="toggleDisplay" className="pill pill__primary pill--displayTile" onClick={this.handleDisplayToggle}></button>
                 </div> 
             </div>
         );

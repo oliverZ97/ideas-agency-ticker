@@ -37,7 +37,7 @@ class Tile extends React.Component {
         </div>
         <div className="Container-row Container-row--flex-end Tile__container--content">
           <p className="text--light Tile__text" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
-          <button className="button--small button--favorite" type="button"></button>
+          <button className="pill pill__secondary pill--favorite"></button>
         </div>
       </div>
     );

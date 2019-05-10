@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Favorites.css';
-import FavTile from '../FavTile/FavTile';
+import FavTile from './FavTile/FavTile';
 
 class Favorites extends Component {
   render() {

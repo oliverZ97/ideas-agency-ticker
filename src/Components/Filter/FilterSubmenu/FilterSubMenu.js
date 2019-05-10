@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './FilterSubmenu.css';
-import FilterSubmenuTile from '../FilterSubmenuTile/FilterSubmenuTile';
+import FilterSubmenuTile from './FilterSubmenuTile/FilterSubmenuTile';
 
 const FilterSubmenu = (props) =>  {
   let entries = props.entries || [];

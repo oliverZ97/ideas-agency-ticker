@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './FavTile.css';
+import '../../../css/elements/pill.css';
 
 class FavTile extends Component {
   render() {
@@ -11,7 +12,7 @@ class FavTile extends Component {
             <p className="Fav_preview">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
         <div className="DeleteFav"> 
-            <button type="submit"></button>
+            <button className="pill pill__primary pill--delete"></button>
         </div>
       </div>
     );

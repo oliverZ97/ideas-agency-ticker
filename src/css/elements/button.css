@@ -1,6 +1,7 @@
 .btn {
     background-color: #3fb0ac;
     border-radius: 5px;
+    color: #173e43;
 }
 
 .btn__primary {
@@ -11,7 +12,6 @@
 
 .btn__primary:hover {
     background-color: #00cc66;
-    color: green;
     cursor: pointer;
 }
 

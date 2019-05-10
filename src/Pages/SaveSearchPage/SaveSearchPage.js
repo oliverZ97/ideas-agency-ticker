@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import React from 'react';
+import { browserHistory } from 'react-router';
 import './SaveSearchPage.css';
-import SlideInView from '../../Components/SlideInView/SlideInView';
+import '../../css/elements/pill.css';
 import SavedSearches from '../../Components/SavedSearches/SavedSearches';
 
-class SaveSearchPage extends Component {
-  render() {
-    return (
-      <div className="SaveSearchPage">
-        <Link to="/list"><button className="ssearches_back"></button></Link>
-        <SavedSearches />
-      </div>
-    );
+function SaveSearchPage() {
+  function handleBackClick() {
+    browserHistory.push('/list-search');
   }
+
+  return (
+    <div className="SaveSearchPage">
+      <button className="pill pill__primary pill--back" onClick={handleBackClick}></button>
+      <SavedSearches />
+    </div>
+  );
 }
 
 export default SaveSearchPage;
