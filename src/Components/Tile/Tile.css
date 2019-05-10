@@ -63,4 +63,14 @@
         height: 150px;
         width: 300px;
     }
+
+    .Tile__headline {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .Tile__headline {
+        font-size: 0.9rem;
+    }
 }
