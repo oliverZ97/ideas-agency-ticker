@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './ContentMenu.css';
 import '../../css/elements/pill.css';
 import '../../css/layout/container.css';
+import '../../css/base/text.css';
 
 class ContentMenu extends Component {
     constructor(props){
@@ -49,7 +50,7 @@ class ContentMenu extends Component {
     render() {
         return (
             <div className="ContentMenu">
-                <input id="searchbar" className="Form__input--round" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
+                <input id="searchbar" className="Form__input--round text text--dark text__secondary" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
                 <div className="ContentMenu_Buttons Container-row Container-row--space-between">
                 <button className="pill pill__primary pill--filter" onClick={this.handleFilterClick}></button>
                 <button id="toggleDisplay" className="pill pill__primary pill--displayTile" onClick={this.handleDisplayToggle}></button>

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './Filter.css';
-import FilterSubmenu from '../FilterSubmenu/FilterSubMenu';
-import FilterMenu from '../FilterMenu/FilterMenu';
+import FilterSubmenu from './FilterSubmenu/FilterSubMenu';
+import '../../css/base/text.css';
+import '../../css/base/headline.css';
+import FilterMenu from './FilterMenu/FilterMenu';
 
 class Filter extends Component {
   constructor(props) {
@@ -84,13 +86,13 @@ class Filter extends Component {
     return (
       <div className="Filter">
 
-        <FilterMenu displayFilter={this.props.displayFilter}/>
-        <h4>Prioritäten</h4>
+        <FilterMenu displayFilter={this.props.displayFilter} />
+        <h4 className="text text--dark headline headline__primary">Prioritäten</h4>
         <FilterSubmenu className="FilterSubmenu" 
           entries={urgencyEntries}
           onFilterChange={this.handleToggleUrgencies}
         />
-        <h4>Kategorien</h4>
+        <h4 className="text text--dark headline headline__primary">Kategorien</h4>
         <FilterSubmenu className="FilterSubmenu"
           entries={categoryEntries}
           onFilterChange={this.handleToggleCategories}

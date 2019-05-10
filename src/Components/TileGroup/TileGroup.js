@@ -1,6 +1,6 @@
 import React from 'react';
 import './TileGroup.css';
-import TileSlider from '../../Components/TileSlider/TileSlider';
+import TileSlider from './TileSlider/TileSlider';
 
 function TileGroup(props) {
     function setDocument(document) {

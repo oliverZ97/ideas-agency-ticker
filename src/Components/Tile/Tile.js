@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import stripHtml from 'string-strip-html';
 import './Tile.css';
 import '../../css/elements/button.css';
 import '../../css/base/text.css';
+import '../../css/base/headline.css';
 import '../../css/layout/container.css';
 import ShortDate from '../ShortDate/ShortDate';
 
@@ -30,13 +31,13 @@ class Tile extends React.Component {
   render() {
     return (
       <div className="Tile" onClick={this.setDocument}>
-        <div className="Container-row Container-row--flex-end Tile__container--meta">
-          <h6 className="text__h--light Tile__h6">{this.props.document.publisher}</h6>
-          <h6 className="text__h--light Tile__h6">{this.props.document.category}</h6>
+        <div className="Container-row Container-row--space-between Tile__meta">
+          <h6 className="text text--light headline headline__tertiary">{this.props.document.publisher}</h6>
+          <h6 className="text text--light headline headline__tertiary">{this.props.document.category}</h6>
           <ShortDate date={this.props.document.dateCreated}/>
         </div>
         <div className="Container-row Container-row--flex-end Tile__container--content">
-          <p className="text--light Tile__text" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
+          <p className="text text__primary text--light Tile__text" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
           <button className="pill pill__secondary pill--favorite"></button>
         </div>
       </div>

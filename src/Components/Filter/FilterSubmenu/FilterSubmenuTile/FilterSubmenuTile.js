@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './FilterSubmenuTile.css';
+import '../../../../css/base/text.css';
 
 const FilterSubmenuTile = (props) => {
 
@@ -15,7 +16,7 @@ const FilterSubmenuTile = (props) => {
           <span className="checkmark"></span>
         </label>
         <div className="tilename">
-          <p>{props.content}</p>
+          <p className="text text--light text__primary">{props.content}</p>
         </div>
       </div >
       <div className="tileImg">

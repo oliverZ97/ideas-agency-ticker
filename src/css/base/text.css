@@ -1,16 +1,27 @@
 /*Gestaltung der <p> Elemente*/
+
+.text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.text__primary {
+    font-size: 1rem;
+}
+
+.text__secondary {
+    font-size: 0.9rem;
+}
+
 .text--light {
-    color:#dddfd4;
+    color: #dddfd4;
 }
 
 .text--dark {
     color: #173e43;
 }
 
-.text__primary {
+.text__primary {}
 
-}
-
-.text__secondary {
-
-}
+.text__secondary {}

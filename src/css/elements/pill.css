@@ -61,3 +61,13 @@
     background: #fae595 url(../../Images/noun_filters_220951.png);
     background-size: 50px 50px;
 }
+
+.pill--update {
+    background: #fae596 url(../../Images/noun_checkmark_67952.png);
+    background-size: 50px 50px;
+}
+
+.pill--save {
+    background: #fae596 url(../../Images/noun_diskette_1939628.png);
+    background-size: 50px 50px;
+}

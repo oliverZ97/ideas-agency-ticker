@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../../css/layout/container.css';
-import './FilterMenu.css';
+import '../../../css/layout/container.css';
+import '../../../css/elements/pill.css';
 
 class FilterMenu extends Component {
     constructor(props){
@@ -22,10 +22,10 @@ class FilterMenu extends Component {
         return (
             <div className="FilterMenu Container-row Container-row--space-between">
                 <div className="Container-row">
-                    <button className="FilterMenu-button--update button--primary" onClick={this.updateFilter}></button>
-                    <button className="FilterMenu-button--save button--primary" type="submit"></button>
+                    <button className="pill pill__primary pill--update" onClick={this.updateFilter}></button>
+                    <button className="pill pill__primary pill--save" type="submit"></button>
                 </div>
-                <button className="FilterMenu-button--back button--primary" onClick={this.goBack}></button>
+                <button className="pill pill__primary pill--back" onClick={this.goBack}></button>
             </div>
         );
     }

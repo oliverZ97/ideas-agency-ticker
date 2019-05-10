@@ -29,18 +29,16 @@
 .DetailView__title {
     grid-area: title;
     justify-self: left;
-    color: #dddfd4;
 }
 
 .DetailView__date {
     grid-area: date;
-    color: #dddfd4;
-    justify-self: start;
+    justify-self: end;
 }
 
 .DetailView__agency {
     grid-area: agency;
-    color: #dddfd4;
+    justify-self: start;
 }
 
 .DetailView-button--favorite {
@@ -58,17 +56,9 @@
 
 .DetailView__text {
     grid-area: article;
-    color: #dddfd4;
     line-height: 1.5;
     padding: 5px;
     border-left: 2px solid #fae596;
-}
-
-.DetailView__author {
-    grid-area: author;
-    color: #dddfd4;
-    margin-left: 15px;
-    justify-self: left;
 }
 
 @media screen and (max-width: 768px){
@@ -79,7 +69,7 @@
         grid-template-areas:
         "fav . . back "
         "title title title title"
-        "date date agency agency"
+        "agency agency date date"
         "img img img img"
         "article article article article"
         ". . . .";
@@ -106,7 +96,7 @@
         grid-template-areas:
         "fav . . back "
         "title title title title"
-        "date date agency ."
+        "agency . date date"
         "img img img img"
         "article article article article"
         "author author . .";
@@ -128,7 +118,7 @@
         grid-template-areas:
         "fav . . back "
         "title title title title"
-        "date . agency ."
+        "agency . date ."
         "img img img img"
         "article article article article"
         "author author . .";

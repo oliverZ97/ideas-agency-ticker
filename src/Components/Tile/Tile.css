@@ -8,23 +8,14 @@
     background-color: #173e43;
 }
 
-.Tile__container--meta {
+.Tile__meta {
     border-bottom: 1px solid #dddfd4;
+    line-height: 10px;
 }
 
 .Tile__text {
     flex: 2;
     margin-top: 3px;
-}
-
-.Tile__h6 {
-    flex: 1;
-    white-space: pre;
-    text-overflow: ellipsis;
-    align-self: flex-end;
-    padding: 2px;
-    margin-block-start: 5px;
-    margin-block-end: 5px;
 }
 
 .Tile__text--hiddenoverflow {
