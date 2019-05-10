@@ -31,14 +31,14 @@ class Tile extends React.Component {
   render() {
     return (
       <div className="Tile" onClick={this.setDocument}>
-        <div className="Container-row Container-row--space-between Tile__meta">
-          <h6 className="text text--light headline headline__tertiary">{this.props.document.publisher}</h6>
-          <h6 className="text text--light headline headline__tertiary">{this.props.document.category}</h6>
+        <div className="Tile__meta">
+          <h6 className="Tile__headline">{this.props.document.publisher}</h6>
+          <h6 className="Tile__headline">{this.props.document.category}</h6>
           <ShortDate date={this.props.document.dateCreated}/>
         </div>
-        <div className="Container-row Container-row--flex-end Tile__container--content">
-          <p className="text text__primary text--light Tile__text" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
-          <button className="pill pill__secondary pill--favorite"></button>
+        <div className="Tile__content">
+          <p className="Tile__text" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
+          <button className="Tile__pill"></button>
         </div>
       </div>
     );

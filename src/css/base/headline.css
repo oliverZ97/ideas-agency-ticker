@@ -1,5 +1,8 @@
 /*Gestaltung von <h> Elementen*/
 .headline {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -18,4 +21,12 @@
 .headline__tertiary {
     font-size: 0.9rem;
     font-weight: bold;
+}
+
+.headline--light {
+    color: #dddfd4;
+}
+
+.headline--dark {
+    color: #173e43;
 }
