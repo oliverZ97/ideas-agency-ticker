@@ -1,0 +1,19 @@
+.FilterMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.FilterMenu__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.FilterMenu__pill {
+    background-color: #fae596;
+    border: 1px solid #173e43;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 2px;
+}
