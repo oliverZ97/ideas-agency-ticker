@@ -42,14 +42,14 @@ class LoginForm extends Component {
 
     return (
       <form className="LoginForm" onSubmit={this.handleSubmit}>
-        <div className="Container-column Container--items-centered">
-          <input className="text text__secondary text--dark Form__input" type="text" placeholder="Username" minLength="4" name="username" onChange={this.handleChangeUsername}></input>
+        <div className="LoginForm__container">
+          <input className="LoginForm__text Form__input" type="text" placeholder="Username" minLength="4" name="username" onChange={this.handleChangeUsername}></input>
         </div>
-        <div className="Container-column Container--items-centered">
-          <input className="text text__secondary text--dark Form__input Form__input" type="password" placeholder="Password" minLength="6" name="password" onChange={this.handleChangePassword}></input>
+        <div className="LoginForm__container">
+          <input className="LoginForm__text Form__input" type="password" placeholder="Password" minLength="6" name="password" onChange={this.handleChangePassword}></input>
         </div>
-        <div className="Container-column Container--items-centered">
-          <button className="btn btn__primary text text--dark text__secondary" type="submit">Login</button>
+        <div className="LoginForm__container">
+          <button className="LoginForm__btn LoginForm__text" type="submit">Login</button>
         </div>
         {errorMessage}
       </form>

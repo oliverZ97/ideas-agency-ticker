@@ -7,3 +7,38 @@
     margin-bottom: 200px;
     background-color: #173e43;
 }
+
+.LoginForm__text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9rem;
+    color: #173e43;
+}
+
+.LoginForm__btn {
+    background-color: #3fb0ac;
+    border-radius: 5px;
+    color: #173e43;
+    width: 250px;
+    height: 50px;
+    margin-top: 1rem;
+}
+
+.LoginForm__btn:hover {
+    background-color: #00cc66;
+    cursor: pointer;
+}
+
+.LoginForm__btn:focus {
+    outline: none;
+}
+
+@media screen and (min-width: 1216px){
+    .LoginForm__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
