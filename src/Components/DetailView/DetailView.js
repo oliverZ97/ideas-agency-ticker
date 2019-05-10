@@ -32,14 +32,14 @@ class DetailView extends React.Component {
 
     return (
       <div className="DetailView">
-        <button className="pill pill__primary pill--back DetailView-button--back" onClick={this.onClickCloseDetailView}></button>
+        <button className="DetailView__pill pill--back DetailView-button--back" onClick={this.onClickCloseDetailView}></button>
         <h4 className="hero DetailView__title" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>
-        <button className="pill pill__primary pill--favorite DetailView-button--favorite" type="button"></button>
-        <p className="text headline headline__tertiary text--light DetailView__date">{this.props.document.dateCreated}</p>
-        <p className="text headline headline__tertiary text--light DetailView__agency">{this.props.document.publisher}/{this.props.document.category}</p>
+        <button className="DetailView__pill pill--favorite DetailView-button--favorite" type="button"></button>
+        <p className="DetailView__headline DetailView__date">{this.props.document.dateCreated}</p>
+        <p className="DetailView__headline DetailView__agency">{this.props.document.publisher}/{this.props.document.category}</p>
         <img className="DetailView__img" alt="Beispielbild" src={"https://picsum.photos/600/250?rand=" + random}></img>
-        <p className="text text__primary text--light DetailView__text">{this.stripHtmlText(this.props.document.content || '')}</p>
-        <h6 className="DetailView__author">{this.props.document.author}</h6>
+        <p className="DetailView__text">{this.stripHtmlText(this.props.document.content || '')}</p>
+  
       </div>
     );
   }
