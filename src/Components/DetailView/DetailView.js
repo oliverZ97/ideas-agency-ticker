@@ -33,7 +33,7 @@ class DetailView extends React.Component {
     return (
       <div className="DetailView">
         <button className="DetailView__pill pill--back DetailView-button--back" onClick={this.onClickCloseDetailView}></button>
-        <h4 className="hero DetailView__title" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>
+        <h4 className="DetailView__title" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>
         <button className="DetailView__pill pill--favorite DetailView-button--favorite" type="button"></button>
         <p className="DetailView__headline DetailView__date">{this.props.document.dateCreated}</p>
         <p className="DetailView__headline DetailView__agency">{this.props.document.publisher}/{this.props.document.category}</p>

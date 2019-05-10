@@ -27,6 +27,10 @@
 }
 
 .DetailView__title {
+    font-family: 'Courier New', Courier, monospace;
+    color: #fae596;
+    font-size: 4rem;
+    font-weight: bold;
     grid-area: title;
     justify-self: left;
 }
@@ -101,6 +105,10 @@
         grid-gap: 0px;
         padding: 5px;
         margin: auto;
+    }
+
+    .DetailView__title {
+        font-size: 2rem;
     }
 
     .DetailView__text {
