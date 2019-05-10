@@ -10,18 +10,15 @@ const FilterSubmenuTile = (props) => {
 
   return (
     <div className="FilterSubmenuTile">
-      <div className="checkbox">
-        <label className="container">
-          <input id="checkbox" className="tile-unchecked" checked={props.isChecked} type="checkbox"  onChange={() => handleClick(props.value, !props.isChecked)}></input>
-          <span className="checkmark"></span>
+      <div className="FilterSubmenuTile__container">
+        <label className="FilterSubmenuTile__label">
+          <input id="checkbox" className="FilterSubmenuTile__input" checked={props.isChecked} type="checkbox" onChange={() => handleClick(props.value, !props.isChecked)}></input>
+          <span className="FilterSubmenuTile__checkmark"></span>
         </label>
-        <div className="tilename">
-          <p className="text text--light text__primary">{props.content}</p>
+        <div className="FilterSubmenuTile__content">
+          <p className="FilterSubmenuTile__text">{props.content}</p>
         </div>
       </div >
-      <div className="tileImg">
-
-      </div>
     </div >
   );
 }
