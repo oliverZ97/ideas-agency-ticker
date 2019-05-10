@@ -5,7 +5,7 @@ import '../../css/layout/container.css';
 import '../../css/base/text.css';
 
 class ContentMenu extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
 
         this.handleDisplayToggle = this.handleDisplayToggle.bind(this);
@@ -15,46 +15,46 @@ class ContentMenu extends Component {
         this.handleFilterClick = this.handleFilterClick.bind(this);
     }
 
-    handleDisplayToggle(){
+    handleDisplayToggle() {
         this.props.toggleHandler();
         this.changeToggleButton();
     }
 
-    handleSearch(){
+    handleSearch() {
         let qString = document.getElementById("searchbar").value;
         this.props.queryHandler(qString);
         this.props.searchHandler();
     }
 
-    handleKeyPress(event){
+    handleKeyPress(event) {
 
         let eventIsEnter = event.key == 'Enter';
 
-        if(eventIsEnter){
+        if (eventIsEnter) {
             this.handleSearch();
         }
     }
 
     changeToggleButton() {
-        if(this.props.displayMode){
-            document.getElementById('toggleDisplay').className = 'pill pill__primary pill--displayList';
+        if (this.props.displayMode) {
+            document.getElementById('toggleDisplay').className = 'ContentMenu__pill pill--displayList';
         } else {
-            document.getElementById('toggleDisplay').className = 'pill pill__primary pill--displayTile';
+            document.getElementById('toggleDisplay').className = 'ContentMenu__pill pill--displayTile';
         }
     }
 
     handleFilterClick() {
-       return this.props.displayFilter();
+        return this.props.displayFilter();
     }
 
     render() {
         return (
             <div className="ContentMenu">
-                <input id="searchbar" className="Form__input--round text text--dark text__secondary" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
-                <div className="ContentMenu_Buttons Container-row Container-row--space-between">
-                <button className="pill pill__primary pill--filter" onClick={this.handleFilterClick}></button>
-                <button id="toggleDisplay" className="pill pill__primary pill--displayTile" onClick={this.handleDisplayToggle}></button>
-                </div> 
+                <input id="searchbar" className="ContentMenu__input ContentMenu__text" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
+                <div>
+                    <button className="ContentMenu__pill pill--filter" onClick={this.handleFilterClick}></button>
+                    <button id="toggleDisplay" className="ContentMenu__pill pill--displayTile" onClick={this.handleDisplayToggle}></button>
+                </div>
             </div>
         );
     }

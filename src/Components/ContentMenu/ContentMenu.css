@@ -6,8 +6,33 @@
     border: 1px solid #dddfd4;
 }
 
-.ContentMenu__buttons {
-    margin: 0;
+.ContentMenu__pill {
+    background-color: #fae596;
+    border: 1px solid #173e43;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 2px;
+}
+
+.ContentMenu__text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9rem;
+    color: #173e43;
+}
+
+.ContentMenu__input {
+    width: 240px;
+    min-width: 15rem;
+    min-height: 30px;
+    padding: 10px;
+    border: 2px solid #173e43;
+    border-radius: 50px;
+    background-color: #ffffff;
+    color: #173e43;
+    font-size: 17px;
 }
 
 @media screen and (max-width: 768px){
@@ -15,13 +40,15 @@
         width: 100%;
     }
 
-    .ContentMenu input {
+    .ContentMenu__input {
+        max-width: 50px;
+        min-width: 10rem;
+    }
+
+    .ContentMenu__pill {
         max-width: 50px;
     }
 
-    .ContentMenu button {
-        max-width: 50px;
-    }
 }
 
 @media screen and (min-width: 769px) {
@@ -29,11 +56,11 @@
         width: 100%;
     }
 
-    .ContentMenu input {
+    .ContentMenu__input {
         max-width: 50px;
     }
 
-    .ContentMenu button {
+    .ContentMenu__pill {
         max-width: 50px;
     }
 }
