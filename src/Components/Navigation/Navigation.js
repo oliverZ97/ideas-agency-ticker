@@ -31,13 +31,13 @@ class Navigation extends Component {
   render() {
     return (
       <div className="Navigation">
-        <div className="nav Container-row Container-row--space-between"> 
+        <div className="Navigation__content"> 
           <div>
-            <button className="pill pill__secondary pill--searches" onClick={this.handleSearchClick}></button>
-            <button className="pill pill__secondary pill--favorite" onClick={this.handleFavClicks}></button>
+            <button className="Navigation__pill pill--searches" onClick={this.handleSearchClick}></button>
+            <button className="Navigation__pill pill--favorite" onClick={this.handleFavClicks}></button>
           </div>
           <div>
-            <button className="pill pill__secondary pill--logout" onClick={this.handleLogout}></button>
+            <button className="Navigation__pill pill--logout" onClick={this.handleLogout}></button>
           </div>
         </div>
       </div>

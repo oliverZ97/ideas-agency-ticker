@@ -3,20 +3,22 @@
     border-bottom: 2px solid #173e43;
 }
 
-.Navigation-button--searches {
-    background: #fae595 url("../../Images/noun_diskette_1939628.png");
-    background-size: 40px 40px;
-}
-
-.Navigation-button--logout {
-    background: #fae595 url("../../Images/noun_logout_1350695.png");
-    background-size: 40px 40px;
+.Navigation__pill {
+    background-color: #fae596;
+    border: 1px solid #173e43;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin: 2px;
 }
 
 @media screen and (max-width: 768px){
     .Navigation__content {
         width: 100%;
         margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -24,16 +26,9 @@
     .Navigation__content {
         width: 80%;
         margin: auto;
-    }
-
-    .Navigation-button--searches {
-        background: #fae595 url("../../Images/noun_diskette_1939628.png");
-        background-size: 40px 40px;
-    }
-    
-    .Navigation-button--logout {
-        background: #fae595 url("../../Images/noun_logout_1350695.png");
-        background-size: 40px 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
