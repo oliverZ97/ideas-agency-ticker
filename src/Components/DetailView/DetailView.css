@@ -92,7 +92,7 @@
 
 @media screen and (max-width: 768px){
     .DetailView {
-        width: 98%;
+        width: 96%;
         left: 0;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-areas:
