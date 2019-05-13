@@ -13,6 +13,7 @@ import ListPageSearches from './Pages/ListPageSearches/ListPageSearches';
 class App extends Component {
 
   render() {
+    console.log('Hello');
     return (
       <div className="app">
       <Navigation />
