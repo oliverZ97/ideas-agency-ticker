@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import stripHtml from 'string-strip-html';
 import './DetailView.css';
 import '../../css/elements/button.css';
@@ -32,7 +32,7 @@ class DetailView extends React.Component {
 
     return (
       <div className="detailView">
-        <button className="detailView__pill pill--back detailView-button--back" onClick={this.onClickClosedetailView}></button>
+        <button className="detailView__pill pill--back detailView-button--back" onClick={this.onClickCloseDetailView}></button>
         <h4 className="detailView__title" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>
         <button className="detailView__pill pill--favorite detailView-button--favorite" type="button"></button>
         <p className="detailView__headline detailView__date">{this.props.document.dateCreated}</p>

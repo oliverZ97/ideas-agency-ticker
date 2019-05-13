@@ -12,4 +12,8 @@
     font-weight: 100;
 }
 
-.hero__img {}
+@media screen and (max-width: 768px) {
+    .hero {
+        font-size: 2rem;
+    }
+}

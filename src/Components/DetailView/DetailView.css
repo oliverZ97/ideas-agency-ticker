@@ -33,6 +33,7 @@
     font-weight: bold;
     grid-area: title;
     justify-self: left;
+    text-align: justify;
 }
 
 .detailView__date {
@@ -108,7 +109,7 @@
     }
 
     .detailView__title {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 
     .detailView__text {
@@ -175,5 +176,13 @@
 @media screen and (min-width: 1408px) {
     .detailView {
         width: 70%;
+    }
+
+    .detailView__headline {
+        font-size: 1.4rem;
+    }
+
+    .detailView__text {
+        font-size: 1.2rem;
     }
 }
