@@ -151,7 +151,7 @@ class ListPageSearches extends Component {
                 <div>
 
                     {this.state.activeDoc &&
-                        <DetailView className="detailView" document={this.state.activeDoc} closeDetail={this.onClickCloseDetailView} />
+                        <DetailView document={this.state.activeDoc} closeDetail={this.onClickCloseDetailView} />
                     }
                 </div>
             </div>
