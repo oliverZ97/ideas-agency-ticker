@@ -5,7 +5,7 @@ import SavedSearchTile from './SavedSearchTile/SavedSearchTile';
 class SavedSearches extends Component {
   render() {
     return (
-      <div className="SavedSearches">
+      <div>
         <SavedSearchTile />
         <SavedSearchTile />
         <SavedSearchTile />

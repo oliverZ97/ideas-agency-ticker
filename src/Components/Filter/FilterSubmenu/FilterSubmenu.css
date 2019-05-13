@@ -1,4 +1,4 @@
-.FilterSubmenu {
+.filterSubmenu {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -6,7 +6,7 @@
 }
 
 @media screen and (min-width: 1024px){
-    .FilterSubmenu {
+    .filterSubmenu {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -14,7 +14,7 @@
 }
 
 @media screen and (min-width: 1216px){
-    .FilterSubmenu {
+    .filterSubmenu {
         justify-content: center;
     }
 }

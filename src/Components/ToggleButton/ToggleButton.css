@@ -1,9 +1,9 @@
-.ToggleButton .toggle {
+.toggleButton .toggle {
     display: flex;
     flex-direction: row;
 }
 
-.ToggleButton input {
+.toggleButton input {
     border-radius: 30px;
     border: none;
     margin-left: 5px;

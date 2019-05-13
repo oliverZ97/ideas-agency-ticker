@@ -5,7 +5,7 @@ import FavTile from './FavTile/FavTile';
 class Favorites extends Component {
   render() {
     return (
-      <div className="Favorites">
+      <div>
         <FavTile />
         <FavTile />
         <FavTile />

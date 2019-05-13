@@ -14,8 +14,8 @@ function TileSlider(props) {
     return (
         <div>
             <h2 className="text text--dark headline headline__primary">{props.title}</h2>
-            <div className="TileSlider">
-                <div className="TileSlider__content">
+            <div className="tileSlider">
+                <div className="tileSlider__content">
                     {tiles}
                 </div>
 

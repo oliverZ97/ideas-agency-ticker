@@ -114,7 +114,7 @@ class ListPageSearches extends Component {
 
     render() {
         return (
-            <div className="ListPageSearches">
+            <div className="listPageSearches">
                 {this.state.displayFilter &&
                     <Filter
                         categories={this.state.categories}

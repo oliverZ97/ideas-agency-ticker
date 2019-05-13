@@ -12,7 +12,7 @@ function TileList(props) {
     
     let tiles = props.documents.map((document) => <Tile key={document.id} document={document} setDoc={setDocument}/>);
     return (
-        <div className="TileList">
+        <div className="tileList">
                 {tiles}
         </div>
     );

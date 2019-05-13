@@ -13,7 +13,7 @@ const FilterSubmenu = (props) =>  {
   })
   
     return (
-    <div className="FilterSubmenu">
+    <div className="filterSubmenu">
       {tiles}
     </div>
   );

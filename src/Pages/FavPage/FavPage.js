@@ -10,7 +10,7 @@ function FavPage() {
   }
 
   return (
-    <div className="FavPage">
+    <div className="favPage">
       <button className="pill pill__primary pill--back" onClick={handleBackClick}></button>
       <Favorites />
     </div>

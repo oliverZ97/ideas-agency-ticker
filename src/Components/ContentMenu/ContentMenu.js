@@ -37,9 +37,9 @@ class ContentMenu extends Component {
 
     changeToggleButton() {
         if (this.props.displayMode) {
-            document.getElementById('toggleDisplay').className = 'ContentMenu__pill pill--displayList';
+            document.getElementById('toggleDisplay').className = 'contentMenu__pill pill--displayList';
         } else {
-            document.getElementById('toggleDisplay').className = 'ContentMenu__pill pill--displayTile';
+            document.getElementById('toggleDisplay').className = 'contentMenu__pill pill--displayTile';
         }
     }
 
@@ -49,11 +49,11 @@ class ContentMenu extends Component {
 
     render() {
         return (
-            <div className="ContentMenu">
-                <input id="searchbar" className="ContentMenu__input ContentMenu__text" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
+            <div className="contentMenu">
+                <input id="searchbar" className="contentMenu__input contentMenu__text" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
                 <div>
-                    <button className="ContentMenu__pill pill--filter" onClick={this.handleFilterClick}></button>
-                    <button id="toggleDisplay" className="ContentMenu__pill pill--displayTile" onClick={this.handleDisplayToggle}></button>
+                    <button className="contentMenu__pill pill--filter" onClick={this.handleFilterClick}></button>
+                    <button id="toggleDisplay" className="contentMenu__pill pill--displayTile" onClick={this.handleDisplayToggle}></button>
                 </div>
             </div>
         );

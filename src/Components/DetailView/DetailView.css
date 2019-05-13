@@ -1,4 +1,4 @@
-.DetailView {
+.detailView {
     position: absolute;
     top: 46px;
     left: 20%;
@@ -21,12 +21,12 @@
         ". author . . . .";
 }
 
-.DetailView-button--back {
+.detailView-button--back {
     grid-area: back;
     justify-self: end;
 }
 
-.DetailView__title {
+.detailView__title {
     font-family: 'Courier New', Courier, monospace;
     color: #fae596;
     font-size: 4rem;
@@ -35,22 +35,22 @@
     justify-self: left;
 }
 
-.DetailView__date {
+.detailView__date {
     grid-area: date;
     justify-self: end;
 }
 
-.DetailView__agency {
+.detailView__agency {
     grid-area: agency;
     justify-self: start;
 }
 
-.DetailView-button--favorite {
+.detailView-button--favorite {
     grid-area: fav;
     justify-self: start;
 }
 
-.DetailView__img {
+.detailView__img {
     grid-area: img;
     object-fit: cover;
     width: 100%;
@@ -58,7 +58,7 @@
     max-height: 200px;
 }
 
-.DetailView__text {
+.detailView__text {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -70,7 +70,7 @@
     border-left: 2px solid #fae596;
 }
 
-.DetailView__headline {
+.detailView__headline {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -81,7 +81,7 @@
     color: #dddfd4;
 }
 
-.DetailView__pill {
+.detailView__pill {
     background-color: #fae596;
     border: 1px solid #173e43;
     width: 50px;
@@ -91,7 +91,7 @@
 }
 
 @media screen and (max-width: 768px){
-    .DetailView {
+    .detailView {
         width: 96%;
         left: 0;
         grid-template-columns: 25% 25% 25% 25%;
@@ -107,24 +107,24 @@
         margin: auto;
     }
 
-    .DetailView__title {
+    .detailView__title {
         font-size: 2rem;
     }
 
-    .DetailView__text {
+    .detailView__text {
         text-align: justify;
         width: 100%;
         padding: 5px;
     }
 
-    .DetailView__img {
+    .detailView__img {
         width: 100%;
         height: auto;
     }
 }
 
 @media screen and (min-width: 769px){
-    .DetailView {
+    .detailView {
         grid-template-columns: 30% auto 20% 5%;
         grid-template-areas:
         "fav . . back "
@@ -139,14 +139,14 @@
         right: 10%;
     }
 
-    .DetailView__text {
+    .detailView__text {
         text-align: justify;
         width: 100%;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .DetailView {
+    .detailView {
         grid-template-columns: 30% auto 20% 5%;
         grid-template-areas:
         "fav . . back "
@@ -165,7 +165,7 @@
 }
 
 @media screen and (min-width: 1216px) {
-    .DetailView {
+    .detailView {
         padding: 5px; 
         margin: auto;
         width: 80%;
@@ -173,7 +173,7 @@
 }
 
 @media screen and (min-width: 1408px) {
-    .DetailView {
+    .detailView {
         width: 70%;
     }
 }

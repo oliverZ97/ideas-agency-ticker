@@ -1,4 +1,4 @@
-.FavTile {
+.favTile {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -9,24 +9,24 @@
     color: #173e43;
 }
 
-.FavTile__headline {
+.favTile__headline {
     margin: 0px;
     color: #dddfd4;
 }
 
-.FavTile__text {
+.favTile__text {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     color: #dddfd4;
 }
 
-.FavTile__content {
+.favTile__content {
         width: 1%;
         flex-grow: 1;
 }
 
-.FavTile__pill {
+.favTile__pill {
     background-color: #fae596;
     border: 1px solid #173e43;
     width: 50px;

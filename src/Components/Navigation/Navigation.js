@@ -30,14 +30,14 @@ class Navigation extends Component {
 
   render() {
     return (
-      <div className="Navigation">
-        <div className="Navigation__content"> 
+      <div className="navigation">
+        <div className="navigation__content"> 
           <div>
-            <button className="Navigation__pill pill--searches" onClick={this.handleSearchClick}></button>
-            <button className="Navigation__pill pill--favorite" onClick={this.handleFavClicks}></button>
+            <button className="navigation__pill pill--searches" onClick={this.handleSearchClick}></button>
+            <button className="navigation__pill pill--favorite" onClick={this.handleFavClicks}></button>
           </div>
           <div>
-            <button className="Navigation__pill pill--logout" onClick={this.handleLogout}></button>
+            <button className="navigation__pill pill--logout" onClick={this.handleLogout}></button>
           </div>
         </div>
       </div>

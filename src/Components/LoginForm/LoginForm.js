@@ -41,15 +41,15 @@ class LoginForm extends Component {
     var errorMessage = this.state.showError ? <p className="text text__primary text--light">Oops! Please check your Login Data.</p> : null;
 
     return (
-      <form className="LoginForm" onSubmit={this.handleSubmit}>
-        <div className="LoginForm__container">
-          <input className="LoginForm__text Form__input" type="text" placeholder="Username" minLength="4" name="username" onChange={this.handleChangeUsername}></input>
+      <form className="loginForm" onSubmit={this.handleSubmit}>
+        <div className="loginForm__container">
+          <input className="loginForm__text Form__input" type="text" placeholder="Username" minLength="4" name="username" onChange={this.handleChangeUsername}></input>
         </div>
-        <div className="LoginForm__container">
-          <input className="LoginForm__text Form__input" type="password" placeholder="Password" minLength="6" name="password" onChange={this.handleChangePassword}></input>
+        <div className="loginForm__container">
+          <input className="loginForm__text Form__input" type="password" placeholder="Password" minLength="6" name="password" onChange={this.handleChangePassword}></input>
         </div>
-        <div className="LoginForm__container">
-          <button className="LoginForm__btn LoginForm__text" type="submit">Login</button>
+        <div className="loginForm__container">
+          <button className="loginForm__btn loginForm__text" type="submit">Login</button>
         </div>
         {errorMessage}
       </form>

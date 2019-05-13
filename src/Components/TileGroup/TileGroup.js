@@ -34,7 +34,7 @@ function TileGroup(props) {
     }
 
     return (
-        <div className="Container-column TileGroup__container">
+        <div className="Container-column tileGroup__container">
             {getTileSliderWithDocumentsLessThanUrgency(props.documents, 3)}
             {getTileSlidersForEachCategory(props.documents)}
         </div>

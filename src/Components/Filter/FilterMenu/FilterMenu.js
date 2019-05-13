@@ -21,12 +21,12 @@ class FilterMenu extends Component {
 
     render() {
         return (
-            <div className="FilterMenu">
-                <div className="FilterMenu__container">
-                    <button className="FilterMenu__pill pill--update" onClick={this.updateFilter}></button>
-                    <button className="FilterMenu__pill pill--save" type="submit"></button>
+            <div className="filterMenu">
+                <div className="filterMenu__container">
+                    <button className="filterMenu__pill pill--update" onClick={this.updateFilter}></button>
+                    <button className="filterMenu__pill pill--save" type="submit"></button>
                 </div>
-                <button className="FilterMenu__pill pill--back" onClick={this.goBack}></button>
+                <button className="filterMenu__pill pill--back" onClick={this.goBack}></button>
             </div>
         );
     }

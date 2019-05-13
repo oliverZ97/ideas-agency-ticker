@@ -1,4 +1,4 @@
-.ListPageSearches {
+.listPageSearches {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -7,7 +7,7 @@
     justify-content: flex-start;
 }
 
-.ListPageSearches .menu {
+.listPageSearches .menu {
     padding: 5px;
     display: flex;
     flex-direction: row;
@@ -16,7 +16,7 @@
     border: 1px solid #dddfd4;
 }
 
-.ListPageSearches .searchresult {
+.listPageSearches .searchresult {
     min-height: 600px;
     display: flex;
     flex-wrap: wrap; 
@@ -24,20 +24,20 @@
 }
 
 @media screen and (max-width: 768px){
-    .ListPageSearches {
+    .listPageSearches {
         width: 100%;
     }
 
 }
 
 @media screen and (min-width: 769px){
-    .ListPageSearches {
+    .listPageSearches {
         width: 80%;
     }
 }
 
 @media screen and (min-width: 1408px){
-    .ListPageSearches {
+    .listPageSearches {
         width: 70%;
     }
 

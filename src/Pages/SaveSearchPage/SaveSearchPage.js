@@ -10,7 +10,7 @@ function SaveSearchPage() {
   }
 
   return (
-    <div className="SaveSearchPage">
+    <div className="saveSearchPage">
       <button className="pill pill__primary pill--back" onClick={handleBackClick}></button>
       <SavedSearches />
     </div>

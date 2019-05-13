@@ -14,7 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
       <Navigation />
         <Router className="content" history={browserHistory}>
                   <Route exact path="/" component={LoginPage}/>

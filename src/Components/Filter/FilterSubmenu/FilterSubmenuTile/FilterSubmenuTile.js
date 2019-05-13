@@ -9,14 +9,14 @@ const FilterSubmenuTile = (props) => {
   }
 
   return (
-    <div className="FilterSubmenuTile">
-      <div className="FilterSubmenuTile__container">
-        <label className="FilterSubmenuTile__label">
-          <input id="checkbox" className="FilterSubmenuTile__input" checked={props.isChecked} type="checkbox" onChange={() => handleClick(props.value, !props.isChecked)}></input>
-          <span className="FilterSubmenuTile__checkmark"></span>
+    <div className="filterSubmenuTile">
+      <div className="filterSubmenuTile__container">
+        <label className="filterSubmenuTile__label">
+          <input id="checkbox" className="filterSubmenuTile__input" checked={props.isChecked} type="checkbox" onChange={() => handleClick(props.value, !props.isChecked)}></input>
+          <span className="filterSubmenuTile__checkmark"></span>
         </label>
-        <div className="FilterSubmenuTile__content">
-          <p className="FilterSubmenuTile__text">{props.content}</p>
+        <div className="filterSubmenuTile__content">
+          <p className="filterSubmenuTile__text">{props.content}</p>
         </div>
       </div >
     </div >

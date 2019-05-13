@@ -30,7 +30,7 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <div className="LoginPage">
+      <div className="loginPage">
         <PageTitle />
         <LoginForm onSubmit={this.onLogin} showError={this.state.loginFailed} />
       </div>

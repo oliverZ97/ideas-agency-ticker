@@ -30,15 +30,15 @@ class Tile extends React.Component {
 
   render() {
     return (
-      <div className="Tile" onClick={this.setDocument}>
-        <div className="Tile__meta">
-          <h6 className="Tile__headline">{this.props.document.publisher}</h6>
-          <h6 className="Tile__headline">{this.props.document.category}</h6>
+      <div className="tile" onClick={this.setDocument}>
+        <div className="tile__meta">
+          <h6 className="tile__headline">{this.props.document.publisher}</h6>
+          <h6 className="tile__headline">{this.props.document.category}</h6>
           <ShortDate date={this.props.document.dateCreated}/>
         </div>
-        <div className="Tile__content">
-          <p className="Tile__text" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
-          <button className="Tile__pill"></button>
+        <div className="tile__content">
+          <p className="tile__text" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></p>
+          <button className="tile__pill"></button>
         </div>
       </div>
     );

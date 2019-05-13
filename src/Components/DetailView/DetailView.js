@@ -31,14 +31,14 @@ class DetailView extends React.Component {
     let random = Math.random()*100000000000;
 
     return (
-      <div className="DetailView">
-        <button className="DetailView__pill pill--back DetailView-button--back" onClick={this.onClickCloseDetailView}></button>
-        <h4 className="DetailView__title" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>
-        <button className="DetailView__pill pill--favorite DetailView-button--favorite" type="button"></button>
-        <p className="DetailView__headline DetailView__date">{this.props.document.dateCreated}</p>
-        <p className="DetailView__headline DetailView__agency">{this.props.document.publisher}/{this.props.document.category}</p>
-        <img className="DetailView__img" alt="Beispielbild" src={"https://picsum.photos/600/250?rand=" + random}></img>
-        <p className="DetailView__text">{this.stripHtmlText(this.props.document.content || '')}</p>
+      <div className="detailView">
+        <button className="detailView__pill pill--back detailView-button--back" onClick={this.onClickClosedetailView}></button>
+        <h4 className="detailView__title" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>
+        <button className="detailView__pill pill--favorite detailView-button--favorite" type="button"></button>
+        <p className="detailView__headline detailView__date">{this.props.document.dateCreated}</p>
+        <p className="detailView__headline detailView__agency">{this.props.document.publisher}/{this.props.document.category}</p>
+        <img className="detailView__img" alt="Beispielbild" src={"https://picsum.photos/600/250?rand=" + random}></img>
+        <p className="detailView__text">{this.stripHtmlText(this.props.document.content || '')}</p>
   
       </div>
     );

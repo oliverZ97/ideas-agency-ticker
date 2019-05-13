@@ -1,9 +1,9 @@
-.Navigation {
+.navigation {
     background-color: #3fb0ac;
     border-bottom: 2px solid #173e43;
 }
 
-.Navigation__pill {
+.navigation__pill {
     background-color: #fae596;
     border: 1px solid #173e43;
     width: 40px;
@@ -13,7 +13,7 @@
 }
 
 @media screen and (max-width: 768px){
-    .Navigation__content {
+    .navigation__content {
         width: 100%;
         margin: auto;
         display: flex;
@@ -23,7 +23,7 @@
 }
 
 @media screen and (min-width: 769px){
-    .Navigation__content {
+    .navigation__content {
         width: 80%;
         margin: auto;
         display: flex;
@@ -33,7 +33,7 @@
 }
 
 @media screen and (min-width: 1408px){
-    .Navigation__content {
+    .navigation__content {
         width: 70%;
     }
 }

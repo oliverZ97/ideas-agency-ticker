@@ -1,4 +1,4 @@
-.Tile {
+.tile {
     border: 2px solid #dddfd4;
     width: 400px;
     height: 200px;
@@ -8,7 +8,7 @@
     background-color: #173e43;
 }
 
-.Tile__meta {
+.tile__meta {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -16,13 +16,13 @@
     line-height: 20px;
 }
 
-.Tile__content {
+.tile__content {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
 
-.Tile__headline {
+.tile__headline {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -33,7 +33,7 @@
     color: #dddfd4;
 }
 
-.Tile__text {
+.tile__text {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -43,7 +43,7 @@
     color: #dddfd4;
 }
 
-.Tile__pill {
+.tile__pill {
     background-color: #fae596;
     border: 1px solid #173e43;
     width: 40px;
@@ -54,23 +54,23 @@
     background-size: 40px 40px;
 }
 
-.Tile__text--hiddenoverflow {
+.tile__text--hiddenoverflow {
     overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {
-    .Tile {
+    .tile {
         height: 150px;
         width: 300px;
     }
 
-    .Tile__headline {
+    .tile__headline {
         font-size: 0.8rem;
     }
 }
 
 @media screen and (min-width: 769px) {
-    .Tile__headline {
+    .tile__headline {
         font-size: 0.9rem;
     }
 }
