@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import './PageTitle.css';
-import '../../css/base/hero.css';
 
 class PageTitle extends Component {
   render() {

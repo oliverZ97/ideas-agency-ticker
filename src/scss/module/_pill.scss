@@ -1,0 +1,82 @@
+@import "../colors";
+
+$pill-margin: 2px;
+$pill-diameter-primary: 50px;
+$pill-diameter-secondary: 40px;
+$pill-diameter-icon: 40px;
+
+.pill {
+    background-color: $pill-col-bg;
+    border: 1px solid $pill-col-border;
+    
+
+    &__primary {
+        @extend .pill;
+        width: $pill-diameter-primary;
+        height: $pill-diameter-primary;
+        border-radius: $pill-diameter-primary;
+        margin: $pill-margin;
+    }
+    
+    &__secondary {
+        @extend .pill;
+        width: $pill-diameter-secondary;
+        height: $pill-diameter-secondary;
+        border-radius: $pill-diameter-secondary;
+        margin: $pill-margin;
+    }
+
+
+    &--favorite {
+        background: $pill-col-bg url("../../../Assets/noun_Star_750828.png");
+        background-size: 40px 40px;
+    }
+    
+    &--searches {
+        background: $pill-col-bg url("../../../Assets/noun_diskette_1939628.png");
+        background-size: 40px 40px;
+    }
+    
+    &--logout {
+        background: $pill-col-bg url("../../../Assets/noun_logout_1350695.png");
+        background-size: 40px 40px;
+    }
+    
+    &--displayTile {
+        background: $pill-col-bg url("../../../Assets/noun_tiles_777826.png") no-repeat center;
+        background-size: 40px 40px;
+    }
+    
+    &--displayList {
+        background: $pill-col-bg url("../../../Assets/noun_List_433943.png") no-repeat center;
+        background-size: 40px 40px;
+    }
+    
+    &--back {
+        background: $pill-col-bg url("../../../Assets/noun_Arrow_8604.png") no-repeat center;
+        background-size: 40px 40px;
+    }
+    
+    &--delete {
+        background: $pill-col-bg url("../../../Assets/noun_abort_1258168.png") no-repeat center;
+        background-size: 50px 50px;
+    }
+    
+    &--filter {
+        background: $pill-col-bg url("../../../Assets/noun_filters_220951.png");
+        background-size: 50px 50px;
+    }
+    
+    &--update {
+        background: $pill-col-bg url("../../../Assets/noun_checkmark_67952.png");
+        background-size: 50px 50px;
+    }
+    
+    &--save {
+        background: $pill-col-bg url("../../../Assets/noun_diskette_1939628.png");
+        background-size: 50px 50px;
+    }
+}
+
+
+

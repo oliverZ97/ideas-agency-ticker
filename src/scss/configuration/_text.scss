@@ -1,0 +1,28 @@
+@import '../colors';
+@import '../font';
+
+.text {
+    font-family: $font-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &__primary {
+        @extend .text;
+        font-size: $text-primary;
+    }
+    
+    &__secondary {
+        @extend .text;
+        font-size: $text-secondary;
+    }
+    
+    &--light {
+        @extend .text;
+        color: $secondary-color;
+    }
+    
+    &--dark {
+        @extend .text;
+        color: $primary-color;
+    }
+}

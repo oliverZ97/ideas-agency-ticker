@@ -1,10 +1,5 @@
 import React from 'react';
 import stripHtml from 'string-strip-html';
-import './Tile.css';
-import '../../css/elements/button.css';
-import '../../css/base/text.css';
-import '../../css/base/headline.css';
-import '../../css/layout/container.css';
 import ShortDate from '../ShortDate/ShortDate';
 
 //erhält über props title , etc und rendert

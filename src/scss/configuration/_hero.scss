@@ -1,0 +1,20 @@
+@import '../_colors';
+@import '../font';
+
+.hero {
+    font-family: $font-secondary;
+    color: $interaction-color;
+    font-size: $hero-primary;
+    font-weight: $headline-weight;
+
+    &__text {
+        font-size: $hero-secondary;
+        font-weight: 100;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        font-size: $hero-tertiary;
+    }
+}

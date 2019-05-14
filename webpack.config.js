@@ -26,17 +26,36 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader"]
+                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"]
             },
             {
                 test: /\.(png|jpe?g|gif)$/,
                 use: [
-                  {
-                    loader: 'file-loader',
-                    options: {},
-                  },
+                    {
+                        loader: 'file-loader',
+                        options: {},
+                    },
                 ],
-              },
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    {
+                        loader: 'css-loader',
+                      }, {
+                        loader: 'resolve-url-loader',
+                      }, {
+                        loader: 'sass-loader',
+                        options: {
+                          sourceMap: true,
+                          sourceMapContents: false
+                        }
+                      }
+                ]
+            }
         ]
     },
     plugins: [
@@ -53,5 +72,5 @@ module.exports = {
     devServer: {
         contentBase: './dist',
         hot: true
-      }
+    }
 };

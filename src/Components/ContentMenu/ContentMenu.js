@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import './ContentMenu.css';
-import '../../css/elements/pill.css';
-import '../../css/layout/container.css';
-import '../../css/base/text.css';
+import './ContentMenu.scss';
 
 class ContentMenu extends Component {
     constructor(props) {
@@ -37,9 +34,9 @@ class ContentMenu extends Component {
 
     changeToggleButton() {
         if (this.props.displayMode) {
-            document.getElementById('toggleDisplay').className = 'contentMenu__pill pill--displayList';
+            document.getElementById('toggleDisplay').className = 'pill__primary pill--displayList';
         } else {
-            document.getElementById('toggleDisplay').className = 'contentMenu__pill pill--displayTile';
+            document.getElementById('toggleDisplay').className = 'pill__primary pill--displayTile';
         }
     }
 
@@ -49,11 +46,11 @@ class ContentMenu extends Component {
 
     render() {
         return (
-            <div className="contentMenu">
-                <input id="searchbar" className="contentMenu__input contentMenu__text" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
+            <div className="container-row--space-between contentMenu">
+                <input id="searchbar" className="form__input--round text__secondary" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
                 <div>
-                    <button className="contentMenu__pill pill--filter" onClick={this.handleFilterClick}></button>
-                    <button id="toggleDisplay" className="contentMenu__pill pill--displayTile" onClick={this.handleDisplayToggle}></button>
+                    <button className="pill__primary pill--filter" onClick={this.handleFilterClick}></button>
+                    <button id="toggleDisplay" className="pill__primary pill--displayTile" onClick={this.handleDisplayToggle}></button>
                 </div>
             </div>
         );

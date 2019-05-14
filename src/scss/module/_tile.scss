@@ -1,0 +1,79 @@
+@import '../colors';
+@import '../font';
+
+.tile {
+    border: 2px solid $secondary-color;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background-color: $primary-color;
+
+    &__meta {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid $secondary-color;
+        line-height: 20px;
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    &__headline {
+        font-family: $font-primary;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-size: $headline-tertiary;
+        font-weight: bold;
+        color: $secondary-color;
+    }
+    
+    &__text {
+        font-family: $font-primary;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 1rem;
+        flex: 2;
+        margin-top: 3px;
+        color: $secondary-color;
+    }
+    
+    &__pill {
+        background-color: $interaction-color;
+        border: 1px solid $primary-color;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        margin: 2px;
+        background: $interaction-color url("../../../Assets/noun_Star_750828.png");
+        background-size: 40px 40px;
+    }
+
+    &__text--hiddenoverflow {
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tile {
+        height: 150px;
+        width: 300px;
+
+        &__headline {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .tile__headline {
+        font-size: 0.9rem;
+    }
+}

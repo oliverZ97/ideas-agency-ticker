@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './FavTile.css';
-import '../../../css/elements/pill.css';
 
 class FavTile extends Component {
   render() {

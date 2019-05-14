@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Router, Route, browserHistory, Redirect} from 'react-router';
+import {Router, Route, browserHistory} from 'react-router';
 import 'normalize.css';
 import './App.css';
 import Navigation from './Components/Navigation/Navigation';
@@ -9,6 +9,7 @@ import FavPage from './Pages/FavPage/FavPage';
 import SaveSearchPage from './Pages/SaveSearchPage/SaveSearchPage';
 import ListPageSearches from './Pages/ListPageSearches/ListPageSearches';
 
+import '../src/scss/styles.scss';
 
 class App extends Component {
 
@@ -19,7 +20,6 @@ class App extends Component {
         <Router className="content" history={browserHistory}>
                   <Route exact path="/" component={LoginPage}/>
                   <Route path={"login"} component={LoginPage}/>
-                  {/*<Route path={"error"} component={ErrorPage}/>*/}
                   <Route path={"favorites"} component={FavPage}/>
                   <Route path={"ssearches"} component={SaveSearchPage}/>
                   <Route path={"list-search"} component={ListPageSearches}/>

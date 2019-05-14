@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './SavedSearchTile.css';
-import '../../../css/elements/pill.css';
 
 class SavedSearchTile extends Component {
   render() {

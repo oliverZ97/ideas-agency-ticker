@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import '../../../css/layout/container.css';
-import '../../../css/elements/pill.css';
 import './FilterMenu.css';
 
 class FilterMenu extends Component {

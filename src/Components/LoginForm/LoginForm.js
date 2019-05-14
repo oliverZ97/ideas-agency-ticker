@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import '../../css/components/form.css';
-import '../../css/layout/container.css';
-import './LoginForm.css';
 
 class LoginForm extends Component {
   constructor(props) {
@@ -41,15 +38,15 @@ class LoginForm extends Component {
     var errorMessage = this.state.showError ? <p className="text text__primary text--light">Oops! Please check your Login Data.</p> : null;
 
     return (
-      <form className="loginForm" onSubmit={this.handleSubmit}>
-        <div className="loginForm__container">
-          <input className="loginForm__text Form__input" type="text" placeholder="Username" minLength="4" name="username" onChange={this.handleChangeUsername}></input>
+      <form className="form" onSubmit={this.handleSubmit}>
+        <div className="container-column container-column--items-centered">
+          <input className="text text__secondary text--dark form__input" type="text" placeholder="Username" minLength="4" name="username" onChange={this.handleChangeUsername}></input>
         </div>
-        <div className="loginForm__container">
-          <input className="loginForm__text Form__input" type="password" placeholder="Password" minLength="6" name="password" onChange={this.handleChangePassword}></input>
+        <div className="container-column container-column--items-centered">
+          <input className="text text__secondary text--dark form__input" type="password" placeholder="Password" minLength="6" name="password" onChange={this.handleChangePassword}></input>
         </div>
-        <div className="loginForm__container">
-          <button className="loginForm__btn loginForm__text" type="submit">Login</button>
+        <div className="container-column container-column--items-centered">
+          <button className="btn btn__primary text text__primary text--light" type="submit">Login</button>
         </div>
         {errorMessage}
       </form>

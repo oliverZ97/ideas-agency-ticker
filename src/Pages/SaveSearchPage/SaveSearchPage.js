@@ -1,7 +1,6 @@
 import React from 'react';
 import { browserHistory } from 'react-router';
 import './SaveSearchPage.css';
-import '../../css/elements/pill.css';
 import SavedSearches from '../../Components/SavedSearches/SavedSearches';
 
 function SaveSearchPage() {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { browserHistory } from 'react-router';
 import './FavPage.css';
-import '../../css/elements/pill.css';
 import Favorites from '../../Components/Favorites/Favorites';
 
 function FavPage() {

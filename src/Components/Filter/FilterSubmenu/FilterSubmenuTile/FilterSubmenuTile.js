@@ -1,6 +1,5 @@
 import React from 'react';
 import './FilterSubmenuTile.css';
-import '../../../../css/base/text.css';
 
 const FilterSubmenuTile = (props) => {
 

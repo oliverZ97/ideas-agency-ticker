@@ -1,0 +1,33 @@
+@import '../colors';
+@import '../font';
+
+.headline {
+    font-family: $font-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: $headline-weight;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    &__primary {
+        font-size: $headline-primary;
+        margin-left: 10px;
+    }
+    
+    &__secondary {
+        font-size: $headline-secondary;
+    }
+    
+    &__tertiary {
+        font-size: $headline-tertiary;
+    }
+    
+    &--light {
+        color: $secondary-color;
+    }
+    
+    &--dark {
+        color: $primary-color;
+    }
+}
+

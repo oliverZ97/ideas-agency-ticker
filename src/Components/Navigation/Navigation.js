@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import authentificationService from '../../services/authentificationService';
-import '../../css/layout/container.css';
-import '../../css/components/nav.css';
-import '../../css/elements/pill.css';
 import './Navigation.css';
 
 class Navigation extends Component {

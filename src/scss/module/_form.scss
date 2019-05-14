@@ -1,0 +1,85 @@
+@import '../colors';
+@import '../font';
+
+.form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center; /**alignment along the MAIN-AXIS(column)**/
+
+    &__input {
+        width: 240px;
+        min-width: 15rem;
+        min-height: 30px;
+        margin-bottom: 200px;
+        padding: 10px;
+        font-size: $text-secondary;
+        background-color: $primary-color;
+        color: $primary-color;
+        flex: 1;
+        margin: 5px;
+        border-radius: 5px;
+        background-color: $secondary-color;
+    }
+    
+    &__input--round {
+        @extend .form__input;
+        flex: none;
+        max-width: 240px;
+        border: 2px solid $primary-color;
+        border-radius: 50px;
+        background-color: $input-color;
+    }
+    
+    &__input:focus {
+        @extend .form__input;
+        color: $primary-color;
+    }
+      
+    &__button {
+        flex: 1;
+        background-color: $tertiary-color;
+        color: $primary-color;
+        font-size: 20px;
+        transition: .6s;
+        overflow: hidden;
+    }
+    
+    &__button:hover {
+        background-color: $button-col-bg;
+        color: green;
+        cursor: pointer;
+    }
+    
+    &__button:focus {
+        outline: none;
+    }
+    
+    &__message {
+        color: $secondary-color;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .Form {
+        justify-content: left;
+        min-width: 260px;
+        min-height: 1000px;
+
+        &__input {
+            width: 15rem;
+            height: 30px;
+        }
+    
+        &__input--round {
+            min-width: 10rem;
+        }
+    
+        &__button {
+            height: 50px;
+        }
+    }
+}

@@ -1,10 +1,6 @@
 import React from 'react';
 import stripHtml from 'string-strip-html';
 import './DetailView.css';
-import '../../css/elements/button.css';
-import '../../css/base/text.css';
-import '../../css/base/hero.css';
-import '../../css/base/headline.css';
 
 class DetailView extends React.Component {
   constructor(props){

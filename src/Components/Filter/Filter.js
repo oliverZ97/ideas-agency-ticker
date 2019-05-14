@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './Filter.css';
 import FilterSubmenu from './FilterSubmenu/FilterSubMenu';
-import '../../css/base/text.css';
-import '../../css/base/headline.css';
 import FilterMenu from './FilterMenu/FilterMenu';
 
 class Filter extends Component {
