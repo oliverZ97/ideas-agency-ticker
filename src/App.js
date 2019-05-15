@@ -11,6 +11,7 @@ import ListPageSearches from './Pages/ListPageSearches/ListPageSearches';
 
 import '../src/scss/styles.scss';
 
+
 class App extends Component {
 
   render() {

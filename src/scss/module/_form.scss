@@ -16,12 +16,11 @@
         margin-bottom: 200px;
         padding: 10px;
         font-size: $text-secondary;
-        background-color: $primary-color;
         color: $primary-color;
         flex: 1;
         margin: 5px;
         border-radius: 5px;
-        background-color: $secondary-color;
+        background-color: $interaction-color;
     }
     
     &__input--round {

@@ -1,7 +1,7 @@
-$primary-color: #173e43;
-$secondary-color: #dddfd4;
-$tertiary-color: #3fb0ac;
-$interaction-color: #fae596;
+$primary-color: #6a6d70 !default;
+$secondary-color: #908f99 !default;
+$tertiary-color: #bddcf9 !default;
+$interaction-color: #9abed2 !default;
 
 $input-color: #ffffff;
 
@@ -12,4 +12,15 @@ $button-col-bg: #00cc66;
 
 $tile-col-bg: $primary-color;
 
+//Themes
+/*
+$primary-color: #173e43;
+$secondary-color: #dddfd4;
+$tertiary-color: #3fb0ac;
+$interaction-color: #fae596;
 
+$primary-color: #6a6d70;
+$secondary-color: #908f99;
+$tertiary-color: #bddcf9;
+$interaction-color: #9abed2;
+*/
