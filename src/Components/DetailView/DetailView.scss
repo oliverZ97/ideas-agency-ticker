@@ -1,0 +1,67 @@
+@import '../../scss/colors';
+@import '../../scss/font';
+@import '../../scss/spacing';
+
+.detailView {
+    position: absolute;
+    top: 46px;
+    left: 20%;
+    right: 20%;
+    width: auto;
+    z-index: 99999;
+    background-color: $primary-color;
+    border: 1px solid $secondary-color;
+    justify-items: center;
+}
+
+.detailView__img {
+    object-fit: cover;
+    width: $width-primary;
+    max-height: 200px;
+}
+
+@media screen and (max-width: 768px){
+    .detailView {
+        width: 96%;
+        left: 0;
+        padding: $padding-primary;
+        margin: $margin-auto;
+    }
+
+    .detailView__img {
+        width: $width-primary;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .detailView {
+        padding: $padding-primary;
+        left: 10%;
+        right: 10%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .detailView {
+        padding: $padding-primary;
+        margin-top: 0px;
+        top: 46px;
+        width: $width-secondary;
+    }
+
+}
+
+@media screen and (min-width: 1216px) {
+    .detailView {
+        padding: $padding-primary; 
+        margin: $margin-auto;
+        width: $width-secondary;
+    }
+}
+
+@media screen and (min-width: 1408px) {
+    .detailView {
+        width: $width-tertiary;
+    }
+}

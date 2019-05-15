@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import authentificationService from '../../services/authentificationService';
-import './Navigation.css';
+import './Navigation.scss';
 
 class Navigation extends Component {
   constructor() {
@@ -28,13 +28,13 @@ class Navigation extends Component {
   render() {
     return (
       <div className="navigation">
-        <div className="navigation__content"> 
+        <div className="navigation__content container-row--space-between"> 
           <div>
-            <button className="navigation__pill pill--searches" onClick={this.handleSearchClick}></button>
-            <button className="navigation__pill pill--favorite" onClick={this.handleFavClicks}></button>
+            <button className="pill__secondary pill--searches" onClick={this.handleSearchClick}></button>
+            <button className="pill__secondary pill--favorite" onClick={this.handleFavClick}></button>
           </div>
           <div>
-            <button className="navigation__pill pill--logout" onClick={this.handleLogout}></button>
+            <button className="pill__secondary pill--logout" onClick={this.handleLogout}></button>
           </div>
         </div>
       </div>

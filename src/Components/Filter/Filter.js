@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Filter.css';
+import './Filter.scss';
 import FilterSubmenu from './FilterSubmenu/FilterSubMenu';
 import FilterMenu from './FilterMenu/FilterMenu';
 
@@ -29,12 +29,12 @@ class Filter extends Component {
   //gibt Limit an SearchPage zurück
   handleToggleUrgencies(urgency, selected) {
     let newUrgency = 0;
-    if(selected) {
-      if(this.props.urgencyLimit < urgency){
+    if (selected) {
+      if (this.props.urgencyLimit < urgency) {
         newUrgency = urgency;
       }
     } else {
-        newUrgency = 0;
+      newUrgency = 0;
     }
     this.props.urgencyHandler(newUrgency);
   }
@@ -61,20 +61,20 @@ class Filter extends Component {
     })
 
     let urgencyEntries =
-    [
-      {text: 'Priorität 1', value: 1},
-      {text: 'Priorität 2', value: 2},
-      {text: 'Priorität 3', value: 3},
-      {text: 'Priorität 4', value: 4},
-      {text: 'Priorität 5', value: 5},
-      {text: 'Priorität 6', value: 6},
-      {text: 'Priorität 7', value: 7},
-      {text: 'Priorität 8', value: 8}
-    ]
+      [
+        { text: 'Priorität 1', value: 1 },
+        { text: 'Priorität 2', value: 2 },
+        { text: 'Priorität 3', value: 3 },
+        { text: 'Priorität 4', value: 4 },
+        { text: 'Priorität 5', value: 5 },
+        { text: 'Priorität 6', value: 6 },
+        { text: 'Priorität 7', value: 7 },
+        { text: 'Priorität 8', value: 8 }
+      ]
     //rendert checkbox in tile
     urgencyEntries.forEach(urgency => {
-      if(this.props.urgencyLimit >= urgency.value) {
-      //if (this.state.urgencies.indexOf(urgency.value) !== -1){ //true when urgency.value is element in array
+      if (this.props.urgencyLimit >= urgency.value) {
+        //if (this.state.urgencies.indexOf(urgency.value) !== -1){ //true when urgency.value is element in array
         urgency.selected = true;
       } else {
         urgency.selected = false;
@@ -83,15 +83,14 @@ class Filter extends Component {
 
     return (
       <div className="filter">
-
         <FilterMenu displayFilter={this.props.displayFilter} />
-        <h4 className="filter__headline">Prioritäten</h4>
-        <FilterSubmenu className="FilterSubmenu" 
+        <h4 className="headline__primary headline--dark filter__headline">Prioritäten</h4>
+        <FilterSubmenu
           entries={urgencyEntries}
           onFilterChange={this.handleToggleUrgencies}
         />
-        <h4 className="filter__headline">Kategorien</h4>
-        <FilterSubmenu className="filterSubmenu"
+        <h4 className="headline__primary headline--dark filter__headline">Kategorien</h4>
+        <FilterSubmenu
           entries={categoryEntries}
           onFilterChange={this.handleToggleCategories}
         />

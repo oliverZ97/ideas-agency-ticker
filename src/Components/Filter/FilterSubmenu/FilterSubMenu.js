@@ -1,5 +1,5 @@
 import React from 'react';
-import './FilterSubmenu.css';
+import './FilterSubmenu.scss';
 import FilterSubmenuTile from './FilterSubmenuTile/FilterSubmenuTile';
 
 const FilterSubmenu = (props) =>  {
@@ -13,7 +13,7 @@ const FilterSubmenu = (props) =>  {
   })
   
     return (
-    <div className="filterSubmenu">
+    <div className="container-row--center filterSubmenu">
       {tiles}
     </div>
   );

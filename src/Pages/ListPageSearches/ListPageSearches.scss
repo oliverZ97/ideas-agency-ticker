@@ -1,33 +1,28 @@
+@import '../../scss/_spacing.scss';
+@import '../../scss/colors';
+
 .listPageSearches {
-    width: 90%;
     margin-left: auto;
     margin-right: auto;
     display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 .listPageSearches .menu {
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #dddfd4;
-    border: 1px solid #dddfd4;
+    padding: $padding-primary;
+    background-color: $secondary-color;
 }
 
 .listPageSearches .searchresult {
     min-height: 600px;
     display: flex;
     flex-wrap: wrap; 
-    background-color: #dddfd4;
+    background-color: $secondary-color;
 }
 
 @media screen and (max-width: 768px){
     .listPageSearches {
         width: 100%;
     }
-
 }
 
 @media screen and (min-width: 769px){

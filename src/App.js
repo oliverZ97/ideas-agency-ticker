@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Router, Route, browserHistory} from 'react-router';
 import 'normalize.css';
-import './App.css';
+import './App.scss';
 import Navigation from './Components/Navigation/Navigation';
 import Footer from './Components/Footer/Footer';
 import LoginPage from './Pages/LoginPage/LoginPage';

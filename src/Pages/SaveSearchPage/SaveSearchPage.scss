@@ -1,0 +1,26 @@
+@import '../../scss/colors';
+@import '../../scss/spacing';
+
+.saveSearchPage {
+    margin: $margin-auto;
+    background-color: $secondary-color;
+}
+
+@media screen and (max-width: 768px) {
+    .saveSearchPage {
+        width: $width-primary;
+    } 
+}
+
+@media screen and (min-width: 1024px){
+    .saveSearchPage {
+        width: $width-primary;
+    }
+}
+
+@media screen and (min-width: 1216px) {
+    .saveSearchPage {
+        width: $width-tertiary;
+        padding: $padding-primary; 
+    }
+}

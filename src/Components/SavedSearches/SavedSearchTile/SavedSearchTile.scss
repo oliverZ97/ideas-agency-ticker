@@ -1,0 +1,14 @@
+@import '../../../scss/colors';
+@import '../../../scss/spacing';
+
+.savedSearchTile {
+    height: 200px;
+    margin: 15px;
+    background-color: $tile-col-bg;
+    padding: $padding-primary;
+}
+
+.savedSearchTile__content {
+    width: $width-primary;
+    padding: $padding-primary;
+}

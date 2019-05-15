@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ListPageSearches.css';
+import './ListPageSearches.scss';
 import TileList from '../../Components/TileList/TileList';
 import apiClient from '../../services/apiClient';
 import ContentMenu from '../../Components/ContentMenu/ContentMenu';
@@ -126,7 +126,7 @@ class ListPageSearches extends Component {
 
                 {!this.state.displayFilter &&
                     <div>
-                        <div className="menu">
+                        <div className="container-row--space-between menu">
                             <ContentMenu
                                 toggleHandler={this.handleDisplayToggle}
                                 queryHandler={this.handleQuery}

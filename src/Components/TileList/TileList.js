@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './TileList.css'
+import React from 'react';
+import './TileList.scss'
 import Tile from '../Tile/Tile';
 
  //TileList ist zuständig für das rendern der tiles und bekommt über die props das suchergebnis
@@ -12,7 +12,7 @@ function TileList(props) {
     
     let tiles = props.documents.map((document) => <Tile key={document.id} document={document} setDoc={setDocument}/>);
     return (
-        <div className="tileList">
+        <div className="container-row--center tileList">
                 {tiles}
         </div>
     );

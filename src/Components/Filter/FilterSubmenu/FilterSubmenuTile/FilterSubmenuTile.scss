@@ -1,18 +1,11 @@
+@import '../../../../scss/colors';
+
 .filterSubmenuTile {
-    border: 1px solid #dddfd4;
+    border: 1px solid $secondary-color;
     width: 200px;
     height: 100px;
     overflow: hidden;
-    background-color: #173e43;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.filterSubmenuTile__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    background-color: $tile-col-bg;
 }
 
 .filterSubmenuTile__label {
@@ -21,16 +14,6 @@
     cursor: pointer;
     user-select: none;
     width: 30%;
-}
-
-.filterSubmenuTile__text {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 1rem;
-    text-align: center;
-    font-size: 22px;
-    color: #dddfd4;
 }
 
 .filterSubmenuTile__content {
@@ -51,12 +34,12 @@
     position: absolute;
     height: 25px;
     width: 25px;
-    background-color: #dddfd4;
+    background-color: $secondary-color;
     border-radius: 50px;
 }
 
 .filterSubmenuTile__label input:checked ~ .filterSubmenuTile__checkmark {
-    background: #fae596;
+    background: $interaction-color;
 }
 
 .filterSubmenuTile__checkmark:after {

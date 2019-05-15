@@ -1,5 +1,5 @@
 import React from 'react';
-import './FilterSubmenuTile.css';
+import './FilterSubmenuTile.scss';
 
 const FilterSubmenuTile = (props) => {
 
@@ -8,14 +8,14 @@ const FilterSubmenuTile = (props) => {
   }
 
   return (
-    <div className="filterSubmenuTile">
-      <div className="filterSubmenuTile__container">
+    <div className="filterSubmenuTile container-column--flex-start">
+      <div className="container-row--center">
         <label className="filterSubmenuTile__label">
           <input id="checkbox" className="filterSubmenuTile__input" checked={props.isChecked} type="checkbox" onChange={() => handleClick(props.value, !props.isChecked)}></input>
           <span className="filterSubmenuTile__checkmark"></span>
         </label>
         <div className="filterSubmenuTile__content">
-          <p className="filterSubmenuTile__text">{props.content}</p>
+          <p className="text__primary text--light">{props.content}</p>
         </div>
       </div >
     </div >

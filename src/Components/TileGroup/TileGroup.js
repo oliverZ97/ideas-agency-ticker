@@ -1,5 +1,5 @@
 import React from 'react';
-import './TileGroup.css';
+import './TileGroup.scss';
 import TileSlider from './TileSlider/TileSlider';
 
 function TileGroup(props) {

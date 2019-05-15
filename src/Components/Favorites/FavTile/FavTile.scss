@@ -1,0 +1,18 @@
+@import '../../../scss/colors';
+
+.favTile {
+    height: 200px;
+    margin: 15px;
+    padding: 5px;
+    background-color: $tile-col-bg;
+}
+
+.favTile__headline {
+    margin: 0px;
+    color: #dddfd4;
+}
+
+.favTile__content {
+    width: 1%;
+    flex-grow: 1;
+}

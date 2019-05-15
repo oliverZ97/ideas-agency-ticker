@@ -3,7 +3,7 @@ import { browserHistory } from 'react-router';
 import PageTitle from '../../Components/PageTitle/PageTitle';
 import LoginForm from '../../Components/LoginForm/LoginForm';
 import apiClient from '../../services/apiClient';
-import './LoginPage.css';
+import './LoginPage.scss';
 
 class LoginPage extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <div className="loginPage">
+      <div className="container-column--items-centered loginPage">
         <PageTitle />
         <LoginForm onSubmit={this.onLogin} showError={this.state.loginFailed} />
       </div>

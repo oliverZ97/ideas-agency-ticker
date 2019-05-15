@@ -1,6 +1,6 @@
 import React from 'react';
 import { browserHistory } from 'react-router';
-import './SaveSearchPage.css';
+import './SaveSearchPage.scss';
 import SavedSearches from '../../Components/SavedSearches/SavedSearches';
 
 function SaveSearchPage() {
@@ -10,7 +10,7 @@ function SaveSearchPage() {
 
   return (
     <div className="saveSearchPage">
-      <button className="pill pill__primary pill--back" onClick={handleBackClick}></button>
+      <button className="pill__primary pill--back" onClick={handleBackClick}></button>
       <SavedSearches />
     </div>
   );

@@ -2,14 +2,3 @@
     margin: 10px;
     overflow-x: scroll
 }
-
-.tileSlider__content {
-    display: flex;
-    flex-direction: row;
-}
-
-@media screen and (max-width: 768px) {
-    .tileSlider__content {
-        width: auto;
-    }
-}

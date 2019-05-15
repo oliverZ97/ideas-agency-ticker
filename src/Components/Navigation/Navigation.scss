@@ -1,0 +1,26 @@
+@import '../../scss/_colors.scss';
+@import '../../scss/spacing';
+
+.navigation {
+    background-color: $tertiary-color;
+    border-bottom: 2px solid $primary-color;
+}
+
+@media screen and (max-width: 768px){
+    .navigation__content {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .navigation__content {
+        width: $width-secondary;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1408px){
+    .navigation__content {
+        width: $width-tertiary;
+    }
+}
