@@ -1,5 +1,6 @@
 @import '../colors';
 @import '../font';
+@import '../mediaQueries';
 
 .form {
     flex: 1;
@@ -63,7 +64,7 @@
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mq-mobile) {
     .Form {
         justify-content: left;
         min-width: 260px;
