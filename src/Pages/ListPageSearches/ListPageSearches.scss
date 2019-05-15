@@ -1,5 +1,6 @@
 @import '../../scss/_spacing.scss';
 @import '../../scss/colors';
+@import '../../scss/mediaQueries';
 
 .listPageSearches {
     margin-left: auto;
@@ -19,19 +20,19 @@
     background-color: $secondary-color;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: $mq-mobile){
     .listPageSearches {
         width: 100%;
     }
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: $mq-tablet){
     .listPageSearches {
         width: 80%;
     }
 }
 
-@media screen and (min-width: 1408px){
+@media screen and (min-width: $mq-widescreen){
     .listPageSearches {
         width: 70%;
     }
