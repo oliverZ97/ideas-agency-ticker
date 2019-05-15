@@ -1,5 +1,6 @@
 @import '../../scss/spacing';
 @import '../../scss/colors';
+@import '../../scss/mediaQueries';
 
 .filter {
     margin-bottom: 50px;
@@ -18,14 +19,14 @@
     margin-top: 100px;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: $mq-mobile){
     .filter {
         width: 95%;
         margin: $margin-auto;
     }
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: $mq-desktop){
     .filter {
         width: $width-primary;
     }

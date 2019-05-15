@@ -31,6 +31,11 @@ $pill-diameter-icon: 40px;
         background: $pill-col-bg url("../../../Assets/noun_Star_750828.png");
         background-size: 40px 40px;
     }
+
+    &--favorite-l {
+        background: $pill-col-bg url("../../../Assets/noun_Star_750828.png")  no-repeat center;
+        background-size: 50px 50px;
+    }
     
     &--searches {
         background: $pill-col-bg url("../../../Assets/noun_diskette_1939628.png");

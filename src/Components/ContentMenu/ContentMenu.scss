@@ -1,18 +1,20 @@
 @import '../../scss/colors';
+@import '../../scss/mediaQueries';
+@import '../../scss/spacing';
 
 .contentMenu {
     background-color: $secondary-color;
     border: 1px solid $secondary-color;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: $mq-mobile){
     .contentMenu {
-        width: 100%;
+        width: $width-primary;
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: $mq-tablet) {
     .contentMenu {
-        width: 100%;
+        width: $width-primary;
     }
 }

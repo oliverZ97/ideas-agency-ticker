@@ -1,10 +1,11 @@
 @import '../../../scss/spacing';
+@import '../../../scss/mediaQueries';
 
 .filterSubmenu {
     flex-wrap: wrap;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: $mq-desktop){
     .filterSubmenu {
         margin: 0;
         padding: 0;

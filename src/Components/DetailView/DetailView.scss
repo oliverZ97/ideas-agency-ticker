@@ -1,12 +1,13 @@
 @import '../../scss/colors';
 @import '../../scss/font';
 @import '../../scss/spacing';
+@import '../../scss/mediaQueries';
 
 .detailView {
     position: absolute;
     top: 46px;
-    left: 20%;
-    right: 20%;
+    left: 10%;
+    right: 10%;
     width: auto;
     z-index: 99999;
     background-color: $primary-color;
@@ -20,12 +21,11 @@
     max-height: 200px;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: $mq-mobile){
     .detailView {
-        width: 96%;
+        width: 97%;
         left: 0;
         padding: $padding-primary;
-        margin: $margin-auto;
     }
 
     .detailView__img {
@@ -34,15 +34,13 @@
     }
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: $mq-tablet){
     .detailView {
         padding: $padding-primary;
-        left: 10%;
-        right: 10%;
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $mq-desktop) {
     .detailView {
         padding: $padding-primary;
         margin-top: 0px;
@@ -52,7 +50,7 @@
 
 }
 
-@media screen and (min-width: 1216px) {
+@media screen and (min-width: $mq-widescreen) {
     .detailView {
         padding: $padding-primary; 
         margin: $margin-auto;
@@ -60,7 +58,7 @@
     }
 }
 
-@media screen and (min-width: 1408px) {
+@media screen and (min-width: $mq-fullhd) {
     .detailView {
         width: $width-tertiary;
     }

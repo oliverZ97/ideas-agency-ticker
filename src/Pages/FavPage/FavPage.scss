@@ -1,22 +1,28 @@
 @import '../../scss/spacing';
+@import '../../scss/mediaQueries';
+@import '../../scss/colors';
+
+.favPage {
+    background-color: $secondary-color;
+}
 
 .favPage__container {
     align-self: flex-end;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mq-mobile) {
     .favPage{
         width: 100%;
     } 
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: $mq-desktop){
     .favPage {
         width: $width-primary;
     }
 }
 
-@media screen and (min-width: 1216px) {
+@media screen and (min-width: $mq-widescreen) {
     .favPage {
         width: $width-tertiary;
         padding: $padding-primary; 

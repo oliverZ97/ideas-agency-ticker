@@ -1,5 +1,7 @@
 @import '../colors';
 @import '../font';
+@import '../mediaQueries';
+@import '../spacing';
 
 .tile {
     border: 2px solid $secondary-color;
@@ -7,7 +9,7 @@
     height: 200px;
     display: flex;
     flex-direction: column;
-    padding: 8px;
+    padding: $padding-primary;
     background-color: $primary-color;
 
     &__meta {
@@ -39,7 +41,7 @@
         font-family: $font-primary;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        font-size: 1rem;
+        font-size: $text-primary;
         flex: 2;
         margin-top: 3px;
         color: $secondary-color;
@@ -61,19 +63,19 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mq-mobile) {
     .tile {
         height: 150px;
-        width: 300px;
+        width: 320px;
 
         &__headline {
-            font-size: 0.8rem;
+            font-size: $headline-tertiary;
         }
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: $mq-tablet) {
     .tile__headline {
-        font-size: 0.9rem;
+        font-size: $headline-tertiary;
     }
 }
