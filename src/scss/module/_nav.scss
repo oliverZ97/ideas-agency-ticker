@@ -1,21 +1,28 @@
 @import '../mediaQueries';
+@import '../spacing';
+
+.nav {
+    background-color: $tertiary-color;
+    border-bottom: $interaction-color;
+    width: $width-primary;
+}
 
 @media screen and (max-width: $mq-mobile){
-    .nav {
-        width: 100%;
+    .nav__content {
+        width: $width-primary;
         margin: auto;
     }
 }
 
 @media screen and (min-width: $mq-tablet){
-    .nav {
-        width: 80%;
+    .nav__content {
+        width: $width-secondary;
         margin: auto;
     }
 }
 
 @media screen and (min-width: $mq-widescreen){
-    .nav {
-        width: 70%;
+    .nav__content {
+        width: $width-tertiary;
     }
 }

@@ -10,10 +10,8 @@ function FavPage() {
   }
 
   return (
-    <div className="favPage container-column--items-centered">
-      <div className="favPage__container">
-        <button className="pill__primary pill--back" onClick={handleBackClick}></button>
-      </div>
+    <div className="favPage">
+      <button className="pill__primary pill--back" onClick={handleBackClick}></button>
       <Favorites />
     </div>
   );

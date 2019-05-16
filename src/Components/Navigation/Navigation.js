@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import authentificationService from '../../services/authentificationService';
-import './Navigation.scss';
 
 class Navigation extends Component {
   constructor() {
@@ -27,8 +26,8 @@ class Navigation extends Component {
 
   render() {
     return (
-      <div className="navigation">
-        <div className="navigation__content container-row--space-between"> 
+      <div className="nav">
+        <div className="nav__content container-row--space-between"> 
           <div>
             <button className="pill__secondary pill--searches" onClick={this.handleSearchClick}></button>
             <button className="pill__secondary pill--favorite" onClick={this.handleFavClick}></button>

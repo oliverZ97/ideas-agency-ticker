@@ -1,7 +1,7 @@
-@import '../../scss/colors';
+@import '../../scss/configuration';
 
 .footer {
-    background-color: $tertiary-color;
+    background-color: $bar-col-bg;
     min-height: 60px;
     position: static;
 }

@@ -1,6 +1,4 @@
-@import '../../scss/colors';
-@import '../../scss/spacing';
-@import '../../scss/mediaQueries';
+@import '../../scss/configuration';
 
 .saveSearchPage {
     margin: $margin-auto;
@@ -13,9 +11,9 @@
     } 
 }
 
-@media screen and (min-width: $mq-desktop){
+@media screen and (min-width: $mq-tablet){
     .saveSearchPage {
-        width: $width-primary;
+        width: $width-secondary;
     }
 }
 

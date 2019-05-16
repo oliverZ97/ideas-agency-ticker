@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const devMode = process.env.NODE_ENV !== 'production';
@@ -6,6 +7,12 @@ const webpack = require('webpack');
 console.log('im running in DevMode: ' + devMode);
 
 module.exports = {
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'index_bundle.js',
+        publicPath: '/'
+    },
     module: {
         rules: [
             {
@@ -70,6 +77,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
+        historyApiFallback: true,
         contentBase: './dist',
         hot: true
     }
