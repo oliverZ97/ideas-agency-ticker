@@ -4,14 +4,16 @@ import './SavedSearchTile.scss';
 class SavedSearchTile extends Component {
   render() {
     return (
-      <div className="savedSearchTile container-row--space-between border--light">
-        <div className="savedSearchTile__content">
-            <h5 className="headline__secondary headline--light">Name</h5>
-            <p className="text__primary text--light">Filter:</p>
-            <p className="text__primary text--light">Prio 1, Prio 2, Prio 3, Wirtschaft, dpa</p>
+      <div className="tile border--light">
+        <div className="tile__meta">
+          <h5 className="headline__tertiary headline--light">Name</h5>
         </div>
-        <div> 
-            <button className="pill__primary pill--delete" type="submit"></button>
+        <div className="tile__content">
+          <div>
+            <p className="headline__tertiary text--light">Filter:</p>
+            <p className="headline__tertiary text--light">Prio 1, Prio 2, Prio 3, Wirtschaft, dpa</p>
+          </div>
+          <button className="pill__primary pill--delete" type="submit"></button>
         </div>
       </div>
     );
