@@ -7,7 +7,7 @@ class Navigation extends Component {
     super();
     this.handleLogout = this.handleLogout.bind(this);
     this.handleSearchClick = this.handleSearchClick.bind(this);
-    this.handleFavClick= this.handleFavClick.bind(this);
+    this.handleFavClick = this.handleFavClick.bind(this);
     this.authentificationService = authentificationService;
 
     console.log(props);
@@ -27,19 +27,23 @@ class Navigation extends Component {
   }
 
   render() {
-    return (
-      <div className="nav">
-        <div className="nav__content container-row--space-between"> 
-          <div>
-            <button className="pill__secondary pill--searches" onClick={this.handleSearchClick}></button>
-            <button className="pill__secondary pill--favorite" onClick={this.handleFavClick}></button>
-          </div>
-          <div>
-            <button className="pill__secondary pill:active pill--logout" onClick={this.handleLogout}></button>
+    if (window.location.pathname === '/login' || window.location.pathname === '/') {
+      return null;
+    } else {
+      return (
+        <div className="nav">
+          <div className="nav__content container-row--space-between">
+            <div>
+              <button className="pill__secondary pill--searches" onClick={this.handleSearchClick}></button>
+              <button className="pill__secondary pill--favorite" onClick={this.handleFavClick}></button>
+            </div>
+            <div>
+              <button className="pill__secondary pill:active pill--logout" onClick={this.handleLogout}></button>
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
 

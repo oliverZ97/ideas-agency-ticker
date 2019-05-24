@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Router, Route, browserHistory} from 'react-router';
+import { Router, Route, browserHistory } from 'react-router';
 import 'normalize.css';
 import './App.scss';
 import Navigation from './Components/Navigation/Navigation';
@@ -17,13 +17,13 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-      <Navigation />
+        <Navigation />
         <Router className="content" history={browserHistory}>
-                  <Route exact path="/" component={LoginPage}/>
-                  <Route displayNav={true} path={"login"} component={LoginPage}/>
-                  <Route path={"favorites"} component={FavPage}/>
-                  <Route path={"ssearches"} component={SaveSearchPage}/>
-                  <Route path={"list-search"} component={ListPageSearches}/>
+          <Route exact path="/" component={LoginPage} />
+          <Route displayNav={true} path={"login"} component={LoginPage} />
+          <Route path={"favorites"} component={FavPage} />
+          <Route path={"ssearches"} component={SaveSearchPage} />
+          <Route path={"list-search"} component={ListPageSearches} />
         </Router>
         <Footer />
       </div>
