@@ -15,14 +15,20 @@
         @extend .text;
         font-size: $text-secondary;
     }
+
+    &__special {
+        @extend .text;
+        font-size: $text-special;
+        font-weight: bold;
+    }
     
     &--light {
         @extend .text;
-        color: $tertiary-color;
+        color: $text-color;
     }
     
     &--dark {
         @extend .text;
-        color: $primary-color;
+        color: $text-color;
     }
 }

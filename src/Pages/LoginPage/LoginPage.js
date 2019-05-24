@@ -12,6 +12,7 @@ class LoginPage extends Component {
       loginFailed: false,
       redirect: false
     };
+    console.log(props);
 
     this.onLogin = this.onLogin.bind(this);
   }

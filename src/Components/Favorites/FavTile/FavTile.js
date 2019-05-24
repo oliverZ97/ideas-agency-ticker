@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './FavTile.scss';
 
 class FavTile extends Component {
   render() {

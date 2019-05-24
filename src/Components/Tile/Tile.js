@@ -27,8 +27,8 @@ class Tile extends React.Component {
     return (
       <div className="tile" onClick={this.setDocument}>
         <div className="tile__meta">
-          <h6 className="tile__headline headline--light">{this.props.document.publisher}</h6>
-          <h6 className="tile__headline headline--light">{this.props.document.category}</h6>
+          <h6 className="headline__tertiary headline--light">{this.props.document.publisher}</h6>
+          <h6 className="headline__tertiary headline--light">{this.props.document.category}</h6>
           <ShortDate date={this.props.document.dateCreated}/>
         </div>
         <div className="tile__content">

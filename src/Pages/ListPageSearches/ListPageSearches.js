@@ -30,7 +30,7 @@ class ListPageSearches extends Component {
         this.handleUrgencyLimit = this.handleUrgencyLimit.bind(this);
         this.handleDisplayFilter = this.handleDisplayFilter.bind(this);
         this.startSearch = this.startSearch.bind(this);
-        }
+    }
 
     componentWillMount() {
         this.handleSearch();
@@ -142,7 +142,7 @@ class ListPageSearches extends Component {
                             }
 
                             {!this.state.displayAsList &&
-                                <TileGroup documents={this.state.documents} setDoc={this.setDocument}/>
+                                <TileGroup documents={this.state.documents} setDoc={this.setDocument} />
                             }
                         </div>
                     </div>

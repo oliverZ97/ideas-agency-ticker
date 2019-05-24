@@ -19,7 +19,12 @@
 .filterSubmenuTile__content {
     width: 70%;
     position: relative;
-    top: -10px;
+}
+
+.filterSubmenuTile__text {
+    position: absolute;
+    top: -12px;
+    left: 30px;
 }
 
 .filterSubmenuTile__label input {

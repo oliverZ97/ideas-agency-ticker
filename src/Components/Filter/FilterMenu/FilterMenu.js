@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './FilterMenu.scss';
 
 class FilterMenu extends Component {
     constructor(props){
@@ -18,7 +19,7 @@ class FilterMenu extends Component {
 
     render() {
         return (
-            <div className="container-row--space-between">
+            <div className="container-row--space-between filterMenu">
                 <div className="container-row">
                     <button className="pill__primary pill--update" onClick={this.updateFilter}></button>
                     <button className="pill__primary pill--save" type="submit"></button>

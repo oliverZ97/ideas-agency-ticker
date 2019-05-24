@@ -3,12 +3,14 @@ import { browserHistory } from 'react-router';
 import authentificationService from '../../services/authentificationService';
 
 class Navigation extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.handleLogout = this.handleLogout.bind(this);
     this.handleSearchClick = this.handleSearchClick.bind(this);
     this.handleFavClick= this.handleFavClick.bind(this);
     this.authentificationService = authentificationService;
+
+    console.log(props);
   }
 
   handleLogout() {
@@ -33,7 +35,7 @@ class Navigation extends Component {
             <button className="pill__secondary pill--favorite" onClick={this.handleFavClick}></button>
           </div>
           <div>
-            <button className="pill__secondary pill--logout" onClick={this.handleLogout}></button>
+            <button className="pill__secondary pill:active pill--logout" onClick={this.handleLogout}></button>
           </div>
         </div>
       </div>

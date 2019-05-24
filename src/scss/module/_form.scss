@@ -16,11 +16,15 @@
         margin-bottom: 200px;
         padding: 10px;
         font-size: $text-secondary;
-        color: $primary-color;
+        color: $text-color;
         flex: 1;
         margin: 5px;
         border-radius: 5px;
-        background-color: $interaction-color;
+        background-color: $input-color;
+    }
+
+    &__input:hover {
+        border: 2px solid $quaternary-color;
     }
     
     &__input--round {
@@ -34,7 +38,7 @@
     
     &__input:focus {
         @extend .form__input;
-        color: $primary-color;
+        color: $text-color;
     }
       
     &__button {
@@ -48,7 +52,7 @@
     
     &__button:hover {
         background-color: $button-col-bg;
-        color: green;
+        color: $text-color;
         cursor: pointer;
     }
     
@@ -57,7 +61,7 @@
     }
     
     &__message {
-        color: $secondary-color;
+        color: $text-color;
     }
 }
 

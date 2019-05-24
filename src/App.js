@@ -20,7 +20,7 @@ class App extends Component {
       <Navigation />
         <Router className="content" history={browserHistory}>
                   <Route exact path="/" component={LoginPage}/>
-                  <Route path={"login"} component={LoginPage}/>
+                  <Route displayNav={true} path={"login"} component={LoginPage}/>
                   <Route path={"favorites"} component={FavPage}/>
                   <Route path={"ssearches"} component={SaveSearchPage}/>
                   <Route path={"list-search"} component={ListPageSearches}/>

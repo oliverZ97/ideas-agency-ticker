@@ -32,7 +32,7 @@ class DetailView extends React.Component {
           <button className="pill__primary pill--favorite-l" type="button"></button>
           <button className="pill__primary pill--back" onClick={this.onClickCloseDetailView}></button>
         </div>
-        <h4 className="hero" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>
+        <h4 className="headline headline__special" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>
         <div className="container-row--space-between">
           <p className="headline__tertiary headline--light">{this.props.document.publisher}/{this.props.document.category}</p>
           <p className="headline__tertiary headline--light">{this.props.document.dateCreated}</p>

@@ -84,12 +84,12 @@ class Filter extends Component {
     return (
       <div className="filter">
         <FilterMenu displayFilter={this.props.displayFilter} />
-        <h4 className="headline__primary headline--dark filter__headline">Prioritäten</h4>
+        <h4 className="headline__special headline--dark filter__headline">Prioritäten</h4>
         <FilterSubmenu
           entries={urgencyEntries}
           onFilterChange={this.handleToggleUrgencies}
         />
-        <h4 className="headline__primary headline--dark filter__headline">Kategorien</h4>
+        <h4 className="headline__special headline--dark filter__headline">Kategorien</h4>
         <FilterSubmenu
           entries={categoryEntries}
           onFilterChange={this.handleToggleCategories}
