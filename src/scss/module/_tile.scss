@@ -5,11 +5,11 @@
 
 .tile {
     border: 2px solid $secondary-color;
+    border-radius: 15px;
     width: 400px;
     height: 200px;
     display: flex;
     flex-direction: column;
-    padding: $padding-primary;
     background-color: $primary-color;
 
     &__meta {
@@ -17,13 +17,18 @@
         flex-direction: row;
         justify-content: space-between;
         border-bottom: 1px solid $secondary-color;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
         line-height: 20px;
+        background-color: $quaternary-color;
+        padding: $padding-primary;
     }
     
     &__content {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        padding: $padding-primary;
     }
     
     &__headline {
