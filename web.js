@@ -1,7 +1,15 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('dist')); //set directory with static files
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static('build'));
+} else {
+    app.use(express.static('dist')); //set directory with static files
+}
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+});
 
 const PORT = process.env.PORT || 3000;
 
