@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ContentMenu.scss';
 
 class ContentMenu extends Component {
     constructor(props) {

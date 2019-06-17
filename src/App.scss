@@ -1,3 +1,5 @@
+@import "./scss/configuration";
+
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +10,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  background-color: $app-bg;
 }
 
 .app .content {

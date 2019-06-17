@@ -10,7 +10,6 @@ class Navigation extends Component {
     this.handleFavClick = this.handleFavClick.bind(this);
     this.authentificationService = authentificationService;
 
-    console.log(props);
   }
 
   handleLogout() {
@@ -27,11 +26,9 @@ class Navigation extends Component {
   }
 
   render() {
-    if (window.location.pathname === '/login' || window.location.pathname === '/') {
-      return null;
-    } else {
+
       return (
-        <div className="nav">
+        <div className="header">
           <div className="nav__content container-row--space-between">
             <div>
               <button className="pill__secondary pill--searches" onClick={this.handleSearchClick}></button>
@@ -43,7 +40,6 @@ class Navigation extends Component {
           </div>
         </div>
       );
-    }
   }
 }
 

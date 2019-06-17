@@ -1,5 +1,4 @@
 import React from 'react';
-import './FilterSubmenuTile.scss';
 
 const FilterSubmenuTile = (props) => {
 

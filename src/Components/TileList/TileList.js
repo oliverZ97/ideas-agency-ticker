@@ -1,5 +1,4 @@
 import React from 'react';
-import './TileList.scss'
 import Tile from '../Tile/Tile';
 
  //TileList ist zuständig für das rendern der tiles und bekommt über die props das suchergebnis

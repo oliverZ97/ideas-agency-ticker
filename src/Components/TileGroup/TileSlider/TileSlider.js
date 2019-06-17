@@ -1,5 +1,4 @@
 import React from 'react';
-import './TileSlider.scss';
 import Tile from '../../Tile/Tile';
 
 function TileSlider(props) {

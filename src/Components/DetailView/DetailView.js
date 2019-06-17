@@ -1,6 +1,5 @@
 import React from 'react';
 import stripHtml from 'string-strip-html';
-import './DetailView.scss';
 
 class DetailView extends React.Component {
   constructor(props) {
