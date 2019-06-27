@@ -28,7 +28,7 @@ class DetailView extends React.Component {
     return (
       <div className="detailView">
         <div className="container-row--space-between">
-          <button className="pill__primary pill--favorite-l" type="button"></button>
+          <button className="pill__primary pill--favorite-large" type="button"></button>
           <button className="pill__primary pill--back" onClick={this.onClickCloseDetailView}></button>
         </div>
         <h4 className="headline headline__special" dangerouslySetInnerHTML={this.renderAsHtml(this.props.document.title)}></h4>

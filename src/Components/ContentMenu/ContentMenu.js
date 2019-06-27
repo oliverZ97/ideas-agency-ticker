@@ -48,7 +48,7 @@ class ContentMenu extends Component {
             <div className="container-row--space-between contentMenu">
                 <input id="searchbar" className="form__input--round text__secondary" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
                 <div>
-                    <button className="pill__primary pill--filter" onClick={this.handleFilterClick}></button>
+                    <button className="pill__primary pill--filter-large" onClick={this.handleFilterClick}></button>
                     <button id="toggleDisplay" className="pill__primary pill--displayTile" onClick={this.handleDisplayToggle}></button>
                 </div>
             </div>
