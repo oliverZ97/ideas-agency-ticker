@@ -8,7 +8,7 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import FavPage from './Pages/FavPage/FavPage';
 import SaveSearchPage from './Pages/SaveSearchPage/SaveSearchPage';
 import ListPageSearches from './Pages/ListPageSearches/ListPageSearches';
-import 'styleguide-gen';
+//import 'styleguide-gen';
 import '../src/scss/styles.scss';
 
 
