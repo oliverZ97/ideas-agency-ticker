@@ -46,7 +46,7 @@ class LoginForm extends Component {
           <input className="text text__secondary text--dark form__input" type="password" placeholder="Password" minLength="6" name="password" onChange={this.handleChangePassword}></input>
         </div>
         <div className="container-column container-column--items-centered">
-          <button className="btn btn__primary text text__primary text--light" type="submit">Login</button>
+          <button className="btn btn__primary text text__primary text--dark" type="submit">Login</button>
         </div>
         {errorMessage}
       </form>
